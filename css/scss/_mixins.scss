@@ -1,0 +1,94 @@
+// Border Radius
+@mixin border-radius($radius...) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	     -o-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+// Box Shadow
+@mixin box-shadow($parameters...) {
+	-webkit-box-shadow: $parameters;
+	   -moz-box-shadow: $parameters;
+	    -ms-box-shadow: $parameters;
+	     -o-box-shadow: $parameters;
+	        box-shadow: $parameters;
+}
+
+// Transition
+@mixin transition($parameters...) {
+	-webkit-transition: $parameters;
+	   -moz-transition: $parameters;
+	    -ms-transition: $parameters;
+	     -o-transition: $parameters;
+	        transition: $parameters;
+}
+
+// Transform
+@mixin transform($parameters...) {
+	-webkit-transform: $parameters;
+	   -moz-transform: $parameters;
+	    -ms-transform: $parameters;
+	     -o-transform: $parameters;
+	        transform: $parameters;
+}
+
+// Transform Origin
+@mixin transform-origin($parameters...) {
+	-webkit-transform-origin: $parameters;
+	   -moz-transform-origin: $parameters;
+	    -ms-transform-origin: $parameters;
+	     -o-transform-origin: $parameters;
+	        transform-origin: $parameters;
+}
+
+// Animation
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin animation-duration($parameters...) {
+	-webkit-animation-duration: $parameters;
+	   -moz-animation-duration: $parameters;
+	    -ms-animation-duration: $parameters;
+	     -o-animation-duration: $parameters;
+	        animation-duration: $parameters;
+}
+
+@mixin animation-iteration-count($parameters...) {
+	-webkit-animation-iteration-count: $parameters;
+	   -moz-animation-iteration-count: $parameters;
+	    -ms-animation-iteration-count: $parameters;
+	     -o-animation-iteration-count: $parameters;
+	        animation-iteration-count: $parameters;
+}
+
+// Animation Keyframes
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

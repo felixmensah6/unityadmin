@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <title>Buttons - Unity Admin Panel</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/unity.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Header -->
+            <nav class="navbar sidebar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/unity.svg" width="18" height="18" class="d-inline-block align-top" alt="">
+                    Unity Websoft Admin
+                </a>
+            </nav>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-content optiscroll">
+
+                <!-- Sidebar Nav -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-group">Overview</li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <ul>
+                        <li class="sidebar-nav-group">Layout</li>
+                        <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
+                        <li><a href="layout-cards.html"><i class="icon-credit-card-o"></i> Cards</a></li>
+                        <li><a href="layout-typography.html"><i class="icon-text-height"></i> Typography</a></li>
+                        <li><a href="layout-jumbotron.html"><i class="icon-minus-square"></i> Jumbotron</a></li>
+                        <li><a href="layout-grids.html"><i class="icon-align-justify"></i> Grids</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Forms</li>
+                        <li><a href="forms-elements.html"><i class="icon-wpforms"></i> Elements</a></li>
+                        <li><a href="forms-components.html"><i class="icon-box"></i> Components</a></li>
+                        <li><a href="forms-validation.html"><i class="icon-check"></i> Validation</a></li>
+                        <li><a href="forms-widgets.html"><i class="icon-boxes"></i> Widgets</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Tables</li>
+                        <li><a href="tables-basic-styles.html"><i class="icon-table"></i> Basic Styles</a></li>
+                        <li><a href="tables-datatables.html"><i class="icon-database"></i> Datatables</a></li>
+                        <li><a href="tables-pricing.html"><i class="icon-tag"></i> Pricing</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Charts</li>
+                        <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
+                        <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
+                        <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
+                        <li><a href="charts-canvasjs.html"><i class="icon-chart-area"></i> CanvasJS</a></li>
+                        <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
+                        <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
+                        <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">UI Elements</li>
+                        <li><a href="ui-icons.html"><i class="icon-dropbox"></i> Icons</a></li>
+                        <li><a href="ui-buttons.html" class="active"><i class="icon-equals"></i> Buttons</a></li>
+                        <li><a href="ui-dropdowns.html"><i class="icon-folder"></i> Dropdowns</a></li>
+                        <li><a href="ui-progress-bars.html"><i class="icon-align-left"></i> Progress Bars</a></li>
+                        <li><a href="ui-tooltips.html"><i class="icon-comment-alt"></i> Tooltips</a></li>
+                        <li><a href="ui-animations.html"><i class="icon-hubspot"></i> Animations</a></li>
+                        <li><a href="ui-modals.html"><i class="icon-window-maximize-o"></i> Modals</a></li>
+                        <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
+                        <li><a href="ui-colors.html"><i class="icon-palette"></i> Colors</a></li>
+                        <li><a href="ui-others.html"><i class="icon-circle-o"></i> Others</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Users</li>
+                        <li><a href="users-profile.html"><i class="icon-user-circle"></i> Profile</a></li>
+                        <li><a href="users-login.html"><i class="icon-sign-in-alt"></i> Login</a></li>
+                        <li><a href="users-registration.html"><i class="icon-list-alt"></i> Registration</a></li>
+                        <li><a href="users-lock-screen.html"><i class="icon-portrait"></i> Lock Screen</a></li>
+                        <li><a href="users-password-reset.html"><i class="icon-lock"></i> Password Reset</a></li>
+                        <li><a href="users-forgot-password.html"><i class="icon-ban"></i> Forgot Password</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Widgets</li>
+                        <li><a href="widgets-calendar.html"><i class="icon-calendar-alt"></i> Calendar</a></li>
+                        <li><a href="widgets-inbox.html"><i class="icon-inbox"></i> Inbox</a></li>
+                        <li><a href="widgets-contacts.html"><i class="icon-address-card"></i> Contacts</a></li>
+                        <li><a href="widgets-photo-gallery.html"><i class="icon-images"></i> Photo Gallery</a></li>
+                        <li><a href="widgets-filtering.html"><i class="icon-filter"></i> Filtering</a></li>
+                        <li><a href="widgets-faq.html"><i class="icon-question-circle"></i> FAQ</a></li>
+                        <li><a href="widgets-todo.html"><i class="icon-clipboard-list"></i> Todo List</a></li>
+                        <li><a href="widgets-timeline.html"><i class="icon-sitemap"></i> Timeline</a></li>
+                        <li><a href="widgets-invoice.html"><i class="icon-receipt"></i> Invoice</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Misc</li>
+                        <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
+                        <li><a href="pages-coming-soon.html"><i class="icon-shoe-prints"></i> Coming Soon</a></li>
+                        <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
+                        <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
+                        <li><a href="pages-error-404.html"><i class="icon-sad-tear"></i> Error 404</a></li>
+                        <li><a href="pages-error-500.html"><i class="icon-sad-tear"></i> Error 500</a></li>
+                        <li><a href="pages-utilities.html"><i class="icon-briefcase"></i> Utilities</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <form class="navbar-search">
+                    <button type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input type="search" name="search" placeholder="Type in to Search..." autocomplete="off">
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown d-none d-sm-block">
+                        <a class="nav-link dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <i class="icon-plus"></i> Add
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 class="dropdown-header text-body">Add New Features</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Products</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Departments</a>
+                            <a class="dropdown-item" href="#">Discounts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a class="nav-link" href="#" role="button">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-danger">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-user dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <img src="images/user.svg" class="rounded-circle" width="30" height="30" alt="User">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <span class="dropdown-item-text">
+                                John W. Smith
+                                <span class="d-block text-muted">smith.john@gmail.com</span>
+                            </span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-profile.html">Profile</a>
+                            <a class="dropdown-item d-flex align-items-center" href="widgets-inbox.html">
+                                Inbox
+                                <span class="badge badge-danger ml-auto">12</span>
+                            </a>
+                            <a class="dropdown-item" href="#">Notifications</a>
+                            <a class="dropdown-item" href="#">Help/Support</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button">
+                    <i class="icon-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-title">
+                    <h5>Buttons</h5>
+                </div>
+                <div class="page-header-link">
+                    <a href="#" class="link"><i class="icon-question-circle"></i></a>
+                    <div class="dropdown d-inline-block">
+                        <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
+                            <i class="icon-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Preferences</a>
+                            <a class="dropdown-item" href="#">Layout Theme</a>
+                            <a class="dropdown-item" href="#">Favorite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content boxed">
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Buttons</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn btn-default">Default</button>
+                        <a href="#" class="btn btn-primary">Primary</a>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-tertiary">Tertiary</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Outline Buttons</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn btn-outline-default">Default</button>
+                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                        <button type="button" class="btn btn-outline-danger">Danger</button>
+                        <button type="button" class="btn btn-outline-warning">Warning</button>
+                        <button type="button" class="btn btn-outline-info">Info</button>
+                        <button type="button" class="btn btn-outline-tertiary">Tertiary</button>
+                        <button type="button" class="btn btn-outline-light">Light</button>
+                        <button type="button" class="btn btn-outline-dark">Dark</button>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Light Buttons</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn btn-light-primary">Primary</button>
+                        <button type="button" class="btn btn-light-success">Success</button>
+                        <button type="button" class="btn btn-light-danger">Danger</button>
+                        <button type="button" class="btn btn-light-warning">Warning</button>
+                        <button type="button" class="btn btn-light-info">Info</button>
+                        <button type="button" class="btn btn-light-tertiary">Tertiary</button>
+                        <hr>
+                        <button type="button" class="btn btn-light-primary" disabled>Primary</button>
+                        <button type="button" class="btn btn-light-success" disabled>Success</button>
+                        <button type="button" class="btn btn-light-danger" disabled>Danger</button>
+                        <button type="button" class="btn btn-light-warning" disabled>Warning</button>
+                        <button type="button" class="btn btn-light-info" disabled>Info</button>
+                        <button type="button" class="btn btn-light-tertiary" disabled>Tertiary</button>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Disabled Buttons</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn btn-default" disabled>Default</button>
+                        <button type="button" class="btn btn-primary" disabled>Primary</button>
+                        <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+                        <button type="button" class="btn btn-success" disabled>Success</button>
+                        <button type="button" class="btn btn-danger" disabled>Danger</button>
+                        <button type="button" class="btn btn-warning" disabled>Warning</button>
+                        <button type="button" class="btn btn-info" disabled>Info</button>
+                        <button type="button" class="btn btn-tertiary" disabled>Tertiary</button>
+                        <button type="button" class="btn btn-light" disabled>Light</button>
+                        <a href="#" class="btn btn-dark disabled" tabindex="-1" role="button" aria-disabled="true">Dark</a>
+                        <hr>
+                        <button type="button" class="btn btn-outline-default" disabled>Default</button>
+                        <button type="button" class="btn btn-outline-primary" disabled>Primary</button>
+                        <button type="button" class="btn btn-outline-secondary" disabled>Secondary</button>
+                        <button type="button" class="btn btn-outline-success" disabled>Success</button>
+                        <button type="button" class="btn btn-outline-danger" disabled>Danger</button>
+                        <button type="button" class="btn btn-outline-warning" disabled>Warning</button>
+                        <button type="button" class="btn btn-outline-info" disabled>Info</button>
+                        <button type="button" class="btn btn-outline-tertiary" disabled>Tertiary</button>
+                        <button type="button" class="btn btn-outline-light" disabled>Light</button>
+                        <a href="#" class="btn btn-outline-dark disabled" tabindex="-1" role="button" aria-disabled="true">Dark</a>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Button Sizes</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn btn-default btn-xs">Extra Small Button</button>
+                        <button type="button" class="btn btn-default btn-sm">Small Button</button>
+                        <button type="button" class="btn btn-default">Default Button</button>
+                        <button type="button" class="btn btn-default btn-lg">Large Button</button>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Block Button</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn btn-default btn-block mb-3">Default Button</button>
+                        <button type="button" class="btn btn-primary btn-block">Primary Button</button>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Buttons with Labels</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn btn-light btn-label">
+                            <span class="btn-label-left"><i class="icon-arrow-left"></i></span>Left
+                        </button>
+                        <button type="button" class="btn btn-light btn-label">
+                            Right<span class="btn-label-right"><i class="icon-arrow-right"></i></span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-label">
+                            <span class="btn-label-left"><i class="icon-bullhorn"></i></span>Information
+                        </button>
+                        <button type="button" class="btn btn-success btn-label">
+                            <span class="btn-label-left"><i class="icon-check"></i></span>Accept
+                        </button>
+                        <button type="button" class="btn btn-danger btn-label">
+                            <span class="btn-label-left"><i class="icon-times"></i></span>Reject
+                        </button>
+                        <button type="button" class="btn btn-warning btn-label">
+                            <span class="btn-label-left"><i class="icon-exclamation-circle"></i></span>Alert
+                        </button>
+                        <button type="button" class="btn btn-info btn-label">
+                            Menu<span class="btn-label-right"><i class="icon-bars"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Button Dropdowns</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Single Button
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+
+                        <div class="btn-group mt-3">
+                            <a href="#" class="btn btn-danger">Split Button</a>
+                            <a class="btn btn-danger dropdown-toggle dropdown-toggle-split" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Button Groups</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">One</button>
+                            <button type="button" class="btn btn-secondary">Two</button>
+                            <button type="button" class="btn btn-secondary">Three</button>
+                            <button type="button" class="btn btn-secondary">Four</button>
+                            <button type="button" class="btn btn-secondary">Five</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Button Toolbar</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <button type="button" class="btn btn-secondary">1</button>
+                                <button type="button" class="btn btn-secondary">2</button>
+                                <button type="button" class="btn btn-secondary">3</button>
+                                <button type="button" class="btn btn-secondary">4</button>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                <button type="button" class="btn btn-secondary">5</button>
+                                <button type="button" class="btn btn-secondary">6</button>
+                                <button type="button" class="btn btn-secondary">7</button>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Third group">
+                                <button type="button" class="btn btn-secondary">8</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Button Group Sizes</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Left</button>
+                            <button type="button" class="btn btn-secondary">Right</button>
+                        </div>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Left</button>
+                            <button type="button" class="btn btn-secondary">Right</button>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Left</button>
+                            <button type="button" class="btn btn-secondary">Right</button>
+                        </div>
+                        <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Left</button>
+                            <button type="button" class="btn btn-secondary">Right</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-8">
+                        Copyright © Unity Websoft
+                    </div>
+                    <div class="col-sm-4 text-sm-right">
+                        Version: 1.0.0
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/unity.core.js"></script>
+    <script src="js/unity.js"></script>
+</body>
+
+</html>

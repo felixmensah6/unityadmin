@@ -1,0 +1,178 @@
+//
+// Colors
+//
+
+$light-100:       #ffffff;
+$light-200:       #e9ecef;
+$light-300:       #c0c2c5;
+$light-400:       #a7a9ad;
+$light-500:       #909296;
+
+$dark-100:        #828181;
+$dark-200:        #5d5d5d;
+$dark-300:        #414141;
+$dark-400:        #212121;
+$dark-500:        #000000;
+
+$gray-100:        #f5f5f5;
+$gray-200:        #bdbdbd;
+$gray-300:        #9e9e9e;
+$gray-400:        #757575;
+$gray-500:        #424242;
+
+$blue-100:        #bbdefb;
+$blue-200:        #42a5f5;
+$blue-300:        #2196f3;
+$blue-400:        #1e88e5;
+$blue-500:        #1565c0;
+
+$green-100:       #c8e6c9;
+$green-200:       #66bb6a;
+$green-300:       #4caf50;
+$green-400:       #43a047;
+$green-500:       #2e7d32;
+
+$red-100:         #ffcdd2;
+$red-200:         #ef5350;
+$red-300:         #f44336;
+$red-400:         #e53935;
+$red-500:         #c62828;
+
+$orange-100:      #ffe0b2;
+$orange-200:      #ffa726;
+$orange-300:      #ff9800;
+$orange-400:      #fb8c00;
+$orange-500:      #ef6c00;
+
+$azure-100:       #b3e5fc;
+$azure-200:       #29b6f6;
+$azure-300:       #03a9f4;
+$azure-400:       #039be5;
+$azure-500:       #0277bd;
+
+$purple-100:      #d1c4e9;
+$purple-200:      #7e57c2;
+$purple-300:      #673ab7;
+$purple-400:      #5e35b1;
+$purple-500:      #4527a0;
+
+$teal-100:        #b2dfdb;
+$teal-200:        #26a69a;
+$teal-300:        #009688;
+$teal-400:        #00897b;
+$teal-500:        #00695c;
+
+$indigo-100:      #c5cae9;
+$indigo-200:      #5c6bc0;
+$indigo-300:      #3f51b5;
+$indigo-400:      #3949ab;
+$indigo-500:      #283593;
+
+//
+// Theme
+//
+
+$theme-link:                       $azure-400;
+$theme-sidebar:                    #19212b;
+$theme-sidebar-link-active:        lighten($azure-200, 8%);
+$theme-page-header:                $azure-400;
+
+//
+// Defined Colors
+//
+
+$default:        $light-100;
+$primary:        $blue-300;
+$secondary:      #6f7c95;
+$success:        $green-300;
+$danger:         $red-300;
+$warning:        $orange-300;
+$info:           $teal-300;
+$tertiary:       $purple-300;
+$light:          #f8f9fa;
+$dark:           #343a40;
+
+//
+// Body
+//
+
+$body-bg:                   #f3f6f9;
+$body-color:                #333333;
+$font-family:               Roboto;
+$link-color:                $blue-400;
+$dropdown-link:             $gray-500;
+$dropdown-hover:            rgba(0, 0, 0, 0.04);
+$dropdown-shadow:           none;
+$dropdown-divider:          rgba(0, 0, 0, 0.1);
+$dropdown-border:           1px solid $dropdown-divider; // e.g. 1px solid transparent
+$dropdown-border-radius:    0.1875rem;
+$dropdown-margin:           0.125rem;
+$page-heading-border:       1px solid rgba(0, 0, 0, 0.10);
+
+//
+// Sidebar
+//
+
+$sidebar-width:                 13.75rem;
+$sidebar-bg:                    $theme-sidebar;
+$sidebar-border:                none; // e.g. 1px solid transparent
+$sidebar-header-bg:             lighten($sidebar-bg, 6%) !important;
+$sidebar-header-shadow:         -1px 1px 4px rgba(0, 0, 0, .13) !important;
+$sidebar-header-link:           $light-100;
+$sidebar-toggler-color:         $light-300;
+$sidebar-nav-group-color:       $light-100;
+$sidebar-nav-link:              $light-300;
+$sidebar-nav-hover:             $light-300;
+$sidebar-nav-hover-bg:          rgba(255, 255, 255, .10);
+$sidebar-nav-active:            $theme-sidebar-link-active;
+$sidebar-nav-active-bg:         transparent;
+
+//
+// Navbar
+//
+
+$navbar-bg:        $light-100;
+$navbar-height:    3.125rem;
+$navbar-shadow:    2px 1px 4px rgba(0, 0, 0, .13);
+$navbar-link:      $light-500;
+
+//
+// Page Header
+//
+
+$page-header-bg:                $theme-page-header;
+$page-header-color:             $light-100;
+$page-header-link:              rgba(250, 250, 250, .7);
+$page-header-link-hover:        $light-100;
+$page-header-active:            $light-100;
+$page-header-active-border:     $light-100;
+$page-header-nav-arrows:        $light-100;
+$page-header-border:            1px solid transparent;
+
+//
+// Panels
+//
+
+$panel-light-bg:           $light-100;
+$panel-shadow:             0 1px 3px 0 rgba(0, 0, 0, 0.15),
+                           0 1px 1px 0 rgba(0, 0, 0, 0.05),
+                           0 2px 1px -1px rgba(0, 0, 0, 0.05);
+$panel-heading-border:     1px solid rgba(0, 0, 0, 0.1);
+$panel-light-link:         $light-500;
+$panel-light-footer-bg:    rgba(0, 0, 0, 0.03);
+
+//
+// Buttons
+//
+
+$button-font-size:         0.875rem;
+$button-border-radius:     0.125rem;
+$button-font-weight:       500;
+
+//
+// Footer
+//
+
+$footer-height:    2.5rem;
+$footer-color:     $light-500;
+$footer-bg:        transparent;

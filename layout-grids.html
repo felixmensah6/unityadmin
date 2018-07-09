@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <title>Panels - Unity Admin Panel</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/unity.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Header -->
+            <nav class="navbar sidebar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/unity.svg" width="18" height="18" class="d-inline-block align-top" alt="">
+                    Unity Websoft Admin
+                </a>
+            </nav>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-content optiscroll">
+
+                <!-- Sidebar Nav -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-group">Overview</li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <ul>
+                        <li class="sidebar-nav-group">Layout</li>
+                        <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
+                        <li><a href="layout-cards.html"><i class="icon-credit-card-o"></i> Cards</a></li>
+                        <li><a href="layout-typography.html"><i class="icon-text-height"></i> Typography</a></li>
+                        <li><a href="layout-jumbotron.html"><i class="icon-minus-square"></i> Jumbotron</a></li>
+                        <li><a href="layout-grids.html" class="active"><i class="icon-align-justify"></i> Grids</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Forms</li>
+                        <li><a href="forms-elements.html"><i class="icon-wpforms"></i> Elements</a></li>
+                        <li><a href="forms-components.html"><i class="icon-box"></i> Components</a></li>
+                        <li><a href="forms-validation.html"><i class="icon-check"></i> Validation</a></li>
+                        <li><a href="forms-widgets.html"><i class="icon-boxes"></i> Widgets</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Tables</li>
+                        <li><a href="tables-basic-styles.html"><i class="icon-table"></i> Basic Styles</a></li>
+                        <li><a href="tables-datatables.html"><i class="icon-database"></i> Datatables</a></li>
+                        <li><a href="tables-pricing.html"><i class="icon-tag"></i> Pricing</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Charts</li>
+                        <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
+                        <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
+                        <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
+                        <li><a href="charts-canvasjs.html"><i class="icon-chart-area"></i> CanvasJS</a></li>
+                        <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
+                        <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
+                        <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">UI Elements</li>
+                        <li><a href="ui-icons.html"><i class="icon-dropbox"></i> Icons</a></li>
+                        <li><a href="ui-buttons.html"><i class="icon-equals"></i> Buttons</a></li>
+                        <li><a href="ui-dropdowns.html"><i class="icon-folder"></i> Dropdowns</a></li>
+                        <li><a href="ui-progress-bars.html"><i class="icon-align-left"></i> Progress Bars</a></li>
+                        <li><a href="ui-tooltips.html"><i class="icon-comment-alt"></i> Tooltips</a></li>
+                        <li><a href="ui-animations.html"><i class="icon-hubspot"></i> Animations</a></li>
+                        <li><a href="ui-modals.html"><i class="icon-window-maximize-o"></i> Modals</a></li>
+                        <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
+                        <li><a href="ui-colors.html"><i class="icon-palette"></i> Colors</a></li>
+                        <li><a href="ui-others.html"><i class="icon-circle-o"></i> Others</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Users</li>
+                        <li><a href="users-profile.html"><i class="icon-user-circle"></i> Profile</a></li>
+                        <li><a href="users-login.html"><i class="icon-sign-in-alt"></i> Login</a></li>
+                        <li><a href="users-registration.html"><i class="icon-list-alt"></i> Registration</a></li>
+                        <li><a href="users-lock-screen.html"><i class="icon-portrait"></i> Lock Screen</a></li>
+                        <li><a href="users-password-reset.html"><i class="icon-lock"></i> Password Reset</a></li>
+                        <li><a href="users-forgot-password.html"><i class="icon-ban"></i> Forgot Password</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Widgets</li>
+                        <li><a href="widgets-calendar.html"><i class="icon-calendar-alt"></i> Calendar</a></li>
+                        <li><a href="widgets-inbox.html"><i class="icon-inbox"></i> Inbox</a></li>
+                        <li><a href="widgets-contacts.html"><i class="icon-address-card"></i> Contacts</a></li>
+                        <li><a href="widgets-photo-gallery.html"><i class="icon-images"></i> Photo Gallery</a></li>
+                        <li><a href="widgets-filtering.html"><i class="icon-filter"></i> Filtering</a></li>
+                        <li><a href="widgets-faq.html"><i class="icon-question-circle"></i> FAQ</a></li>
+                        <li><a href="widgets-todo.html"><i class="icon-clipboard-list"></i> Todo List</a></li>
+                        <li><a href="widgets-timeline.html"><i class="icon-sitemap"></i> Timeline</a></li>
+                        <li><a href="widgets-invoice.html"><i class="icon-receipt"></i> Invoice</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Misc</li>
+                        <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
+                        <li><a href="pages-coming-soon.html"><i class="icon-shoe-prints"></i> Coming Soon</a></li>
+                        <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
+                        <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
+                        <li><a href="pages-error-404.html"><i class="icon-sad-tear"></i> Error 404</a></li>
+                        <li><a href="pages-error-500.html"><i class="icon-sad-tear"></i> Error 500</a></li>
+                        <li><a href="pages-utilities.html"><i class="icon-briefcase"></i> Utilities</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <form class="navbar-search">
+                    <button type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input type="search" name="search" placeholder="Type in to Search..." autocomplete="off">
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown d-none d-sm-block">
+                        <a class="nav-link dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <i class="icon-plus"></i> Add
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 class="dropdown-header text-body">Add New Features</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Products</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Departments</a>
+                            <a class="dropdown-item" href="#">Discounts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a class="nav-link" href="#" role="button">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-danger">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-user dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <img src="images/user.svg" class="rounded-circle" width="30" height="30" alt="User">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <span class="dropdown-item-text">
+                                John W. Smith
+                                <span class="d-block text-muted">smith.john@gmail.com</span>
+                            </span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-profile.html">Profile</a>
+                            <a class="dropdown-item d-flex align-items-center" href="widgets-inbox.html">
+                                Inbox
+                                <span class="badge badge-danger ml-auto">12</span>
+                            </a>
+                            <a class="dropdown-item" href="#">Notifications</a>
+                            <a class="dropdown-item" href="#">Help/Support</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button">
+                    <i class="icon-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-title">
+                    <h5>Grids</h5>
+                </div>
+                <div class="page-header-link">
+                    <a href="#" class="link"><i class="icon-question-circle"></i></a>
+                    <div class="dropdown d-inline-block">
+                        <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
+                            <i class="icon-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Preferences</a>
+                            <a class="dropdown-item" href="#">Layout Theme</a>
+                            <a class="dropdown-item" href="#">Favorite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content boxed">
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Equal-Width</h6>
+                    <small class="text-muted">For example, here are two grid layouts that apply to every device and viewport, from <code>xs</code> to <code>xl</code>. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Setting One Column Wdth</h6>
+                    <small class="text-muted">Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="panel panel-default p-3">.col-6 (wider)</div>
+                    </div>
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Variable Width Content</h6>
+                    <small class="text-muted">Use <code>col-{breakpoint}-auto</code> classes to size columns based on the natural width of their content.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-2">
+                        <div class="panel panel-default p-3">.col .col-lg-2</div>
+                    </div>
+                    <div class="col-md-auto">
+                        <div class="panel panel-default p-3">Variable width content</div>
+                    </div>
+                    <div class="col col-lg-2">
+                        <div class="panel panel-default p-3">.col .col-lg-2</div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                    <div class="col-md-auto">
+                        <div class="panel panel-default p-3">Variable width content</div>
+                    </div>
+                    <div class="col col-lg-2">
+                        <div class="panel panel-default p-3">.col .col-lg-2</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Equal-Width Multi-Row</h6>
+                    <small class="text-muted">Create equal-width columns that span multiple rows by inserting a <code>.w-100</code> where you want the columns to break to a new line. Make the breaks responsive by mixing the <code>.w-100</code> with some responsive display utilities.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="panel panel-default p-3">.col</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>All Breakpoints</h6>
+                    <small class="text-muted">For grids that are the same from the smallest of devices to the largest, use the <code>.col</code> and <code>.col-*</code> classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to <code>.col</code>.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-8">
+                        <div class="panel panel-default p-3">.col-8</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="panel panel-default p-3">.col-4</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Stacked to Horizontal</h6>
+                    <small class="text-muted">Using a single set of <code>.col-sm-*</code> classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<code>sm</code>).</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="panel panel-default p-3">.col-sm-8</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="panel panel-default p-3">.col-sm-4</div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="panel panel-default p-3">.col-sm</div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="panel panel-default p-3">.col-sm</div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="panel panel-default p-3">.col-sm</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Mix and Match</h6>
+                    <small class="text-muted">Don’t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="panel panel-default p-3">.col-12 .col-md-8</div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="panel panel-default p-3">.col-12 .col-md-4</div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <div class="panel panel-default p-3">.col-6 .col-md-4</div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="panel panel-default p-3">.col-6 .col-md-4</div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="panel panel-default p-3">.col-6 .col-md-4</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Column Breaks</h6>
+                    <small class="text-muted">Breaking columns to a new line in flexbox requires a small hack: add an element with <code>width: 100%</code> wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple <code>.rows</code>, but not every implementation method can account for this.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-6 col-sm-3">
+                        <div class="panel panel-default p-3">.col-6 .col-sm-3</div>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <div class="panel panel-default p-3">.col-6 .col-sm-3</div>
+                    </div>
+
+                    <!-- Force next columns to break to new line -->
+                    <div class="w-100"></div>
+
+                    <div class="col-6 col-sm-3">
+                        <div class="panel panel-default p-3">.col-6 .col-sm-3</div>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <div class="panel panel-default p-3">.col-6 .col-sm-3</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>No Gutters</h6>
+                    <small class="text-muted">The gutters between columns in our predefined grid classes can be removed with <code>.no-gutters</code>. This removes the negative <code>margins</code> from <code>.row</code> and the horizontal <code>padding</code> from all immediate children columns.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-6 col-md-8">
+                        <div class="panel panel-default p-3">.col-12 .col-sm-6 .col-md-8</div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="panel panel-default p-3">.col-6 .col-md-4</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Offset Classes</h6>
+                    <small class="text-muted">Move columns to the right using <code>.offset-md-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.offset-md-4</code> moves <code>.col-md-4</code> over four columns.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default p-3">.col-md-4</div>
+                    </div>
+                    <div class="col-md-4 offset-md-4">
+                        <div class="panel panel-default p-3">.col-md-4 .offset-md-4</div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-md-3 offset-md-3">
+                        <div class="panel panel-default p-3">.col-md-3 .offset-md-3</div>
+                    </div>
+                    <div class="col-md-3 offset-md-3">
+                        <div class="panel panel-default p-3">.col-md-3 .offset-md-3</div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="panel panel-default p-3">.col-md-6 .offset-md-3</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Reset Offset</h6>
+                    <small class="text-muted">In addition to column clearing at responsive breakpoints, you may need to reset offsets.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-5 col-md-6">
+                        <div class="panel panel-default p-3">.col-sm-5 .col-md-6</div>
+                    </div>
+                    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                        <div class="panel panel-default p-3">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-5 col-lg-6">
+                        <div class="panel panel-default p-3">.col-sm-6 .col-md-5 .col-lg-6</div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
+                        <div class="panel panel-default p-3">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <div class="page-heading">
+                    <h6>Margin Utilities</h6>
+                    <small class="text-muted">With the move to flexbox in Bootstrap v4, you can use margin utilities like <code>.mr-auto</code> to force sibling columns away from one another.</small>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default p-3">.col-md-4</div>
+                    </div>
+                    <div class="col-md-4 ml-auto">
+                        <div class="panel panel-default p-3">.col-md-4 .ml-auto</div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-md-3 ml-md-auto">
+                        <div class="panel panel-default p-3">.col-md-3 .ml-md-auto</div>
+                    </div>
+                    <div class="col-md-3 ml-md-auto">
+                        <div class="panel panel-default p-3">.col-md-3 .ml-md-auto</div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-auto mr-auto">
+                        <div class="panel panel-default p-3">.col-auto .mr-auto</div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="panel panel-default p-3">.col-auto</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-8">
+                        Copyright © Unity Websoft
+                    </div>
+                    <div class="col-sm-4 text-sm-right">
+                        Version: 1.0.0
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/unity.core.js"></script>
+    <script src="js/unity.js"></script>
+</body>
+
+</html>
