@@ -175,7 +175,7 @@
 
         .panel-title {
             flex: 1;
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             overflow: hidden;
             width: 200px;
 
@@ -190,7 +190,7 @@
         }
 
         .panel-link {
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             display: flex;
             align-items: center;
 
@@ -205,11 +205,11 @@
     }
 
     .panel-body {
-        padding: 1rem;
+        padding: 1rem 1.5rem;
     }
 
     .panel-footer {
-        padding: 1rem;
+        padding: 1rem 1.5rem;
     }
 
 }

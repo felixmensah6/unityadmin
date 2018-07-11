@@ -179,7 +179,9 @@
     border-color: darken($default, 20%);
 }
 
-.btn-default:hover {
+.btn-default:hover,
+.btn-default:focus {
+    color: darken($default, 85%);
     background-color: darken($default, 10%);
     border-color: darken($default, 20%);
 }
@@ -202,7 +204,8 @@
     background-color: transparent;
     border-color: $default;
 }
-.btn-outline-default:hover {
+.btn-outline-default:hover,
+.btn-outline-default:focus {
     color: darken($default, 85%);
     background-color: $default;
     border-color: $default;
@@ -223,11 +226,14 @@
 
 //--- Primary ---//
 .btn-primary {
+    color: #fff;
     background-color: $primary;
     border-color: $primary;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
+    color: #fff;
     background-color: darken($primary, 10%);
     border-color: darken($primary, 10%);
 }
@@ -247,9 +253,12 @@
 
 .btn-outline-primary {
     color: $primary;
+    background-color: transparent;
     border-color: $primary;
 }
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    color: #fff;
     background-color: $primary;
     border-color: $primary;
 }
@@ -273,7 +282,8 @@
     border-color: $primary-light;
 }
 
-.btn-light-primary:hover {
+.btn-light-primary:hover,
+.btn-light-primary:focus {
     background-color: darken($primary-light, 3%);
     border-color: darken($primary-light, 3%);
 }
@@ -293,17 +303,21 @@
 
 //--- Secondary ---//
 .btn-secondary {
+    color: #fff;
     background-color: $secondary;
     border-color: $secondary;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #fff;
     background-color: darken($secondary, 10%);
     border-color: darken($secondary, 10%);
 }
 
 .btn-secondary.disabled,
 .btn-secondary:disabled {
+    color: #fff;
     background-color: $secondary;
     border-color: $secondary;
 }
@@ -318,8 +332,11 @@
 .btn-outline-secondary {
     color: $secondary;
     border-color: $secondary;
+    background-color: transparent;
 }
-.btn-outline-secondary:hover {
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    color: #fff;
     background-color: $secondary;
     border-color: $secondary;
 }
@@ -339,17 +356,21 @@
 
 //--- Success ---//
 .btn-success {
+    color: #fff;
     background-color: $success;
     border-color: $success;
 }
 
-.btn-success:hover {
+.btn-success:hover,
+.btn-success:focus {
+    color: #fff;
     background-color: darken($success, 8%);
     border-color: darken($success, 8%);
 }
 
 .btn-success.disabled,
 .btn-success:disabled {
+    color: #fff;
     background-color: $success;
     border-color: $success;
 }
@@ -364,8 +385,11 @@
 .btn-outline-success {
     color: $success;
     border-color: $success;
+    background-color: transparent;
 }
-.btn-outline-success:hover {
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+    color: #fff;
     background-color: $success;
     border-color: $success;
 }
@@ -389,7 +413,8 @@
     border-color: $success-light;
 }
 
-.btn-light-success:hover {
+.btn-light-success:hover,
+.btn-light-success:focus {
     background-color: darken($success-light, 3%);
     border-color: darken($success-light, 3%);
 }
@@ -409,17 +434,21 @@
 
 //--- Danger ---//
 .btn-danger {
+    color: #fff;
     background-color: $danger;
     border-color: $danger;
 }
 
-.btn-danger:hover {
-    background-color: darken($danger, 8%);
-    border-color: darken($danger, 8%);
+.btn-danger:hover,
+.btn-danger:focus {
+    color: #fff;
+    background-color: darken($danger, 10%);
+    border-color: darken($danger, 10%);
 }
 
 .btn-danger.disabled,
 .btn-danger:disabled {
+    color: #fff;
     background-color: $danger;
     border-color: $danger;
 }
@@ -427,15 +456,18 @@
 .btn-danger:not(:disabled):not(.disabled).active,
 .btn-danger:not(:disabled):not(.disabled):active,
 .show > .btn-danger.dropdown-toggle {
-    background-color: darken($danger, 10%);
-    border-color: darken($danger, 10%);
+    background-color: darken($danger, 15%);
+    border-color: darken($danger, 15%);
 }
 
 .btn-outline-danger {
     color: $danger;
     border-color: $danger;
+    background-color: transparent;
 }
-.btn-outline-danger:hover {
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+    color: #fff;
     background-color: $danger;
     border-color: $danger;
 }
@@ -459,7 +491,8 @@
     border-color: $danger-light;
 }
 
-.btn-light-danger:hover {
+.btn-light-danger:hover,
+.btn-light-danger:focus {
     background-color: darken($danger-light, 3%);
     border-color: darken($danger-light, 3%);
 }
@@ -484,7 +517,8 @@
     border-color: $warning;
 }
 
-.btn-warning:hover {
+.btn-warning:hover,
+.btn-warning:focus {
     color: #fff;
     background-color: darken($warning, 8%);
     border-color: darken($warning, 8%);
@@ -507,8 +541,10 @@
 .btn-outline-warning {
     color: $warning;
     border-color: $warning;
+    background-color: transparent;
 }
-.btn-outline-warning:hover {
+.btn-outline-warning:hover,
+.btn-outline-warning:focus {
     color: #fff;
     background-color: $warning;
     border-color: $warning;
@@ -533,7 +569,8 @@
     border-color: $warning-light;
 }
 
-.btn-light-warning:hover {
+.btn-light-warning:hover,
+.btn-light-warning:focus {
     background-color: darken($warning-light, 3%);
     border-color: darken($warning-light, 3%);
 }
@@ -553,17 +590,21 @@
 
 //--- Info ---//
 .btn-info {
+    color: #fff;
     background-color: $info;
     border-color: $info;
 }
 
-.btn-info:hover {
+.btn-info:hover,
+.btn-info:focus {
+    color: #fff;
     background-color: darken($info, 8%);
     border-color: darken($info, 8%);
 }
 
 .btn-info.disabled,
 .btn-info:disabled {
+    color: #fff;
     background-color: $info;
     border-color: $info;
 }
@@ -578,8 +619,11 @@
 .btn-outline-info {
     color: $info;
     border-color: $info;
+    background-color: transparent;
 }
-.btn-outline-info:hover {
+.btn-outline-info:hover,
+.btn-outline-info:focus {
+    color: #fff;
     background-color: $info;
     border-color: $info;
 }
@@ -603,7 +647,8 @@
     border-color: $info-light;
 }
 
-.btn-light-info:hover {
+.btn-light-info:hover,
+.btn-light-info:focus {
     background-color: darken($info-light, 3%);
     border-color: darken($info-light, 3%);
 }
@@ -628,7 +673,8 @@
     border-color: $tertiary;
 }
 
-.btn-tertiary:hover {
+.btn-tertiary:hover,
+.btn-tertiary:focus {
     color: #fff;
     background-color: darken($tertiary, 8%);
     border-color: darken($tertiary, 8%);
@@ -653,7 +699,8 @@
     background-color: transparent;
     border-color: $tertiary;
 }
-.btn-outline-tertiary:hover {
+.btn-outline-tertiary:hover,
+.btn-outline-tertiary:focus {
     color: #fff;
     background-color: $tertiary;
     border-color: $tertiary;
@@ -678,7 +725,8 @@
     border-color: $purple-100;
 }
 
-.btn-light-tertiary:hover {
+.btn-light-tertiary:hover,
+.btn-light-tertiary:focus {
     background-color: darken($purple-100, 3%);
     border-color: darken($purple-100, 3%);
 }
@@ -703,7 +751,8 @@
     border-color: $light;
 }
 
-.btn-light:hover {
+.btn-light:hover,
+.btn-light:focus {
     color: darken($default, 85%);
     background-color: darken($light, 8%);
     border-color: darken($light, 8%);
@@ -728,7 +777,8 @@
     background-color: transparent;
     border-color: $light;
 }
-.btn-outline-light:hover {
+.btn-outline-light:hover,
+.btn-outline-light:focus {
     color: darken($default, 85%);
     background-color: $light;
     border-color: $light;
@@ -745,6 +795,97 @@
 .show > .btn-outline-light.dropdown-toggle {
     background-color: $light;
     border-color: $light;
+}
+
+//--- Dark ---//
+.btn-dark {
+    color: #fff;
+    background-color: $dark;
+    border-color: $dark;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+    color: #fff;
+    background-color: darken($dark, 8%);
+    border-color: darken($dark, 8%);
+}
+
+.btn-dark.disabled,
+.btn-dark:disabled {
+    color: #fff;
+    background-color: $dark;
+    border-color: $dark;
+}
+
+.btn-dark:not(:disabled):not(.disabled).active,
+.btn-dark:not(:disabled):not(.disabled):active,
+.show > .btn-dark.dropdown-toggle {
+    background-color: darken($dark, 10%);
+    border-color: darken($dark, 10%);
+}
+
+.btn-outline-dark {
+    color: $dark;
+    background-color: transparent;
+    border-color: $dark;
+}
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+    color: #fff;
+    background-color: $dark;
+    border-color: $dark;
+}
+
+.btn-outline-dark.disabled,
+.btn-outline-dark:disabled {
+    color: $dark;
+    background-color: transparent;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled).active,
+.btn-outline-dark:not(:disabled):not(.disabled):active,
+.show > .btn-outline-dark.dropdown-toggle {
+    background-color: $dark;
+    border-color: $dark;
+}
+
+//--- Link ---//
+.btn-link {
+    color: $theme-link;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    color: darken($theme-link, 10%);
+    text-decoration: none;
+}
+
+.btn-link.disabled,
+.btn-link:disabled {
+    color: #6c757d;
+}
+
+//
+// Forms
+//
+
+.form-control {
+    border: $form-input-border;
+    @include border-radius($form-input-border-radius);
+    font-size: $body-font-size;
+
+    &:focus {
+        @include box-shadow(none);
+        border-color: $form-input-focus-border-color;
+    }
+
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: auto;
 }
 
 //

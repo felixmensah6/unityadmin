@@ -108,6 +108,7 @@ $tertiary-light:       $purple-100;
 $body-bg:                   #f3f6f9;
 $body-color:                #333333;
 $font-family:               Roboto;
+$body-font-size:            0.875rem;
 $link-color:                $blue-400;
 $dropdown-link:             $gray-500;
 $dropdown-hover:            rgba(0, 0, 0, 0.04);
@@ -177,6 +178,14 @@ $panel-light-footer-bg:    rgba(0, 0, 0, 0.03);
 $button-font-size:         0.875rem;
 $button-border-radius:     0.125rem;
 $button-font-weight:       500;
+
+//
+// Forms
+//
+
+$form-input-border-radius:         0.125rem;
+$form-input-border:                1px solid #ced4da;
+$form-input-focus-border-color:    #65686b;
 
 //
 // Footer
