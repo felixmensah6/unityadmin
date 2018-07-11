@@ -268,27 +268,27 @@
 }
 
 .btn-light-primary {
-    color: $blue-500;
-    background-color: $blue-100;
-    border-color: $blue-100;
+    color: darken($primary-light, 50%);
+    background-color: $primary-light;
+    border-color: $primary-light;
 }
 
 .btn-light-primary:hover {
-    background-color: darken($blue-100, 3%);
-    border-color: darken($blue-100, 3%);
+    background-color: darken($primary-light, 3%);
+    border-color: darken($primary-light, 3%);
 }
 
 .btn-light-primary.disabled,
 .btn-light-primary:disabled {
-    background-color: $blue-100;
-    border-color: $blue-100;
+    background-color: $primary-light;
+    border-color: $primary-light;
 }
 
 .btn-light-primary:not(:disabled):not(.disabled).active,
 .btn-light-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
-    background-color: darken($blue-100, 3%);
-    border-color: darken($blue-100, 3%);
+    background-color: darken($primary-light, 3%);
+    border-color: darken($primary-light, 3%);
 }
 
 //--- Secondary ---//
@@ -384,27 +384,27 @@
 }
 
 .btn-light-success {
-    color: $green-500;
-    background-color: $green-100;
-    border-color: $green-100;
+    color: darken($success-light, 50%);
+    background-color: $success-light;
+    border-color: $success-light;
 }
 
 .btn-light-success:hover {
-    background-color: darken($green-100, 3%);
-    border-color: darken($green-100, 3%);
+    background-color: darken($success-light, 3%);
+    border-color: darken($success-light, 3%);
 }
 
 .btn-light-success.disabled,
 .btn-light-success:disabled {
-    background-color: $green-100;
-    border-color: $green-100;
+    background-color: $success-light;
+    border-color: $success-light;
 }
 
 .btn-light-success:not(:disabled):not(.disabled).active,
 .btn-light-success:not(:disabled):not(.disabled):active,
 .show > .btn-light-success.dropdown-toggle {
-    background-color: darken($green-100, 3%);
-    border-color: darken($green-100, 3%);
+    background-color: darken($success-light, 3%);
+    border-color: darken($success-light, 3%);
 }
 
 //--- Danger ---//
@@ -454,27 +454,27 @@
 }
 
 .btn-light-danger {
-    color: $red-500;
-    background-color: $red-100;
-    border-color: $red-100;
+    color: darken($danger-light, 50%);
+    background-color: $danger-light;
+    border-color: $danger-light;
 }
 
 .btn-light-danger:hover {
-    background-color: darken($red-100, 3%);
-    border-color: darken($red-100, 3%);
+    background-color: darken($danger-light, 3%);
+    border-color: darken($danger-light, 3%);
 }
 
 .btn-light-danger.disabled,
 .btn-light-danger:disabled {
-    background-color: $red-100;
-    border-color: $red-100;
+    background-color: $danger-light;
+    border-color: $danger-light;
 }
 
 .btn-light-danger:not(:disabled):not(.disabled).active,
 .btn-light-danger:not(:disabled):not(.disabled):active,
 .show > .btn-light-danger.dropdown-toggle {
-    background-color: darken($red-100, 3%);
-    border-color: darken($red-100, 3%);
+    background-color: darken($danger-light, 3%);
+    border-color: darken($danger-light, 3%);
 }
 
 //--- Warning ---//
@@ -528,27 +528,27 @@
 }
 
 .btn-light-warning {
-    color: $orange-500;
-    background-color: $orange-100;
-    border-color: $orange-100;
+    color: darken($warning-light, 50%);
+    background-color: $warning-light;
+    border-color: $warning-light;
 }
 
 .btn-light-warning:hover {
-    background-color: darken($orange-100, 3%);
-    border-color: darken($orange-100, 3%);
+    background-color: darken($warning-light, 3%);
+    border-color: darken($warning-light, 3%);
 }
 
 .btn-light-warning.disabled,
 .btn-light-warning:disabled {
-    background-color: $orange-100;
-    border-color: $orange-100;
+    background-color: $warning-light;
+    border-color: $warning-light;
 }
 
 .btn-light-warning:not(:disabled):not(.disabled).active,
 .btn-light-warning:not(:disabled):not(.disabled):active,
 .show > .btn-light-warning.dropdown-toggle {
-    background-color: darken($orange-100, 3%);
-    border-color: darken($orange-100, 3%);
+    background-color: darken($warning-light, 3%);
+    border-color: darken($warning-light, 3%);
 }
 
 //--- Info ---//
@@ -598,27 +598,27 @@
 }
 
 .btn-light-info {
-    color: $teal-500;
-    background-color: $teal-100;
-    border-color: $teal-100;
+    color: darken($info-light, 50%);
+    background-color: $info-light;
+    border-color: $info-light;
 }
 
 .btn-light-info:hover {
-    background-color: darken($teal-100, 3%);
-    border-color: darken($teal-100, 3%);
+    background-color: darken($info-light, 3%);
+    border-color: darken($info-light, 3%);
 }
 
 .btn-light-info.disabled,
 .btn-light-info:disabled {
-    background-color: $teal-100;
-    border-color: $teal-100;
+    background-color: $info-light;
+    border-color: $info-light;
 }
 
 .btn-light-info:not(:disabled):not(.disabled).active,
 .btn-light-info:not(:disabled):not(.disabled):active,
 .show > .btn-light-info.dropdown-toggle {
-    background-color: darken($teal-100, 3%);
-    border-color: darken($teal-100, 3%);
+    background-color: darken($info-light, 3%);
+    border-color: darken($info-light, 3%);
 }
 
 //--- Tertiary ---//
@@ -694,6 +694,57 @@
 .show > .btn-light-tertiary.dropdown-toggle {
     background-color: darken($purple-100, 3%);
     border-color: darken($purple-100, 3%);
+}
+
+//--- Light ---//
+.btn-light {
+    color: darken($default, 85%);
+    background-color: $light;
+    border-color: $light;
+}
+
+.btn-light:hover {
+    color: darken($default, 85%);
+    background-color: darken($light, 8%);
+    border-color: darken($light, 8%);
+}
+
+.btn-light.disabled,
+.btn-light:disabled {
+    color: darken($default, 85%);
+    background-color: $light;
+    border-color: $light;
+}
+
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active,
+.show > .btn-light.dropdown-toggle {
+    background-color: darken($light, 10%);
+    border-color: darken($light, 10%);
+}
+
+.btn-outline-light {
+    color: $light;
+    background-color: transparent;
+    border-color: $light;
+}
+.btn-outline-light:hover {
+    color: darken($default, 85%);
+    background-color: $light;
+    border-color: $light;
+}
+
+.btn-outline-light.disabled,
+.btn-outline-light:disabled {
+    color: $light;
+    background-color: transparent;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.show > .btn-outline-light.dropdown-toggle {
+    background-color: $light;
+    border-color: $light;
 }
 
 //
