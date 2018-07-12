@@ -108,7 +108,7 @@
     flex-direction: column;
 
     &.boxed {
-        padding: 2rem;
+        padding: 1rem;
     }
 
     .page-heading {
@@ -261,6 +261,10 @@
 //
 
 @media (min-width: 576px) {
+
+    .content.boxed {
+        padding: 2rem;
+    }
 
     .footer {
         line-height: $footer-height;
