@@ -161,12 +161,12 @@
     }
 
     .btn-label-left {
-        @include border-radius(0.125rem 0 0 0.125rem);
+        @include border-radius($button-border-radius 0 0 $button-border-radius);
         left: -0.8125rem;
     }
 
     .btn-label-right {
-        @include border-radius(0 0.125rem 0.125rem 0);
+        @include border-radius(0 $button-border-radius $button-border-radius 0);
         right: -0.8125rem;
     }
 
