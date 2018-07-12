@@ -868,6 +868,62 @@
     color: #6c757d;
 }
 
+//--- Facebook ---//
+.btn-facebook {
+    color: #fff;
+    background-color: $facebook;
+    border-color: $facebook;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus {
+    color: #fff;
+    background-color: darken($facebook, 8%);
+    border-color: darken($facebook, 8%);
+}
+
+.btn-facebook.disabled,
+.btn-facebook:disabled {
+    color: #fff;
+    background-color: $facebook;
+    border-color: $facebook;
+}
+
+.btn-facebook:not(:disabled):not(.disabled).active,
+.btn-facebook:not(:disabled):not(.disabled):active,
+.show > .btn-facebook.dropdown-toggle {
+    background-color: darken($facebook, 10%);
+    border-color: darken($facebook, 10%);
+}
+
+//--- Google ---//
+.btn-google {
+    color: #fff;
+    background-color: $google;
+    border-color: $google;
+}
+
+.btn-google:hover,
+.btn-google:focus {
+    color: #fff;
+    background-color: darken($google, 8%);
+    border-color: darken($google, 8%);
+}
+
+.btn-google.disabled,
+.btn-google:disabled {
+    color: #fff;
+    background-color: $google;
+    border-color: $google;
+}
+
+.btn-google:not(:disabled):not(.disabled).active,
+.btn-google:not(:disabled):not(.disabled):active,
+.show > .btn-google.dropdown-toggle {
+    background-color: darken($google, 10%);
+    border-color: darken($google, 10%);
+}
+
 //
 // Forms
 //

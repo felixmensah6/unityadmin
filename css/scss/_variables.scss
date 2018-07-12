@@ -101,6 +101,11 @@ $warning-light:        $orange-100;
 $info-light:           $teal-100;
 $tertiary-light:       $purple-100;
 
+//------ Social Media -------//
+
+$facebook:             #3d66a3;
+$google:               #e05342;
+
 //
 // Body
 //
@@ -109,6 +114,8 @@ $body-bg:                   #f3f6f9;
 $body-color:                #333333;
 $font-family:               Roboto;
 $body-font-size:            0.875rem;
+$body-bg-image:             url(../images/bg.jpg);
+$body-bg-overlay:           rgba(0, 0, 0, 0.65);
 $link-color:                $blue-400;
 $dropdown-link:             $gray-500;
 $dropdown-hover:            rgba(0, 0, 0, 0.04);
@@ -194,3 +201,9 @@ $form-input-focus-border-color:    rgba(0, 0, 0, 0.30);
 $footer-height:    2.5rem;
 $footer-color:     $light-500;
 $footer-bg:        transparent;
+
+//
+// Login, Registration, Lock Screen, Password Reset etc.
+//
+
+$login-form-bg:            $light-100;

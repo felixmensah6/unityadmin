@@ -243,6 +243,47 @@
 
 }
 
+.login-box {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-grow: 1;
+
+    .login-box-content {
+        flex-basis: 26.25rem;
+        margin: 0 1rem;
+
+        .login-box-header {
+            text-align: center;
+            padding: 1.5rem;
+
+            h4 {
+                font-weight: 400;
+            }
+            p {
+                font-size: 0.8125rem;
+            }
+        }
+
+        .lock-screen-user {
+            text-align: center;
+            color: #fff;
+
+            h4 {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .login-box-footer {
+            text-align: center;
+            font-size: 0.8125rem;
+        }
+
+    }
+
+}
+
 .footer {
     padding: 0 1rem;
     font-size: 0.75rem;
