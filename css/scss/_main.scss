@@ -282,6 +282,21 @@
 
     }
 
+    .error-box {
+        color: #3b4354;
+        text-align: center;
+
+        .error-icon {
+            font-size: 7.5rem;
+            font-weight: 900;
+        }
+
+        h3 {
+            font-weight: 400;
+        }
+
+    }
+
 }
 
 .footer {
@@ -305,6 +320,10 @@
 
     .content.boxed {
         padding: 2rem;
+    }
+
+    .error-box .error-icon {
+        font-size: 9.375rem !important;
     }
 
     .footer {
