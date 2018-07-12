@@ -888,6 +888,29 @@ select.form-control:not([size]):not([multiple]) {
     height: auto;
 }
 
+.input-group-end {
+    width: 100%;
+
+    .form-control {
+        @include border-radius($form-input-border-radius $form-input-border-radius 0 0);
+        resize: none;
+        position: relative;
+        z-index: 1;
+    }
+
+    .input-group-text {
+        @include border-radius(0 0 $form-input-border-radius $form-input-border-radius);
+        margin-top: -1px;
+        white-space: normal;
+        text-align: left;
+    }
+
+}
+
+.input-group-text {
+    font-size: $body-font-size;
+}
+
 //
 // Medium devices (tablets, 768px and up)
 //
