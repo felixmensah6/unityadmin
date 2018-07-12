@@ -214,8 +214,13 @@
 
                 <!-- Panel -->
                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <input type="text" class="form-control" placeholder="Type in Icon Name to Search..." id="search-icons" onkeyup="searchFilter()">
+                        </div>
+                    </div>
                     <div class="panel-body">
-                        <div class="row">
+                        <div class="row" id="grid-icons">
                             <div class="col-sm-4 col-md-3 col-lg-2">
                             	<div class="icon-grid-item">
                             		<i class="icon-px"></i>
@@ -6724,6 +6729,29 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/unity.core.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+        // Filter function
+        function searchFilter() {
+            // Declare variables
+            var input, filter, ul, li, a, i;
+            input = document.getElementById('search-icons');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("grid-icons");
+            li = ul.getElementsByTagName('div');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("span")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+    </script>
 </body>
 
 </html>
