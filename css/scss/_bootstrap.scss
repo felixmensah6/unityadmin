@@ -924,6 +924,34 @@
     border-color: darken($google, 10%);
 }
 
+//--- Twitter ---//
+.btn-twitter {
+    color: #fff;
+    background-color: $twitter;
+    border-color: $twitter;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus {
+    color: #fff;
+    background-color: darken($twitter, 8%);
+    border-color: darken($twitter, 8%);
+}
+
+.btn-twitter.disabled,
+.btn-twitter:disabled {
+    color: #fff;
+    background-color: $twitter;
+    border-color: $twitter;
+}
+
+.btn-twitter:not(:disabled):not(.disabled).active,
+.btn-twitter:not(:disabled):not(.disabled):active,
+.show > .btn-twitter.dropdown-toggle {
+    background-color: darken($twitter, 10%);
+    border-color: darken($twitter, 10%);
+}
+
 //
 // Forms
 //
