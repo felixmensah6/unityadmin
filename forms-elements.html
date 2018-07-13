@@ -870,6 +870,115 @@
                     </div>
                 </div>
 
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Custom Upload Inputs</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>File Input with Text Input</label>
+                                <div class="input-group fileinput fileinput-new" data-provides="fileinput">
+                                    <div class="form-control" data-trigger="fileinput">
+                                        <i class="icon-file fileinput-exists"></i>
+                                        <span class="fileinput-filename"></span>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="btn btn-default btn-file">
+                                            <span class="fileinput-new">Select file</span>
+                                            <span class="fileinput-exists">Change</span>
+                                            <input type="file" name="fileinput">
+                                        </span>
+                                        <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>File Input</label>
+                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                    <span class="btn btn-default btn-file">
+                                        <span class="fileinput-new">Select file</span>
+                                        <span class="fileinput-exists">Change</span>
+                                        <input type="file" name="fileinput">
+                                    </span>
+                                    <span class="fileinput-filename"></span>
+                                    <a href="#" class="close fileinput-exists" data-dismiss="fileinput">&times;</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>File Input with Preview</label>
+                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                    <div class="fileinput-preview img-thumbnail mb-2" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+                                    <div>
+                                        <span class="btn btn-default btn-file">
+                                            <span class="fileinput-new">Select image</span>
+                                            <span class="fileinput-exists">Change</span>
+                                            <input type="file" name="fileinput">
+                                        </span>
+                                        <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>File Input with Preview and Placeholder</label>
+                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                    <div class="fileinput-new img-thumbnail mb-2" style="width: 200px; height: 150px;">
+                                        <img data-src="holder.js/100px100p" alt="...">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists img-thumbnail mb-2" style="max-width: 200px; max-height: 150px;"></div>
+                                    <div>
+                                        <span class="btn btn-default btn-file">
+                                            <span class="fileinput-new">Select image</span>
+                                            <span class="fileinput-exists">Change</span>
+                                            <input type="file" name="fileinput">
+                                        </span>
+                                        <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>File Input with Preview and Placeholder Inline</label>
+                                <div class="fileinput fileinput-new d-flex align-items-center" data-provides="fileinput">
+                                    <div class="fileinput-new img-thumbnail mr-2" style="width: 100px; height: 100px;">
+                                        <img data-src="holder.js/100px100p" alt="...">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists img-thumbnail mr-2" style="max-width: 100px; max-height: 100px;"></div>
+                                    <div class="ml-1">
+                                        <span class="btn btn-default btn-file">
+                                            <span class="fileinput-new">Select image</span>
+                                            <span class="fileinput-exists">Change</span>
+                                            <input type="file" name="fileinput">
+                                        </span>
+                                        <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput"><i class="icon-times"></i></a>
+                                        <button type="submit" class="btn btn-success">Upload</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>File Input with Callback Event</label>
+                                <div class="input-group fileinput fileinput-new" data-provides="fileinput" id="fileinput-event">
+                                    <div class="form-control" data-trigger="fileinput">
+                                        <i class="icon-file fileinput-exists"></i>
+                                        <span class="fileinput-filename"></span>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="btn btn-default btn-file">
+                                            <span class="fileinput-new">Select file</span>
+                                            <span class="fileinput-exists">Change</span>
+                                            <input type="file" name="fileinput">
+                                        </span>
+                                        <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-secondary" id="clear-btn">Clear</button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -892,8 +1001,30 @@
     <script src="js/jquery-slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
     <script src="js/unity.core.js"></script>
     <script src="js/unity.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+
+			// Reset input on button click
+			$('#clear-btn').click(function () {
+				$('.fileinput').fileinput('clear');
+			});
+
+			// Callback if file is selected
+			$('#fileinput-event').on('change.bs.fileinput', function () {
+				alert('You selected a file');
+			})
+
+			// Callback if file is removed
+			$('#fileinput-event').on('clear.bs.fileinput', function () {
+				alert('You removed a file');
+			})
+
+		});
+	</script>
+
 </body>
 
 </html>

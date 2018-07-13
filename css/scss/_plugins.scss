@@ -359,3 +359,95 @@ ul.nav-scroller-content {
     @include border-radius(50%);
     background: rgba(0, 0, 0, 0.6);
 }
+
+//
+// Custom File Upload Input
+//
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.btn-file>input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 23px;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    direction: ltr;
+}
+
+.fileinput .form-control {
+    display: inline-block;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    cursor: text;
+}
+
+.fileinput .btn {
+    vertical-align: middle;
+}
+
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists {
+    display: none;
+}
+
+.fileinput .close {
+    float: none;
+    margin-left: 0.625rem;
+}
+
+.fileinput .img-thumbnail {
+    text-align: center;
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+}
+
+.fileinput-inline .fileinput-controls {
+    display: inline;
+}
+
+.fileinput-filename {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-left: 0.3125rem;
+}
+
+.fileinput .form-control {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.form-control .fileinput-filename {
+    vertical-align: bottom;
+}
+
+.fileinput.input-group>* {
+    position: relative;
+    z-index: 2;
+}
+
+.fileinput.input-group>.btn-file {
+    z-index: 1;
+}
+
+.fileinput-new.input-group .btn-file,
+.fileinput-new .input-group .btn-file {
+    @include border-radius(0 $button-border-radius $button-border-radius 0 !important)
+}
