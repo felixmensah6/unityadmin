@@ -30,28 +30,31 @@
                     </div>
                     <div class="panel-body">
                         <form method="post" action="">
-                            <p class="text-danger">Invalid Username or Password</p>
+                            <p class="text-danger">
+                                <i class="icon-times-circle mr-1"></i>
+                                Invalid Username or Password
+                            </p>
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Username">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="Password">
                             </div>
-                            <div class="form-row">
+                            <div class="form-row login-forgot">
                                 <div class="form-group col-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">Remember me</label>
-                                    </div>
+                                    <label class="checkbox-inline checkbox-styled">
+                                        <input type="checkbox"> Remember me
+                                        <span class="tick"></span>
+                                    </label>
                                 </div>
                                 <div class="form-group col-6 text-right">
-                                    <a href="#">Forgot password?</a>
+                                    <a href="users-forgot-password.html">Forgot password?</a>
                                 </div>
                             </div>
                             <button type="button" class="btn btn-success btn-block mb-3">Log In</button>
                             <div class="login-box-footer">
                                 Don't have an Account?
-                                <a href="users-login-advance.html">Create an Account.</a>
+                                <a href="users-login.html">Create an Account.</a>
                             </div>
                         </form>
                     </div>
