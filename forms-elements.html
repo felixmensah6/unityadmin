@@ -9,6 +9,7 @@
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/select2/css/select2.css" rel="stylesheet">
     <link href="css/unity.css" rel="stylesheet">
 </head>
 
@@ -1081,6 +1082,105 @@
                     </div>
                 </div>
 
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Custom Select</h6>
+                            <small>Powered by Select2 Custom Select Inputs</small>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Single Select</label>
+                                <select class="form-control select2-single">
+                                    <option></option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Single Select with Option Disabled</label>
+                                <select class="form-control select2-single">
+                                    <option></option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="IL" disabled>Illinois</option>
+                                    <option value="IA" disabled>Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Single Select with Option Groups</label>
+                                <select class="form-control select2-single">
+                                    <option></option>
+                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                                        <option value="AK">Alaska</option>
+                                        <option value="HI">Hawaii</option>
+                                    </optgroup>
+                                    <optgroup label="Pacific Time Zone">
+                                        <option value="CA">California</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="WA">Washington</option>
+                                    </optgroup>
+                                    <optgroup label="Mountain Time Zone">
+                                        <option value="AZ">Arizona</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="WY">Wyoming</option>
+                                    </optgroup>
+                                    <option value="TNOGZ">The No Optgroup Zone</option>
+                                    <option value="TPZ">The Panic Zone</option>
+                                    <option value="TTZ">The Twilight Zone</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Multiple Select with Limitation</label>
+                                <select class="form-control select2-limited" multiple>
+                                    <option></option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Multiple Select</label>
+                                <select class="form-control select2-multiple" multiple>
+                                    <option></option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Disable Search</label>
+                                <select class="form-control select2-nosearch">
+                                    <option>Select a State</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -1104,10 +1204,15 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/holder.min.js"></script>
+    <script src="plugins/select2/js/select2.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
+
+            //
+            // Custom File Input
+            //
 
 			// Reset input on button click
 			$('#clear-btn').click(function () {
@@ -1123,6 +1228,29 @@
 			$('#fileinput-event').on('clear.bs.fileinput', function () {
 				alert('You removed a file');
 			})
+
+            //
+            // Select2 Custom Select
+            //
+
+            $.fn.select2.defaults.set( "theme", "bootstrap" );
+
+    		$(".select2-single, .select2-multiple").select2({
+    			placeholder: "Select a State",
+    			width: null,
+    			containerCssClass: ':all:'
+    		});
+
+    		$('.select2-nosearch').select2({
+    			minimumResultsForSearch: -1
+    		});
+
+            $('.select2-limited').select2({
+                placeholder: 'Select 3 States',
+                width: null,
+                minimumResultsForSearch: -1,
+                maximumSelectionLength: 3
+            });
 
 		});
 	</script>
