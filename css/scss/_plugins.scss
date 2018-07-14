@@ -451,3 +451,140 @@ ul.nav-scroller-content {
 .fileinput-new .input-group .btn-file {
     @include border-radius(0 $button-border-radius $button-border-radius 0 !important)
 }
+
+//
+// CSS Switches
+//
+
+.switch {
+    position: relative;
+    display: inline-block;
+    margin: 2px 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch input+span {
+    width: 54px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 30px;
+    @include transition(background-color 0.4s);
+    position: relative;
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.switch input+span:after {
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    width: 26px;
+    background-color: $default;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    @include transition(transform 0.15s ease-out);
+    position: absolute;
+    content: "";
+}
+
+.switch input:focus+span {
+    /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);*/
+}
+
+.switch input:checked+span {
+    background-color: #ddd;
+}
+
+.switch input:checked+span:after {
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+    @include transform(translateX(23px));
+}
+
+.switch input:disabled+span {
+    opacity: 0.4;
+}
+
+.switch input:disabled+span:after {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.switch.switch-sm {
+    margin: 8px 0 7px;
+    font-size: 12px;
+}
+
+.switch.switch-sm input+span {
+    width: 36px;
+    height: 20px;
+}
+
+.switch.switch-sm input+span:after {
+    width: 16px;
+}
+
+.switch.switch-sm input:checked+span:after {
+    @include transform(translateX(15px));
+}
+
+.switch.switch-md input+span {
+    width: 50px;
+    height: 26px;
+}
+
+.switch.switch-md input+span:after {
+    width: 22px;
+}
+
+.switch.switch-lg {
+    margin: 1px 0;
+}
+
+.switch.switch-lg input+span {
+    width: 70px;
+    height: 34px;
+}
+
+.switch.switch-lg input+span:after {
+    width: 30px;
+}
+
+.switch.switch-lg input:checked+span:after {
+    @include transform(translateX(35px));
+}
+
+.switch.switch-square input+span,
+.switch.switch-square input+span:after {
+    @include border-radius(0);
+}
+
+.switch-default input:checked+span {
+    background-color: $secondary;
+}
+
+.switch-primary input:checked+span {
+    background-color: $primary;
+}
+
+.switch-info input:checked+span {
+    background-color: $info;
+}
+
+.switch-success input:checked+span {
+    background-color: $success;
+}
+
+.switch-warning input:checked+span {
+    background-color: $warning;
+}
+
+.switch-danger input:checked+span {
+    background-color: $danger;
+}
