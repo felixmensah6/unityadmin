@@ -996,6 +996,16 @@ select.form-control:not([size]):not([multiple]) {
     @include border-radius($form-input-border-radius);
 }
 
+label, legend {
+    font-weight: $form-label-weight;
+    color: $form-label-color;
+}
+
+.form-check-label {
+    font-weight: 400;
+    color: inherit;
+}
+
 //
 // Medium devices (tablets, 768px and up)
 //

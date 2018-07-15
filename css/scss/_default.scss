@@ -13,6 +13,7 @@ body {
 	background: $body-bg;
 	color: $body-color;
 	font-size: $body-font-size;
+	overflow-x: hidden;
 
 	&.bg-image {
 		background-image: $body-bg-image;
