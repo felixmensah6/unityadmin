@@ -1337,15 +1337,15 @@ exports.default = PriorityNavScroller;
         this.$fileselect = $(this);
         this.metadata = this.$fileInput.data();
         this.$inputGroup = $('<div>').addClass('input-group');
-        this.$inputGroupBtn = $('<label>').addClass('input-group-btn');
+        this.$inputGroupBtn = $('<label>').addClass('input-group-append');
         this.$browseBtn = $('<span>');
-        this.$labelInput = $('<input>').attr('type', 'text').attr('readonly', true).addClass('form-control');
+        this.$labelInput = $('<input>').attr('type', 'text').attr('readonly', true).addClass('form-control').css('background-color', '#fff');
         this.translations = {
             'en': {
                 'browse': 'Browse',
                 'rules': {
                     'numberOfFiles': 'The number of uploadable files is limited to [num] file(s)',
-                    'fileExtensions': 'The files are restricted to following file extensions: [ext]',
+                    'fileExtensions': 'The files are restricted to the following file extensions: [ext]',
                     'fileSize': 'The file size is limited to [size]',
                 }
             },
@@ -1362,14 +1362,14 @@ exports.default = PriorityNavScroller;
     };
     Fileselect.prototype = {
         defaults: {
-            browseBtnClass: 'btn btn-primary',
+            browseBtnClass: 'btn btn-default',
             browserBtnPosition: 'right',
             limit: false,
             extensions: false,
             allowedFileSize: false,
             allowedFileExtensions: false,
             allowedNumberOfFiles: false,
-            language: false,
+            language: 'en',
             validationCallback: function (message, instance) {
                 alert(message);
             }
@@ -1389,8 +1389,8 @@ exports.default = PriorityNavScroller;
             }
 
             this.$inputGroupBtn
-                    .append(this.$browseBtn)
                     .append(this.$fileInput)
+                    .append(this.$browseBtn)
                     .css('margin-bottom', 0);
 
             this.$browseBtn
