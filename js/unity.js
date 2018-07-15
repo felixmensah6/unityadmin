@@ -67,5 +67,24 @@ $(document).bind('scroll', function() {
 	}
 });
 
+//
+// Show or Hide Password
+//
+
+$(".password-toggle").click(function() {
+    var passwordInput = $('[data-toggle="password"]').closest('input'),
+        toggleIcon = $('.password-toggle'),
+        showIconClass = 'icon-eye-o',
+        hideIconClass = 'icon-eye-slash-o';
+
+    if (passwordInput.attr('type') === 'password') {
+        toggleIcon.removeClass(showIconClass).addClass(hideIconClass).attr('title', 'Hide Password');
+        passwordInput.attr('type', 'text');
+    } else {
+        toggleIcon.removeClass(hideIconClass).addClass(showIconClass).attr('title', 'Show Password');
+        passwordInput.attr('type', 'password');
+    }
+});
+
 
 })();

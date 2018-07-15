@@ -972,6 +972,10 @@ select.form-control:not([size]):not([multiple]) {
     height: auto;
 }
 
+.form-group {
+    position: relative;
+}
+
 .input-group-end {
     width: 100%;
 
@@ -1004,6 +1008,38 @@ label, legend {
 .form-check-label {
     font-weight: 400;
     color: inherit;
+}
+
+[data-toggle="password"] {
+    padding-right: 1.875rem;
+
+    &:hover ~ .password-toggle,
+    &:focus ~ .password-toggle {
+        display: block;
+    }
+
+}
+
+.password-toggle {
+    position: absolute;
+    background: transparent;
+    border: 0;
+    padding: 0 0.25rem;
+    top: 0;
+    right: 0.3125rem;
+    height: 100%;
+    cursor: pointer;
+    display: none;
+    color: rgba(0, 0, 0, 0.6);
+
+    &:hover {
+        display: block;
+    }
+
+    &::before {
+        vertical-align: middle;
+    }
+
 }
 
 //
