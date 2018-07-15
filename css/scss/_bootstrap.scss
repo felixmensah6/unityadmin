@@ -962,7 +962,7 @@
     font-size: $body-font-size;
 
     &:focus {
-        @include box-shadow(none);
+        @include box-shadow($form-input-focus-shadow);
         border-color: $form-input-focus-border-color;
     }
 
