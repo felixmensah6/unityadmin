@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Blank Page - Unity Admin Panel</title>
+    <title>Upload Input - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
                     <ul>
                         <li class="sidebar-nav-group">Forms</li>
                         <li><a href="forms-elements.html"><i class="icon-wpforms"></i> Elements</a></li>
-                        <li><a href="forms-date-time.html"><i class="icon-box"></i> Components</a></li>
+                        <li><a href="forms-components.html" class="active"><i class="icon-box"></i> Components</a></li>
                         <li><a href="forms-validation.html"><i class="icon-check"></i> Validation</a></li>
                         <li><a href="forms-widgets.html"><i class="icon-boxes"></i> Widgets</a></li>
                     </ul>
@@ -101,7 +101,7 @@
                     </ul>
                     <ul>
                         <li class="sidebar-nav-group">Misc</li>
-                        <li><a href="pages-blank.html" class="active"><i class="icon-file"></i> Blank Page</a></li>
+                        <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
                         <li><a href="pages-maintenance.html"><i class="icon-wrench"></i> Maintenance</a></li>
                         <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
                         <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
@@ -176,7 +176,7 @@
             <!-- Page Header -->
             <div class="page-header">
                 <div class="page-title">
-                    <h5>Blank Page</h5>
+                    <h5>Upload Input</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link"><i class="icon-question-circle"></i></a>
@@ -191,10 +191,60 @@
                         </div>
                     </div>
                 </div>
+                <div class="nav-scroller" id="page-nav">
+                    <nav class="nav-scroller-nav">
+                        <div class="nav-scroller-content">
+                            <a href="forms-date-time.html" class="nav-scroller-item">Date & Time</a>
+                            <a href="forms-number-input.html" class="nav-scroller-item">Number Input</a>
+                            <a href="forms-upload-input.html" class="nav-scroller-item active">Upload Input</a>
+                            <a href="forms-range-slider.html" class="nav-scroller-item">Range Slider</a>
+                            <a href="forms-color-picker.html" class="nav-scroller-item">Color Picker</a>
+                            <a href="forms-input-mask.html" class="nav-scroller-item">Input Mask</a>
+                            <a href="forms-multi-select.html" class="nav-scroller-item">Multi Select</a>
+                            <a href="forms-select-list.html" class="nav-scroller-item">Select List</a>
+                        </div>
+                    </nav>
+                    <button class="nav-scroller-btn nav-scroller-btn-left" aria-label="Scroll left">
+                        <i class="icon-chevron-left"></i>
+                    </button>
+                    <button class="nav-scroller-btn nav-scroller-btn-right" aria-label="Scroll right">
+                        <i class="icon-chevron-right"></i>
+                    </button>
+                    <div class="nav-scroller-border"></div>
+                </div>
             </div>
 
             <!-- Content -->
-            <div class="content">
+            <div class="content boxed">
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Default Panel</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label class="d-block">Basic</label>
+                                <input id="example1" type="file" name="demo" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Default Panel</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        ...
+                    </div>
+                </div>
 
             </div>
 
@@ -215,11 +265,14 @@
     </div>
 
     <!-- Javascript -->
-    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+        $('#example1').fileselect();
+    </script>
 </body>
 
 </html>
