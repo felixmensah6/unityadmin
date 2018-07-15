@@ -425,7 +425,11 @@
                             <div class="form-group row">
                                 <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                    <div class="position-relative">
+                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" data-toggle="password">
+                                        <button type="button" class="password-toggle icon-eye-o" title="Show Password"></button>
+                                    </div>
+                                    <small class="form-text text-muted">Show/Hide Password icon visible on :hover or :focus</small>
                                 </div>
                             </div>
                             <fieldset class="form-group">

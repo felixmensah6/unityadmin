@@ -29,10 +29,11 @@ $sidebarCont.optiscroll('scrollIntoView', $element, 'auto', $sidebarHeight);
 function showActiveNav(){
     if($("#page-nav").hasClass("nav-scroller")) {
         var activeElem = $('.nav-scroller-content .active'),
-            activeElemoffSet = activeElem.offset(),
-            activeElemelemWidth = activeElem.outerWidth(),
-            activeElemelemPosition = activeElemoffSet.left - activeElemelemWidth;
-        $('.nav-scroller-nav').animate({scrollLeft: activeElemelemPosition}, 1000);
+            activeElemoffSet = activeElem.position(),
+            totalElementPadding = 50,
+            currentPosition = activeElemoffSet + totalElementPadding;
+
+        $('.nav-scroller-nav').animate({scrollLeft: activeElemoffSet.left-48}, 1000);
     }
 }
 
