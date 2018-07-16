@@ -590,3 +590,38 @@ ul.nav-scroller-content {
 .switch-danger input:checked+span {
     background-color: $danger;
 }
+
+//
+// jQuery Number Spinner
+//
+
+.spinner .spin-up,
+.spinner .spin-down {
+	height: 1.09375rem;
+    width: 0.625rem;
+    overflow: hidden;
+    display: block;
+    font-size: 0.6875rem;
+	position: relative;
+}
+
+.spinner .spin-up i,
+.spinner .spin-down i {
+    position: absolute;
+    display: inline-block;
+    top: 0.25rem;
+    left: 0.4375rem;
+}
+
+.spinner .spin-up {
+	@include border-radius(0 0.125rem 0 0 !important);
+    border-bottom: 0;
+}
+
+.spinner .spin-down {
+    margin-left: 0px !important;
+    @include border-radius(0 0 0.125rem 0 !important);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

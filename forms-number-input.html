@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Date & Time Picker - Unity Admin Panel</title>
+    <title>Number Input - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -176,7 +176,7 @@
             <!-- Page Header -->
             <div class="page-header">
                 <div class="page-title">
-                    <h5>Date & Time Picker</h5>
+                    <h5>Number Input</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link"><i class="icon-question-circle"></i></a>
@@ -194,9 +194,9 @@
                 <div class="nav-scroller" id="page-nav">
                     <nav class="nav-scroller-nav">
                         <div class="nav-scroller-content">
-                            <a href="forms-date-time.html" class="nav-scroller-item active">Date & Time</a>
+                            <a href="forms-date-time.html" class="nav-scroller-item">Date & Time</a>
                             <a href="forms-date-range.html" class="nav-scroller-item">Date Range</a>
-                            <a href="forms-number-input.html" class="nav-scroller-item">Number Input</a>
+                            <a href="forms-number-input.html" class="nav-scroller-item active">Number Input</a>
                             <a href="forms-upload-input.html" class="nav-scroller-item">Upload Input</a>
                             <a href="forms-range-slider.html" class="nav-scroller-item">Range Slider</a>
                             <a href="forms-color-picker.html" class="nav-scroller-item">Color Picker</a>
@@ -217,6 +217,305 @@
 
             <!-- Content -->
             <div class="content boxed">
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Examples</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="quantity">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Currency</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="currency">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default" data-spin="up">Up</button>
+                                        <button class="btn btn-default" data-spin="down">Down</button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Decimal</label>
+                                <div class="input-group spinner currency-cedi" data-trigger="spinner">
+                                    <input type="text" class="form-control" value="1.0000" data-rule="decimal">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Percent</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="percent">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default" data-spin="up"><i class="icon-arrow-up"></i></button>
+                                        <button class="btn btn-default" data-spin="down"><i class="icon-arrow-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Month</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="month">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default" data-spin="up"><i class="icon-angle-double-up"></i></button>
+                                        <button class="btn btn-default" data-spin="down"><i class="icon-angle-double-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Day</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="day">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Hour</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="hour">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default" data-spin="up"><i class="icon-angle-up"></i></button>
+                                        <button class="btn btn-default" data-spin="down"><i class="icon-angle-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                               <label>Minute</label>
+                               <div class="input-group spinner" data-trigger="spinner">
+                                   <input type="text" class="form-control" value="1" data-rule="minute">
+                                   <span class="input-group-append">
+                                       <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                       <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                   </span>
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <label>Second</label>
+                               <div class="input-group spinner" data-trigger="spinner">
+                                   <input type="text" class="form-control" value="1" data-rule="second">
+                                   <span class="input-group-append">
+                                       <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                       <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                   </span>
+                               </div>
+                           </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Customize</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Maximum</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" data-max="200" data-min="0">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                                <small class="form-text text-muted">Set maximum value: <code>data-max="200"</code></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Minimum</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" data-min="-10">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                                <small class="form-text text-muted">Set minimum value: <code>data-min="-10"</code></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Steps</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <input type="text" class="form-control" data-min="0" data-max="20" data-step="2">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                                <small class="form-text text-muted">Set number of steps to jump: <code>data-step="2"</code></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Prefix</label>
+                                <div class="input-group spinner" data-trigger="spinner">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">GHS</span>
+                                    </div>
+                                    <input type="text" class="form-control" data-rule="currency" data-step="0.50">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                 <label>Prostfix</label>
+                                 <div class="input-group spinner" data-trigger="spinner">
+                                     <input type="text" class="form-control br-0" value="0" data-min="-100" data-step="1" data-max="100">
+                                     <span class="input-group-append">
+                                         <span class="input-group-text">&deg;c</span>
+                                         <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                         <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                     </span>
+                                 </div>
+                             </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Spinner Callback Event</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <div class="input-group spinner" data-trigger="spinner" id="spinner1">
+                                    <input type="text" class="form-control" value="1" data-rule="quantity">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <div class="input-group spinner" data-trigger="spinner" id="spinner2">
+                                    <input type="text" class="form-control" value="1" data-rule="quantity">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Logs</label>
+                                <pre id="logs" style="height:150px; overflow:auto;"></pre>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Number Spinner + Number Format</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Quantity + Default Format</label>
+                                <div class="input-group spinner" data-trigger="spinner" id="quantity-spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="quantity" id="quantity">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                                <pre class="mt-3" id="quantity-output">Output:</pre>
+                            </div>
+                            <div class="form-group">
+                                <label>Currency + 2 Decimal Places</label>
+                                <div class="input-group spinner" data-trigger="spinner" id="currency-spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="currency" id="currency">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                                <pre class="mt-3" id="currency-output">Output:</pre>
+                            </div>
+                            <div class="form-group">
+                                <label>Currency + 4 Decimal Places</label>
+                                <div class="input-group spinner" data-trigger="spinner" id="decimal-spinner">
+                                    <input type="text" class="form-control" value="1" data-rule="decimal" id="decimal">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-default spin-up" data-spin="up"><i class="icon-chevron-up"></i></button>
+                                        <button class="btn btn-default spin-down" data-spin="down"><i class="icon-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                                <pre class="mt-3" id="decimal-output">Output:</pre>
+                            </div>
+                            <div class="form-group">
+                                <label>Custom Decimal Separator</label>
+                                <input type="text" class="form-control" value="1" id="decimal-seperator">
+                                <pre class="mt-3" id="decimal-seperator-output">Output:</pre>
+                            </div>
+                            <div class="form-group">
+                                <label>Custom Thousand Separator</label>
+                                <input type="text" class="form-control" value="1" id="thousand-seperator">
+                                <pre class="mt-3" id="thousand-seperator-output">Output:</pre>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Number Format</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Default Format</label>
+                                <pre class="mt-3">// $('#log1').number(5020.2364); <br>Output: <span id="log1"></span></pre>
+                            </div>
+                            <div class="form-group">
+                                <label>Decimal Places Format</label>
+                                <pre class="mt-3">// $('#log2').number(5020.2364, 2); <br>Output: <span id="log2"></span></pre>
+                            </div>
+                            <div class="form-group">
+                                <label>Decimal Seperator Format</label>
+                                <pre class="mt-3">// $('#log3').number(5020.2364, 3, ','); <br>Output: <span id="log3"></span></pre>
+                            </div>
+                            <div class="form-group">
+                                <label>Thousand Seperator Format</label>
+                                <pre class="mt-3">// $('#log4').number(5020.2364, 1, ',', ' '); <br>Output: <span id="log4"></span></pre>
+                            </div>
+                            <div class="form-group">
+                                <label>Auto Read, Format & Replace Content</label>
+                                <pre class="mt-3">// &#8249;span id="log5"&#8250;5020.2364&#8249;/span&#8250; <br>Output: <span id="log5">5020.2364</span></pre>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
             </div>
 
@@ -242,6 +541,99 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+		var log = $("#logs");
+
+		// Spinner Callback
+		$("#spinner1")
+			.spinner('delay', 200) //delay in ms
+			.spinner('changed', function(e, newVal, oldVal) {
+
+				log.prepend("Changed New Value: " + newVal + "<br>");
+
+			})
+			.spinner('changing', function(e, newVal, oldVal) {
+
+				log.prepend("Changing Old Value: " + oldVal + "<br>");
+
+			}
+		);
+
+		$("#spinner2").spinner({step: function(dir) {
+			// 'this' references to the spinner object
+			log.prepend("Old Value: " + this.oldValue + "<br>");
+
+			if ((this.oldValue === 1 && dir === 'down') || (this.oldValue === -1 && dir === 'up')) {
+
+				log.prepend("Step '" + dir + "' limit reached<br>");
+
+			}
+			return 1;
+		  }
+		});
+
+
+		/*
+		* Formatting Form Inputs
+		*/
+
+		// Default Format
+		$('#quantity').number(true);
+
+		$('#quantity-spinner').spinner('changing', function(e, newVal, oldVal) {
+
+				$('#quantity-output').text("Output: " + $(this,'input').val());
+
+		});
+
+		// 2 Decimal Places Format
+		$('#currency').number(true, 2);
+
+		$('#currency-spinner').spinner('changing', function(e, newVal, oldVal) {
+
+				$('#currency-output').text("Output: " + $(this,'input').val());
+
+		});
+
+		// 4 Decimal Places Format
+		$('#decimal').number(true, 4);
+
+		$('#decimal-spinner').spinner('changing', function(e, newVal, oldVal) {
+
+				$('#decimal-output').text("Output: " + $(this,'input').val());
+
+		});
+
+		// Custom Decimal Seperator Format
+		$('#decimal-seperator').number(true, 2, ',');
+
+		$('#decimal-seperator').on('input', function() {
+
+				$('#decimal-seperator-output').text("Output: " + $(this).val());
+
+		});
+
+		// Custom Thousand Seperator Format
+		$('#thousand-seperator').number(true, 0, '.', ' ');
+
+		$('#thousand-seperator').on('input', function() {
+
+				$('#thousand-seperator-output').text("Output: " + $(this).val());
+
+		});
+
+		// Read Number and Output Seperately
+		$('#log1').number(5020.2364);
+		$('#log2').number(5020.2364, 2);
+		$('#log3').number(5020.2364, 3, ',');
+		$('#log4').number(5020.2364, 1, ',', ' ');
+
+		// Read & Replace
+		$('#log5').number(true, 2);
+
+
+    </script>
 </body>
 
 </html>

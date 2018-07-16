@@ -995,12 +995,16 @@ select.form-control:not([size]):not([multiple]) {
 
 }
 
+.input-group-append {
+    position: relative;
+}
+
 .input-group-text {
     font-size: $body-font-size;
     @include border-radius($form-input-border-radius);
 
     i {
-        margin: 0.25rem 0 0 0;    
+        margin: 0.25rem 0 0 0;
     }
 
 }
@@ -1045,6 +1049,24 @@ label, legend {
         vertical-align: middle;
     }
 
+}
+
+//
+// Typography
+//
+
+pre {
+    display: block;
+    padding: 0.59375rem;
+    //margin: 0 0 10px;
+    font-size: 0.8125rem;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    @include border-radius(0.25rem);
 }
 
 //
