@@ -240,6 +240,10 @@
                                         <input id="example2" type="file" name="demo" multiple/>
                                     </div>
                                     <div class="form-group">
+                                        <label class="d-block">Custom Button Text</label>
+                                        <input id="example8" type="file" name="demo" />
+                                    </div>
+                                    <div class="form-group">
                                         <label class="d-block">Validation</label>
                                         <input id="example3" type="file" name="demo" multiple/>
                                         <small class="form-text text-muted">
@@ -419,7 +423,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/holder.min.js"></script>
-    <script src="js/unity.core.min.js"></script>
+    <script src="js/unity.core.js"></script>
     <script src="js/unity.js"></script>
     <script>
 
@@ -429,6 +433,11 @@
 
         // Basic & Multiple
         $('#example1, #example2').fileselect();
+
+        // Custom Button Text
+        $('#example8').fileselect({
+            browseBtnText: 'Select File'
+        });
 
         // Validation
         $('#example3').fileselect({

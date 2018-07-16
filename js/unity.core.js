@@ -1363,6 +1363,7 @@ exports.default = PriorityNavScroller;
     Fileselect.prototype = {
         defaults: {
             browseBtnClass: 'btn btn-default',
+            browseBtnText: '',
             browserBtnPosition: 'right',
             limit: false,
             extensions: false,
@@ -1395,7 +1396,7 @@ exports.default = PriorityNavScroller;
 
             this.$browseBtn
                     .addClass(this.config.browseBtnClass)
-                    .text(this.translations.browse);
+                    .text((this.config.browseBtnText === '') ? this.translations.browse : this.config.browseBtnText);
 
             this.$fileInput.on('change', $.proxy(this.changeEvent, this));
 
