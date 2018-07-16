@@ -9,6 +9,7 @@
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/datetimepicker/css/datetimepicker.min.css" rel="stylesheet">
     <link href="css/unity.css" rel="stylesheet">
 </head>
 
@@ -218,6 +219,430 @@
             <!-- Content -->
             <div class="content boxed">
 
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-xl-6">
+                        <!-- Panel -->
+                        <div class="panel panel-default bordered">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h6>Date & Time Picker</h6>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Minimum Setup</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time Only</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date Only</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker3">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Enabled/Disabled Dates</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker5">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-6">
+                                            <label>Linked (Start)</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="datetimepicker6">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label>Linked (End)</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="datetimepicker7">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Custom Icons</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker8">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>View Mode</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker9">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Min View Mode</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker10">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>View Mode - Days</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker9_1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>View Mode - Months</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker9_2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>View Mode - Years</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker9_3">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Disabled Days of the Week</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="datetimepicker11">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Inline</label>
+                                        <div id="datetimepicker12"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <!-- Panel -->
+                        <div class="panel panel-default bordered">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h6>Date & Time Format</h6>
+                                </div>
+                            </div>
+                            <div class="panel-body p-0">
+                                <table class="table table-sm table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th width="40%"></th>
+                                            <th width="10%">Token</th>
+                                            <th width="50%">Output</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Month</td>
+                                            <td>M</td>
+                                            <td>1 2 ... 11 12</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Mo</td>
+                                            <td>1st 2nd ... 11th 12th</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>MM</td>
+                                            <td>01 02 ... 11 12</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>MMM</td>
+                                            <td>Jan Feb ... Nov Dec</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>MMMM</td>
+                                            <td>January February ... November December</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quarter</td>
+                                            <td>Q</td>
+                                            <td>1 2 3 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Day of Month</td>
+                                            <td>D</td>
+                                            <td>1 2 ... 30 31</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Do</td>
+                                            <td>1st 2nd ... 30th 31st</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>DD</td>
+                                            <td>01 02 ... 30 31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Day of Year</td>
+                                            <td>DDD</td>
+                                            <td>1 2 ... 364 365</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>DDDo</td>
+                                            <td>1st 2nd ... 364th 365th</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>DDDD</td>
+                                            <td>001 002 ... 364 365</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Day of Week</td>
+                                            <td>d</td>
+                                            <td>0 1 ... 5 6</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>do</td>
+                                            <td>0th 1st ... 5th 6th</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>dd</td>
+                                            <td>Su Mo ... Fr Sa</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>ddd</td>
+                                            <td>Sun Mon ... Fri Sat</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>dddd</td>
+                                            <td>Sunday Monday ... Friday Saturday</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Day of Week (Locale)</td>
+                                            <td>e</td>
+                                            <td>0 1 ... 5 6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Day of Week (ISO)</td>
+                                            <td>E</td>
+                                            <td>1 2 ... 6 7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Week of Year</td>
+                                            <td>w</td>
+                                            <td>1 2 ... 52 53</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>wo</td>
+                                            <td>1st 2nd ... 52nd 53rd</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>ww</td>
+                                            <td>01 02 ... 52 53</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Week of Year (ISO)</td>
+                                            <td>W</td>
+                                            <td>1 2 ... 52 53</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Wo</td>
+                                            <td>1st 2nd ... 52nd 53rd</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>WW</td>
+                                            <td>01 02 ... 52 53</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Year</td>
+                                            <td>YY</td>
+                                            <td>70 71 ... 29 30</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>YYYY</td>
+                                            <td>1970 1971 ... 2029 2030</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Week Year</td>
+                                            <td>gg</td>
+                                            <td>70 71 ... 29 30</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>gggg</td>
+                                            <td>1970 1971 ... 2029 2030</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Week Year (ISO)</td>
+                                            <td>GG</td>
+                                            <td>70 71 ... 29 30</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>GGGG</td>
+                                            <td>1970 1971 ... 2029 2030</td>
+                                        </tr>
+                                        <tr>
+                                            <td>AM/PM</td>
+                                            <td>A</td>
+                                            <td>AM PM</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>a</td>
+                                            <td>am pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hour</td>
+                                            <td>H</td>
+                                            <td>0 1 ... 22 23</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>HH</td>
+                                            <td>00 01 ... 22 23</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>h</td>
+                                            <td>1 2 ... 11 12</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>hh</td>
+                                            <td>01 02 ... 11 12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Minute</td>
+                                            <td>m</td>
+                                            <td>0 1 ... 58 59</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>mm</td>
+                                            <td>00 01 ... 58 59</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second</td>
+                                            <td>s</td>
+                                            <td>0 1 ... 58 59</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>ss</td>
+                                            <td>00 01 ... 58 59</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fractional Second</td>
+                                            <td>S</td>
+                                            <td>0 1 ... 8 9</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>SS</td>
+                                            <td>0 1 ... 98 99</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>SSS</td>
+                                            <td>0 1 ... 998 999</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Timezone</td>
+                                            <td>z or zz</td>
+                                            <td>EST CST ... MST PST </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Z</td>
+                                            <td>-07:00 -06:00 ... +06:00 +07:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>ZZ</td>
+                                            <td>-0700 -0600 ... +0600 +0700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Unix Timestamp</td>
+                                            <td>X</td>
+                                            <td>1360013296</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Unix Millisecond Timestamp</td>
+                                            <td>x</td>
+                                            <td>1360013296123</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Time</td>
+                                            <td>LT</td>
+                                            <td>8:30 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Time with seconds</td>
+                                            <td>LTS</td>
+                                            <td>8:30:25 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Month numeral, day of month, year</td>
+                                            <td>L</td>
+                                            <td>09/04/1986</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>l</td>
+                                            <td>9/4/1986</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Month name, day of month, year</td>
+                                            <td>LL</td>
+                                            <td>September 4 1986</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>ll</td>
+                                            <td>Sep 4 1986</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Month name, day of month, year, time</td>
+                                            <td>LLL</td>
+                                            <td>September 4 1986 8:30 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>lll</td>
+                                            <td>Sep 4 1986 8:30 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Month name, day of month, day of week, year, time</td>
+                                            <td>LLLL</td>
+                                            <td>Thursday, September 4 1986 8:30 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>llll</td>
+                                            <td>Thu, Sep 4 1986 8:30 PM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -240,8 +665,108 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/moment/js/moment.min.js"></script>
+    <script src="plugins/datetimepicker/js/datetimepicker.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            // Minimum Setup
+            $('#datetimepicker1').datetimepicker();
+
+            // Time Only
+			$('#datetimepicker2').datetimepicker({
+				format: 'LT'
+			});
+
+			// Date Only
+			$('#datetimepicker3').datetimepicker({
+				format: 'L'
+			});
+
+			// Enabled/Disabled Dates
+			$('#datetimepicker5').datetimepicker({
+				defaultDate: "11/1/2013",
+				disabledDates: [
+					moment("12/25/2013"),
+					new Date(2013, 11 - 1, 21),
+					"11/22/2013 00:53"
+				]
+			});
+
+			// Linked Pickers
+			$('#datetimepicker6').datetimepicker();
+			$('#datetimepicker7').datetimepicker({
+				useCurrent: false //Important!
+			});
+			$("#datetimepicker6").on("dp.change", function (e) {
+				$('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+			});
+			$("#datetimepicker7").on("dp.change", function (e) {
+				$('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+			});
+
+			// Custom Icons
+            $('#datetimepicker8').datetimepicker({
+                icons: {
+                    time: "icon-clock",
+                    date: "icon-calendar",
+                    up: "icon-chevron-circle-up",
+                    down: "icon-chevron-circle-down",
+                    previous: "icon-chevron-circle-left",
+                    next: "icon-chevron-circle-right"
+                }
+            });
+
+			// View Mode
+            $('#datetimepicker9').datetimepicker({
+                viewMode: 'years'
+            });
+
+			// View Mode - Days
+            $('#datetimepicker9_1').datetimepicker({
+                viewMode: 'days',
+				format: 'DD',
+				dayViewHeaderFormat: 'YYYY',
+				showTodayButton: true,
+				showClear: true,
+				showClose: true
+            });
+
+			// View Mode - Months
+            $('#datetimepicker9_2').datetimepicker({
+                viewMode: 'months',
+				format: 'MM'
+            });
+
+			// View Mode - Years
+            $('#datetimepicker9_3').datetimepicker({
+                viewMode: 'years',
+				format: 'YYYY'
+            });
+
+			// Min View Mode
+            $('#datetimepicker10').datetimepicker({
+                viewMode: 'years',
+                format: 'MM/YYYY'
+            });
+
+			// Disabled Days of the Week
+            $('#datetimepicker11').datetimepicker({
+                daysOfWeekDisabled: [0, 6]
+            });
+
+            // Inline
+            $('#datetimepicker12').datetimepicker({
+                inline: true,
+                sideBySide: true
+            });
+
+        });
+
+    </script>
 </body>
 
 </html>

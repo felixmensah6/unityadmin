@@ -998,6 +998,11 @@ select.form-control:not([size]):not([multiple]) {
 .input-group-text {
     font-size: $body-font-size;
     @include border-radius($form-input-border-radius);
+
+    i {
+        margin: 0.25rem 0 0 0;    
+    }
+
 }
 
 label, legend {
