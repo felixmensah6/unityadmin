@@ -1019,34 +1019,49 @@ label, legend {
     color: inherit;
 }
 
-[data-toggle="password"] {
-    padding-right: 1.875rem;
+.form-icon-addon {
+    position: relative;
 
-    &:hover ~ .password-toggle,
-    &:focus ~ .password-toggle {
+    .form-icon,
+    .form-icon-only {
+        position: absolute;
+        background: transparent;
+        border: 0;
+        padding: 0 0.25rem;
+        top: 0;
+        right: 0.3125rem;
+        height: 100%;
+        cursor: pointer;
+        display: block;
+        color: $form-icon-color;
+
+        &::before {
+            vertical-align: middle;
+        }
+
+    }
+
+    .form-icon-only {
+        top: 28%;
+        cursor: default;
+    }
+
+    .form-control {
+        padding-right: 1.875rem;
+    }
+
+    [data-toggle="password"]:hover ~ .password-toggle,
+    [data-toggle="password"]:focus ~ .password-toggle {
         display: block;
     }
 
-}
+    .password-toggle {
+        display: none;
 
-.password-toggle {
-    position: absolute;
-    background: transparent;
-    border: 0;
-    padding: 0 0.25rem;
-    top: 0;
-    right: 0.3125rem;
-    height: 100%;
-    cursor: pointer;
-    display: none;
-    color: rgba(0, 0, 0, 0.6);
+        &:hover {
+            display: block;
+        }
 
-    &:hover {
-        display: block;
-    }
-
-    &::before {
-        vertical-align: middle;
     }
 
 }

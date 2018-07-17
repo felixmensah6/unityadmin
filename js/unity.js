@@ -74,7 +74,7 @@ $(document).bind('scroll', function() {
 
 $(".password-toggle").click(function() {
     var passwordInput = $('[data-toggle="password"]').closest('input'),
-        toggleIcon = $('.password-toggle'),
+        toggleIcon = $('.password-toggle i'),
         showIconClass = 'icon-eye-o',
         hideIconClass = 'icon-eye-slash-o';
 

@@ -417,17 +417,35 @@
                     <div class="panel-body">
                         <form>
                             <div class="form-group row">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                <label class="col-sm-2 col-form-label">Username</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                    <div class="form-icon-addon">
+                                        <input type="text" class="form-control" placeholder="Username">
+                                        <button type="button" class="form-icon">
+                                            <i class="icon-user"></i>
+                                        </button>
+                                    </div>
+                                    <small class="form-text text-muted">Input with a clickable button/icon</small>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                <label class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <div class="position-relative">
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" data-toggle="password">
-                                        <button type="button" class="password-toggle icon-eye-o" title="Show Password"></button>
+                                    <div class="form-icon-addon">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                        <i class="form-icon-only icon-envelope"></i>
+                                    </div>
+                                    <small class="form-text text-muted">Input with just an icon</small>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <div class="form-icon-addon">
+                                        <input type="password" class="form-control" placeholder="Password" data-toggle="password">
+                                        <button type="button" class="password-toggle form-icon" title="Show Password">
+                                            <i class="icon-eye-o"></i>
+                                        </button>
                                     </div>
                                     <small class="form-text text-muted">Show/Hide Password icon visible on :hover or :focus</small>
                                 </div>
