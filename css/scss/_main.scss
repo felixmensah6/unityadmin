@@ -323,7 +323,7 @@
 // Small devices (landscape phones, 576px and up)
 //
 
-@media (min-width: 576px) {
+@media (min-width: $viewport-sm) {
 
     .content.boxed {
         padding: 2rem;
@@ -344,7 +344,7 @@
 // Medium devices (tablets, 768px and up)
 //
 
-@media (min-width: 768px) {
+@media (min-width: $viewport-md) {
 
     .main {
         margin-left: $sidebar-width;
