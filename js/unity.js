@@ -87,5 +87,15 @@ $(".password-toggle").click(function() {
     }
 });
 
+//
+// Masonry
+//
+
+$('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-item',
+      percentPosition: true
+});
+
 
 })();
