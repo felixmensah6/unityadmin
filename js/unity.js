@@ -57,9 +57,10 @@ $(document).bind('scroll', function() {
         $pageHeader = $(".page-header"),
         $pageHeaderHeight = $pageHeader.height(),
         $navbarHeight = $(".navbar").height(),
+        $pageTitleHeight = $(".page-title").height(),
         $contentDiv = $(".content"),
         $pageNav = $("#page-nav");
-	if($pageNav.hasClass("nav-scroller") && $scrollPosition > 50) {
+	if($pageNav.hasClass("nav-scroller") && $scrollPosition > $pageTitleHeight) {
 		$pageHeader.addClass("fixed-header");
         $contentDiv.css({'margin-top' : ($pageHeaderHeight + $navbarHeight) + 'px'});
 	}else{
@@ -101,7 +102,9 @@ $('.grid').masonry({
 // Tooltip
 //
 
-$('[data-toggle="tooltip"]').tooltip();
+$('[data-toggle="tooltip"]').tooltip({
+    container: '.wrapper'
+});
 
 
 

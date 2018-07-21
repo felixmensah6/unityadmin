@@ -76,10 +76,13 @@
 
     .page-header-link {
         padding: 0 1.5rem 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .link {
             color: $page-header-link;
-            padding: 0.9375rem 0.3125rem 0 0.3125rem;
+            padding: 0.625rem;
             display: inline-block;
         }
 
