@@ -1776,7 +1776,6 @@ exports.default = PriorityNavScroller;
   return $.fn.spinner;
 });
 
-
 //
 // jQuery Number Format
 //

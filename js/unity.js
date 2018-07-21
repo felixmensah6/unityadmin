@@ -97,5 +97,12 @@ $('.grid').masonry({
       percentPosition: true
 });
 
+//
+// Tooltip
+//
+
+$('[data-toggle="tooltip"]').tooltip();
+
+
 
 })();
