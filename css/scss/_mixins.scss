@@ -1,3 +1,7 @@
+//
+// CSS Properties
+//
+
 // Border Radius
 @mixin border-radius($radius...) {
 	-webkit-border-radius: $radius;
@@ -73,4 +77,116 @@
     @keyframes #{$animationName} {
         @content;
     }
+}
+
+//
+// CSS Predefined Classes
+//
+
+// Bootstrap Button
+@mixin btn($name, $bg, $border, $hover-ratio, $border-ratio, $custom-color: '') {
+
+	$color: '';
+	@if ($custom-color == '') {
+		$color: text-contrast($bg);
+	} @else {
+		$color: $custom-color;
+	}
+
+	.btn-#{$name} {
+	    color: $color;
+	    background-color: $bg;
+	    border-color: darken($border, $border-ratio);
+	}
+
+	.btn-#{$name}:hover,
+	.btn-#{$name}:focus {
+	    color: $color;
+	    background-color: darken($bg, $hover-ratio);
+	    border-color: darken($border, if($name == 'default', $border-ratio, $hover-ratio));
+	}
+
+	.btn-#{$name}.disabled,
+	.btn-#{$name}:disabled {
+		color: $color;
+	    background-color: $bg;
+	    border-color: darken($border, $border-ratio);
+	}
+
+	.btn-#{$name}:not(:disabled):not(.disabled).active,
+	.btn-#{$name}:not(:disabled):not(.disabled):active,
+	.show > .btn-#{$name}.dropdown-toggle {
+		color: $color;
+	    background-color: darken($bg, $hover-ratio);
+	    border-color: darken($border, if($name == 'default', $border-ratio, $hover-ratio));
+	}
+
+}
+
+// Bootstrap Outline Button
+@mixin btn-outline($name, $bg, $custom-color: '') {
+
+	$color: '';
+	@if ($custom-color == '') {
+		$color: text-contrast($bg);
+	} @else {
+		$color: $custom-color;
+	}
+
+	.btn-outline-#{$name} {
+	    color: $bg;
+	    background-color: transparent;
+	    border-color: $bg;
+	}
+	.btn-outline-#{$name}:hover,
+	.btn-outline-#{$name}:focus {
+	    color: $color;
+	    background-color: $bg;
+	    border-color: $bg;
+	}
+
+	.btn-outline-#{$name}.disabled,
+	.btn-outline-#{$name}:disabled {
+	    color: $bg;
+	    background-color: transparent;
+	}
+
+	.btn-outline-#{$name}:not(:disabled):not(.disabled).active,
+	.btn-outline-#{$name}:not(:disabled):not(.disabled):active,
+	.show > .btn-outline-#{$name}.dropdown-toggle {
+		color: $color;
+	    background-color: $bg;
+	    border-color: $bg;
+	}
+
+}
+
+// Lighter Button
+@mixin btn-lighter($name, $bg, $color-percentage, $hover-percentage) {
+
+	.btn-light-#{$name} {
+	    color: darken($bg, $color-percentage);
+	    background-color: $bg;
+	    border-color: $bg;
+	}
+
+	.btn-light-#{$name}:hover,
+	.btn-light-#{$name}:focus {
+	    background-color: darken($bg, $hover-percentage);
+	    border-color: darken($bg, $hover-percentage);
+	}
+
+	.btn-light-#{$name}.disabled,
+	.btn-light-#{$name}:disabled {
+	    background-color: $bg;
+	    border-color: $bg;
+	}
+
+	.btn-light-#{$name}:not(:disabled):not(.disabled).active,
+	.btn-light-#{$name}:not(:disabled):not(.disabled):active,
+	.show > .btn-#{$name}.dropdown-toggle {
+	    background-color: darken($bg, $hover-percentage);
+	    border-color: darken($bg, $hover-percentage);
+	}
+
 }

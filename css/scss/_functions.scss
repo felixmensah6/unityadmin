@@ -1,0 +1,19 @@
+// Returns black for dark text and white for light text.
+@function text-contrast($color, $custom-color: '') {
+
+    $color-brightness: round((red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000);
+    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+
+    @if ($custom-color == '') {
+
+        @if (abs($color-brightness) < ($light-color/2)) {
+            @return white;
+        } @else {
+            @return black;
+        }
+
+    } @else {
+        @return $custom-color;
+    }
+
+}
