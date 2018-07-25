@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Panels - Unity Admin Panel</title>
+    <title>Tooltips & Popovers - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                     <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
                     <ul>
                         <li class="sidebar-nav-group">Layout</li>
-                        <li><a href="layout-panels.html" class="active"><i class="icon-grip-horizontal"></i> Panels</a></li>
+                        <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
                         <li><a href="layout-cards.html"><i class="icon-credit-card-o"></i> Cards</a></li>
                         <li><a href="layout-typography.html"><i class="icon-text-height"></i> Typography</a></li>
                         <li><a href="layout-jumbotron.html"><i class="icon-minus-square"></i> Jumbotron</a></li>
@@ -71,7 +71,7 @@
                         <li><a href="ui-buttons.html"><i class="icon-equals"></i> Buttons</a></li>
                         <li><a href="ui-dropdowns.html"><i class="icon-folder"></i> Dropdowns</a></li>
                         <li><a href="ui-progress-bars.html"><i class="icon-align-left"></i> Progress Bars</a></li>
-                        <li><a href="ui-tooltips.html"><i class="icon-comment-alt"></i> Tooltips</a></li>
+                        <li><a href="ui-tooltips.html" class="active"><i class="icon-comment-alt"></i> Tooltips</a></li>
                         <li><a href="ui-animations.html"><i class="icon-hubspot"></i> Animations</a></li>
                         <li><a href="ui-modals.html"><i class="icon-window-maximize-o"></i> Modals</a></li>
                         <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
@@ -176,7 +176,7 @@
             <!-- Page Header -->
             <div class="page-header">
                 <div class="page-title">
-                    <h5>Panels</h5>
+                    <h5>Tooltips & Popovers</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
@@ -199,17 +199,34 @@
             <div class="content boxed">
 
                 <!-- Panel -->
-                <div class="panel panel-default">
+                <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Default Panel</h6>
+                            <h6>Tooltips</h6>
                         </div>
                     </div>
                     <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque commodi quos praesentium incidunt unde modi obcaecati autem. Alias culpa illum omnis ipsam voluptas, beatae possimus quia dicta molestiae provident.
-                    </div>
-                    <div class="panel-footer">
-                        Panel footer
+                        <p>In-Text Tooltips</p>
+                        <p>Tight pants next level keffiyeh <a href="tooltips.html#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="tooltips.html#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="tooltips.html#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="tooltips.html#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.</p>
+                        <hr>
+                        <p>Button Tootips</p>
+                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                            Tooltip on top
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                            Tooltip on right
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            Tooltip on bottom
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                            Tooltip on left
+                        </button>
+                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
+                            <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>
+                                Disabled button
+                            </button>
+                        </span>
                     </div>
                 </div>
 
@@ -217,162 +234,40 @@
                 <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Panel Bordered</h6>
-                        </div>
-                        <div class="panel-link">
-                          <a href="#" class="link">Link</a>
-                          <a href="#" class="link"><i class="icon-redo-alt"></i></a>
-                          <div class="dropdown d-inline-block">
-                              <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
-                                  <i class="icon-ellipsis-v"></i>
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                  <a class="dropdown-item" href="#">Settings</a>
-                                  <a class="dropdown-item" href="#">Export</a>
-                                  <a class="dropdown-item" href="#">Delete</a>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque commodi quos praesentium incidunt unde modi obcaecati autem. Alias culpa illum omnis ipsam voluptas, beatae possimus quia dicta molestiae provident.
-                    </div>
-                    <div class="panel-footer">
-                        Panel footer
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered panel-light">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>Panel with Light Header and Footer</h6>
-                        </div>
-                        <div class="panel-link">
-                          <a href="#" class="link">Link</a>
-                          <a href="#" class="link"><i class="icon-redo-alt"></i></a>
-                          <div class="dropdown d-inline-block">
-                              <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
-                                  <i class="icon-ellipsis-v"></i>
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                  <a class="dropdown-item" href="#">Settings</a>
-                                  <a class="dropdown-item" href="#">Export</a>
-                                  <a class="dropdown-item" href="#">Delete</a>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque commodi quos praesentium incidunt unde modi obcaecati autem. Alias culpa illum omnis ipsam voluptas, beatae possimus quia dicta molestiae provident.
-                    </div>
-                    <div class="panel-footer">
-                        Panel footer
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered panel-light">
-                    <div class="panel-heading clear">
-                        <div class="panel-title">
-                            <h6>Panel with Light Footer</h6>
-                        </div>
-                        <div class="panel-link">
-                          <a href="#" class="link">Link</a>
-                          <a href="#" class="link"><i class="icon-redo-alt"></i></a>
-                          <div class="dropdown d-inline-block">
-                              <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
-                                  <i class="icon-ellipsis-v"></i>
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                  <a class="dropdown-item" href="#">Settings</a>
-                                  <a class="dropdown-item" href="#">Export</a>
-                                  <a class="dropdown-item" href="#">Delete</a>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque commodi quos praesentium incidunt unde modi obcaecati autem. Alias culpa illum omnis ipsam voluptas, beatae possimus quia dicta molestiae provident.
-                    </div>
-                    <div class="panel-footer">
-                        Panel footer
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>Panel with Description</h6>
-                            <small class="text-muted">This can be used to provide additional information</small>
-                        </div>
-                        <div class="panel-link">
-                          <a href="#" class="link">Link</a>
-                          <a href="#" class="link"><i class="icon-redo-alt"></i></a>
-                          <div class="dropdown d-inline-block">
-                              <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
-                                  <i class="icon-ellipsis-v"></i>
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                  <a class="dropdown-item" href="#">Settings</a>
-                                  <a class="dropdown-item" href="#">Export</a>
-                                  <a class="dropdown-item" href="#">Delete</a>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque commodi quos praesentium incidunt unde modi obcaecati autem. Alias culpa illum omnis ipsam voluptas, beatae possimus quia dicta molestiae provident.
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>No Footer Panel</h6>
-                        </div>
-                        <div class="panel-link">
-                          <a href="#" class="link">Link</a>
-                          <a href="#" class="link"><i class="icon-redo-alt"></i></a>
-                          <div class="dropdown d-inline-block">
-                              <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
-                                  <i class="icon-ellipsis-v"></i>
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                  <a class="dropdown-item" href="#">Settings</a>
-                                  <a class="dropdown-item" href="#">Export</a>
-                                  <a class="dropdown-item" href="#">Delete</a>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque commodi quos praesentium incidunt unde modi obcaecati autem. Alias culpa illum omnis ipsam voluptas, beatae possimus quia dicta molestiae provident.
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered">
-                    <div class="panel-body">
-                        <h6>No Header Panel</h6>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque commodi quos praesentium incidunt unde modi obcaecati autem. Alias culpa illum omnis ipsam voluptas, beatae possimus quia dicta molestiae provident.
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-clear">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>Panel Clear</h6>
+                            <h6>Popovers</h6>
                         </div>
                     </div>
                     <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque commodi quos praesentium incidunt unde modi obcaecati autem. Alias culpa illum omnis ipsam voluptas, beatae possimus quia dicta molestiae provident.
-                    </div>
-                    <div class="panel-footer">
-                        Panel footer
+                        <p>With Title</p>
+                        <button type="button" class="btn btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+                            Click to toggle popover
+                        </button>
+                        <hr>
+                        <p>Directions</p>
+                        <button type="button" class="btn btn-secondary" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                            Popover on top
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                            Popover on right
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                        sagittis lacus vel augue laoreet rutrum faucibus.">
+                            Popover on bottom
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                            Popover on left
+                        </button>
+                        <span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
+                            <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>
+                                Disabled button
+                            </button>
+                        </span>
+                        <hr>
+                        <p>Dismiss on Next Click</p>
+                        <a tabindex="0" class="btn btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
                     </div>
                 </div>
 

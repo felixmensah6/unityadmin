@@ -95,15 +95,11 @@
 // Badges
 //
 
-$badge-colors: (
-    primary: $primary,
-    success: $success,
-    danger: $danger,
-    warning: $warning,
-    info: $info
-);
+.badge {
+    @include border-radius($button-border-radius);
+}
 
-@each $name, $color in $badge-colors {
+@each $name, $color in $colors {
     .badge-#{$name} {
         color: #fff;
         background-color: $color;
@@ -114,6 +110,27 @@ $badge-colors: (
             background-color: darken($color, 8%);
         }
     }
+}
+
+//
+// Popovers
+//
+
+.popover {
+    @include border-radius($panel-border-radius);
+}
+
+//
+// Progress Bars
+//
+
+.progress {
+    @include border-radius($button-border-radius);
+    background-color: $progress-bg;
+}
+
+.progress-bar {
+    background-color: $progress-bar-bg;
 }
 
 //
@@ -323,6 +340,11 @@ label, legend {
         padding-right: 1.875rem;
     }
 
+    .form-control:focus ~ .form-icon,
+    .form-control:focus ~ .form-icon-only {
+        color: $form-focus-icon-color;
+    }
+
     [data-toggle="password"]:hover ~ .password-toggle,
     [data-toggle="password"]:focus ~ .password-toggle {
         display: block;
@@ -355,6 +377,104 @@ pre {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
     @include border-radius(0.25rem);
+}
+
+//
+// Alerts
+//
+
+.alert {
+    padding: 0.875rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 0;
+    line-height: 1.25rem;
+    @include border-radius($alert-border-radius);
+    background-color: #f8f8f9;
+    color: #1a1a1a;
+    @include box-shadow(0 0 0 1px rgba(34, 36, 38, 0.22) inset, 0 0 0 0 transparent);
+    display: flex;
+
+    .alert-icon {
+        font-size: 2.1875rem;
+        display: flex;
+        align-items: center;
+        margin-right: 1.25rem;
+        justify-content: center;
+
+        i {
+            margin-top: 0.5rem;
+        }
+
+    }
+
+    .alert-content {
+
+        h6 {
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+
+        hr {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+    }
+
+    &.alert-dismissible {
+        padding-right: 2.1875rem;
+
+        .close {
+            padding: 12px;
+            opacity: 0.8;
+        }
+
+    }
+
+}
+
+.alert-info {
+    background-color: #f8ffff;
+    color: #276f86;
+    @include box-shadow(0 0 0 1px #a9d5de inset, 0 0 0 0 transparent);
+}
+
+.alert-success {
+    background-color: #fcfff5;
+    color: #2c662d;
+    @include box-shadow(0 0 0 1px #a3c293 inset, 0 0 0 0 transparent);
+}
+
+.alert-danger {
+    background-color: #fff6f6;
+    color: #9f3a38;
+    @include box-shadow(0 0 0 1px #e0b4b4 inset, 0 0 0 0 transparent);
+}
+
+.alert-warning {
+    background-color: #fffaf3;
+    color: #573a08;
+    @include box-shadow(0 0 0 1px #c9ba9b inset, 0 0 0 0 transparent);
+}
+
+//
+// Background Color Utilities
+//
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
 }
 
 //

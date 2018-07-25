@@ -23,6 +23,22 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-spin {
+    animation: spin-rotation 2s infinite linear;
+    -webkit-transform-origin: 50% 34%;
+       -moz-transform-origin: 50% 34%;
+            transform-origin: 50% 34%;
+}
+
+@keyframes spin-rotation {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(1turn)
+    }
+}
+
 .icon-px:before {
     content: "\e900";
 }

@@ -132,7 +132,7 @@
 
 .panel {
     position: relative;
-    @include border-radius(0.1875rem);
+    @include border-radius($panel-border-radius);
     margin-bottom: 1.875rem;
 
     &.panel-default {
@@ -152,8 +152,17 @@
 
     &.panel-light {
 
+        .panel-heading {
+            background-color: $panel-light-footer-bg;
+        }
+
         .panel-footer {
             background-color: $panel-light-footer-bg;
+        }
+
+        .panel-heading.clear,
+        .panel-footer.clear {
+            background-color: transparent !important;
         }
 
     }
@@ -177,6 +186,7 @@
 
     .panel-heading {
         display: flex;
+        @include border-radius($panel-border-radius $panel-border-radius 0 0);
 
         .panel-title {
             flex: 1;

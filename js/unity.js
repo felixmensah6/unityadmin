@@ -99,10 +99,14 @@ $('.grid').masonry({
 });
 
 //
-// Tooltip
+// Tooltips & Popovers
 //
 
 $('[data-toggle="tooltip"]').tooltip({
+    container: '.wrapper'
+});
+
+$('[data-toggle="popover"]').popover({
     container: '.wrapper'
 });
 
