@@ -227,6 +227,13 @@
         padding: 1rem 1.5rem;
     }
 
+    .panel-divider {
+        border-top: $panel-heading-border;
+        height: 1px;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
 }
 
 .icon-grid-item {

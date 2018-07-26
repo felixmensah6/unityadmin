@@ -52,3 +52,24 @@ a:active {
 .caret-none::after {
 	display: none !important;
 }
+
+.dimmer, .dimmer-inverse {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include border-radius($panel-border-radius);
+	justify-content: center;
+	align-items: center;
+}
+
+.dimmer {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dimmer-inverse {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.85);
+}
