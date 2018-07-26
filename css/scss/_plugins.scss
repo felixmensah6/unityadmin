@@ -1,4 +1,47 @@
 //
+// Notifications
+//
+
+.notify {
+
+    a {
+        text-decoration: underline !important;
+        color: #fff;
+    }
+
+    .alert-default {
+        background-color: $secondary;
+        color: #fff;
+        @include box-shadow(none);
+    }
+
+    .alert-info {
+        background-color: darken($primary, 5%);
+        color: #fff;
+        @include box-shadow(none);
+    }
+
+    .alert-success {
+        background-color: darken($success, 3%);
+        color: #fff;
+        @include box-shadow(none);
+    }
+
+    .alert-danger {
+        background-color: darken($danger, 5%);
+        color: #fff;
+        @include box-shadow(none);
+    }
+
+    .alert-warning {
+        background-color: darken($warning, 3%);
+        color: #fff;
+        @include box-shadow(none);
+    }
+
+}
+
+//
 // Optiscroll
 //
 

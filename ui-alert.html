@@ -362,7 +362,7 @@
                         <button class="btn btn-success" id="notify-success">Notify Success</button>
                         <button class="btn btn-primary" id="notify-info">Notify Info</button>
                         <button class="btn btn-warning" id="notify-warning">Notify Warning</button>
-                        <button class="btn btn-danger" id="notify-error">Notify Error</button>
+                        <button class="btn btn-danger" id="notify-danger">Notify Error</button>
                     </div>
                 </div>
 
@@ -389,6 +389,64 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            var container = $('body');
+
+            $('#notify-default').on('click', function(e) {
+                container.notify({
+                    message: 'This is a default notification.',
+                });
+				e.preventDefault();
+			});
+
+            $('#notify-success').on('click', function(e) {
+                container.notify({
+                    type: 'success',
+                    header: 'Delay is 10 seconds',
+                    message: 'Order successful. <a href="#">View Order</a>',
+                    delay: 10000
+                });
+				e.preventDefault();
+			});
+
+            $('#notify-info').on('click', function(e) {
+                container.notify({
+                    type: 'info',
+                    header: 'Sticky notification',
+                    message: 'I will stick here for a long time unless you close me.',
+                    sticky: true
+                });
+				e.preventDefault();
+			});
+
+            $('#notify-warning').on('click', function(e) {
+                container.notify({
+                    type: 'warning',
+                    iconClass: 'icon-exclamation-circle',
+                    header: 'Custom wrapper width!',
+                    message: 'This warning notification has a custom wrapper width which must be set for all other notifications for it to take full effect. Try clicking me first after page load',
+                    delay: 15000,
+                    wrapperWidth: 450
+                });
+				e.preventDefault();
+			});
+
+            $('#notify-danger').on('click', function(e) {
+                container.notify({
+                    type: 'danger',
+                    iconClass: 'icon-times-circle-o',
+                    header: 'System error!',
+                    message: 'Please check your system to locate any problems that might cause this kind of error.'
+                });
+				e.preventDefault();
+			});
+
+        });
+
+    </script>
 </body>
 
 </html>

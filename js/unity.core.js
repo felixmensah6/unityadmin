@@ -896,6 +896,122 @@ function _throttle(fn, threshhold) {
 }(jQuery || Zepto));
 
 //
+// Notifications
+//
+
+(function($) {
+
+    $.fn.notify = function(options) {
+
+        // Default settings
+        // [string] type: success, info, warning & danger. Default is default.
+        var settings = $.extend({
+            type: 'default',
+            iconClass: null,
+            header: null,
+            message: null,
+            delay: 5000, // 5 seconds
+            sticky: false,
+            wrapperWidth: 320
+        }, options);
+
+        // Loop through and return
+        return this.each( function() {
+
+            // Variables
+            var markup,
+                iconMarkup,
+                headerMarkup,
+                messageMarkup,
+                closeButton,
+                formatType;
+
+            // Include an icon if the icon class is set
+            if(settings.iconClass) {
+                iconMarkup = '<div class="alert-icon"><i class="' + settings.iconClass + '"></i></div>';
+            }else{
+                iconMarkup = '';
+            }
+
+            // Include the header if the headerText is set
+            if(settings.header) {
+                headerMarkup = '<h6>' + settings.header + '</h6>';
+            }else{
+                headerMarkup = '';
+            }
+
+            // Include the message if is set
+            if(settings.message) {
+                messageMarkup = '<p>' + settings.message + '</p>';
+            }else{
+                messageMarkup = 'Error: Message not defined.';
+            }
+
+            // Include the close button if sticky is set to TRUE
+            if(settings.sticky) {
+
+                closeButton = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+
+                // Increase delay time if sticky is set to TRUE
+                settings.delay = 300000; // 5 minutes
+
+            }else{
+                closeButton = '';
+            }
+
+            // Format type to match the alert class
+            formatType = 'alert-' + settings.type;
+
+            // Notification HTML markup
+            markup = $('<div class="alert ' + formatType + ' alert-dismissible mb-3" role="alert" style="right:-' + settings.wrapperWidth + 'px">' + iconMarkup + '<div class="alert-content">' + headerMarkup + messageMarkup +  closeButton + '</div></div>');
+
+            // Append markup and animate
+            function showNotification(selector, markup, delay, width) {
+
+                $(selector).append(markup),
+            		markup.animate(
+            			{
+            				right: 5
+            			}, 500)
+            		.animate(
+            			{
+            				right: 0
+            			}, 200)
+            		.delay(delay)
+            		.animate(
+            			{
+            				right: 5
+            			}, 200)
+            		.animate(
+            			{
+            				right: -width
+            			}, 500,
+            			function() {
+                    		$(this).remove()
+                		}
+            		)
+            }
+
+            // Add the wrapper element if it is not already and show notification
+            if($('.notify').length) {
+
+                showNotification('.notify', markup, settings.delay, settings.wrapperWidth);
+
+            }else{
+
+                $(this).append('<div class="notify" style="position:fixed;width:' + settings.wrapperWidth + 'px;right:0px;bottom:20px;z-index:1000;"></div>');
+
+                showNotification('.notify', markup, settings.delay, settings.wrapperWidth);
+
+            }
+
+        });
+
+    }
+
+}(jQuery));
+
+//
 // Priority Nav Scroller
 //
 
