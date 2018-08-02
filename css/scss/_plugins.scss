@@ -16,7 +16,7 @@
     }
 
     .alert-info {
-        background-color: darken($primary, 5%);
+        background-color: darken($primary, 3%);
         color: #fff;
         @include box-shadow(none);
     }
@@ -28,7 +28,7 @@
     }
 
     .alert-danger {
-        background-color: darken($danger, 5%);
+        background-color: darken($danger, 3%);
         color: #fff;
         @include box-shadow(none);
     }

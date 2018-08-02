@@ -380,10 +380,11 @@ pre {
 }
 
 //
-// Alerts
+// Alerts & Callouts
 //
 
-.alert {
+.alert,
+.callout {
     padding: 0.875rem 1.25rem;
     margin-bottom: 1rem;
     border: 0;
@@ -393,55 +394,57 @@ pre {
     color: #1a1a1a;
     @include box-shadow(0 0 0 1px rgba(34, 36, 38, 0.22) inset, 0 0 0 0 transparent);
     display: flex;
+    position: relative;
+}
 
-    .alert-icon {
-        font-size: 2.1875rem;
-        display: flex;
-        align-items: center;
-        margin-right: 1.25rem;
-        justify-content: center;
+.alert .alert-icon {
+    font-size: 2.1875rem;
+    display: flex;
+    align-items: center;
+    margin-right: 1.25rem;
+    justify-content: center;
 
-        i {
-            margin-top: 0.5rem;
-        }
-
+    i {
+        margin-top: 0.5rem;
     }
 
-    .alert-content {
+}
 
-        h6 {
-            margin-bottom: 0.25rem;
-            font-weight: 700;
-        }
+.alert .alert-content,
+.callout {
 
-        p {
-            margin: 0;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 1.25rem;
-        }
-
-        hr {
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            margin-top: 0.75rem;
-            margin-bottom: 0.75rem;
-        }
-
+    h6 {
+        margin-bottom: 0.25rem;
+        font-weight: 700;
     }
 
-    &.alert-dismissible {
-        padding-right: 2.1875rem;
+    p {
+        margin: 0;
+    }
 
-        .close {
-            padding: 0.75rem;
-        }
+    ul {
+        margin: 0;
+        padding-left: 1rem;
+    }
 
-        .close:hover {
-            opacity: 0.5;
-        }
+    hr {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
 
+}
+
+.alert.alert-dismissible {
+    padding-right: 2.1875rem;
+
+    .close {
+        padding: 0.75rem;
+        font-weight: 500;
+    }
+
+    .close:hover {
+        opacity: 0.5;
     }
 
 }
@@ -468,6 +471,36 @@ pre {
     background-color: #fffaf3;
     color: #573a08;
     @include box-shadow(0 0 0 1px #c9ba9b inset, 0 0 0 0 transparent);
+}
+
+.callout {
+    background-color: #fff;
+    flex-flow: column nowrap;
+    border-left: 0.25rem solid rgba(34, 36, 38, 0.22);
+}
+
+.callout h6,
+.callout p,
+.callout ul,
+.callout hr {
+    display: block;
+    width: 100%;
+}
+
+.callout-success {
+    border-left-color: $success;
+}
+
+.callout-info {
+    border-left-color: $primary;
+}
+
+.callout-warning {
+    border-left-color: $warning;
+}
+
+.callout-danger {
+    border-left-color: $danger;
 }
 
 //
@@ -597,7 +630,7 @@ div.loader {
 
     &::before {
         left: 0;
-        @include border-radius(3px);
+        @include border-radius($panel-border-radius);
         border: 0;
         background-color: rgba(255, 255, 255, 0.8);
         z-index: 100;
