@@ -162,10 +162,10 @@
 }
 
 // Lighter Button
-@mixin btn-lighter($name, $bg, $color-percentage, $hover-percentage) {
+@mixin btn-lighter($name, $bg, $color, $hover-percentage) {
 
 	.btn-light-#{$name} {
-	    color: darken($bg, $color-percentage);
+	    color: $color;
 	    background-color: $bg;
 	    border-color: $bg;
 	}

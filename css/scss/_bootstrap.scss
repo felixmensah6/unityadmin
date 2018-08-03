@@ -217,12 +217,11 @@
 @include btn-outline('dark', $dark);
 
 // Lighter Buttons
-@include btn-lighter('primary', $primary-light, 45%, 3%);
-@include btn-lighter('success', $success-light, 45%, 3%);
-@include btn-lighter('danger', $danger-light, 45%, 3%);
-@include btn-lighter('warning', $warning-light, 45%, 3%);
-@include btn-lighter('info', $info-light, 45%, 3%);
-@include btn-lighter('tertiary', $tertiary-light, 45%, 3%);
+@include btn-lighter('primary', $primary-light, $primary, 3%);
+@include btn-lighter('success', $success-light, $success, 3%);
+@include btn-lighter('danger', $danger-light, $danger, 3%);
+@include btn-lighter('warning', $warning-light, $warning, 3%);
+@include btn-lighter('tertiary', $tertiary-light, $tertiary, 3%);
 
 // Link Button
 .btn-link {
@@ -476,7 +475,9 @@ pre {
 .callout {
     background-color: #fff;
     flex-flow: column nowrap;
+    border: 1px solid rgba(34, 36, 38, 0.22);
     border-left: 0.25rem solid rgba(34, 36, 38, 0.22);
+    @include box-shadow(none);
 }
 
 .callout h6,
