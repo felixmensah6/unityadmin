@@ -10,6 +10,7 @@
     position: fixed;
     right: 0;
     left: 0;
+    top: 0;
     z-index: 830;
     @include transition(left 0.3s ease-in-out);
 
@@ -736,6 +737,27 @@ div.loader {
 .zoom.show {
     opacity: 1;
     transform: scale(1, 1);
+}
+
+//
+// Tables
+//
+
+.table {
+    margin: 0;
+}
+
+.table thead th {
+    border-top: 0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+.table-hover tbody tr:hover,
+.table-striped tbody tr:nth-of-type(odd):hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 //

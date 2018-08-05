@@ -75,7 +75,7 @@
     }
 
     .page-header-link {
-        padding: 0 1.5rem 0 0;
+        padding: 0 0.875rem 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -312,6 +312,7 @@
     .error-box {
         color: #3b4354;
         text-align: center;
+        padding: 0 1rem;
 
         .error-icon {
             font-size: 7.5rem;
