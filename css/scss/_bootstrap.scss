@@ -141,6 +141,7 @@
     @include border-radius($button-border-radius);
     font-size: $button-font-size;
     font-weight: $button-font-weight;
+    padding: .375rem 1rem;
 }
 
 .btn.focus,
@@ -600,7 +601,7 @@ pre {
     width: 16px;
     height: 16px;
     left: 6px;
-    top: 6px;
+    top: 8px;
     border-width: 2px;
 }
 
@@ -613,7 +614,7 @@ pre {
     width: 30px;
     height: 30px;
     left: 9px;
-    top: 8px;
+    top: 6px;
     border-width: 3px;
 }
 
@@ -690,6 +691,54 @@ div.loader {
 }
 
 //
+// Modals
+//
+
+.modal-content {
+    @include border-radius($panel-border-radius);
+}
+
+.modal-header {
+    padding: 0.75rem 1rem;
+    border-top-left-radius: $panel-border-radius;
+    border-top-right-radius: $panel-border-radius;
+}
+
+.modal-title {
+    font-size: 1.125rem;
+}
+
+.modal-footer {
+    padding: 0.75rem 1rem;
+    border-bottom-left-radius: $panel-border-radius;
+    border-bottom-right-radius: $panel-border-radius;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+
+    &.show {
+        opacity: 1;
+    }
+
+}
+
+.zoom {
+    transform: scale(0.8, 0.8);
+    opacity: 0;
+    transition: all .3s linear;
+}
+
+.zoomed {
+    display: block !important;
+}
+
+.zoom.show {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+//
 // Background Color Utilities
 //
 
@@ -697,6 +746,32 @@ div.loader {
     .bg-#{$name} {
         background-color: $color !important;
     }
+}
+
+//
+// Text Color Utilities
+//
+
+@each $name, $color in $colors {
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
+
+//
+// Small devices (landscape phones, 576px and up)
+//
+
+@media (min-width: $viewport-sm) {
+
+    .modal-fix {
+        right: 17px !important;
+    }
+
+    .modal-sm {
+        max-width: 340px;
+    }
+
 }
 
 //

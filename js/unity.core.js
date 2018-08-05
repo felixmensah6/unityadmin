@@ -1893,6 +1893,124 @@ exports.default = PriorityNavScroller;
 });
 
 //
+// Bootstrap Confirm
+//
+
+;
+( function ( $, window, document, undefined )
+{
+		var bootstrap_confirm = function ( element, options )
+		{
+				this.element = $( element );
+				this.settings = $.extend(
+						{
+								debug: false,
+								heading: 'Confirm', //Delete
+								message: 'Are you sure you want to continue?',
+								icon: '<i class="icon-trash-alt text-danger"></i>',
+								btn_ok_label: 'Yes',
+								btn_cancel_label: 'Cancel',
+								data_type: null,
+								callback: null,
+								delete_callback: null,
+								cancel_callback: null
+						}, options || {}
+				);
+
+				this.onDelete = function ( event )
+				{
+						event.preventDefault();
+
+						var plugin = $( this ).data( 'bootstrap_confirm' );
+
+						if ( undefined !== $( this ).attr( 'data-type' ) )
+						{
+								var name = $( this ).attr( 'data-type' );
+
+								plugin.settings.heading = 'Confirm';
+								plugin.settings.message = 'Are you sure you want to delete "' + name + '"?';
+						}
+
+						if ( null === document.getElementById( 'bootstrap-confirm-container' ) )
+						{
+								$( 'body' ).append( '<div id="bootstrap-confirm-container" class="bootstrap-confirm"><div id="bootstrap-confirm-dialog" class="modal zoom"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="bootstrap-confirm-dialog-heading"></h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body d-flex align-items-center"><div id="bootstrap-confirm-dialog-icon" class="ml-2 mr-4" style="font-size:3rem"></div><div id="bootstrap-confirm-dialog-text"></div></div><div class="modal-footer"><button id="bootstrap-confirm-dialog-cancel-btn" type="button" class="btn btn-default mr-auto" data-dismiss="modal">Cancel</button><a id="bootstrap-confirm-dialog-btn" href="#" class="btn btn-success">Delete</a></div></div></div></div></div>' );
+						}
+
+						$( '#bootstrap-confirm-dialog-heading' ).html( plugin.settings.heading );
+						$( '#bootstrap-confirm-dialog-text' ).html( plugin.settings.message );
+						$( '#bootstrap-confirm-dialog-icon' ).html( plugin.settings.icon );
+						$( '#bootstrap-confirm-dialog-btn' ).html( plugin.settings.btn_ok_label );
+						$( '#bootstrap-confirm-dialog-cancel-btn' ).html( plugin.settings.btn_cancel_label );
+						$( '#bootstrap-confirm-dialog' ).modal( 'toggle' );
+						$('#bootstrap-confirm-dialog').on('hide.bs.modal', function (e) {
+							$(this).toggleClass('zoomed');
+						})
+						$('#bootstrap-confirm-dialog').on('hidden.bs.modal', function (e) {
+                            setTimeout( function(){$("#bootstrap-confirm-container").remove();}, 200);
+						})
+
+						var deleteBtn = $( 'a#bootstrap-confirm-dialog-btn' );
+						var cancelBtn = $( 'a#bootstrap-confirm-dialog-cancel-btn' );
+						var hasCallback = false;
+
+						if ( null !== plugin.settings.callback )
+						{
+								if ( $.isFunction( plugin.settings.callback ) )
+								{
+										deleteBtn.attr( 'data-dismiss', 'modal' ).off('.bs-confirm-delete').on( 'click.bs-confirm-delete', { originalObject: $( this ) }, plugin.settings.callback );
+										hasCallback = true;
+								}
+								else
+								{
+										console.log( plugin.settings.callback + ' is not a valid callback' );
+								}
+						}
+						if ( null !== plugin.settings.delete_callback )
+						{
+								if ( $.isFunction( plugin.settings.delete_callback ) )
+								{
+										deleteBtn.attr( 'data-dismiss', 'modal' ).off('.bs-confirm-delete').on( 'click.bs-confirm-delete', { originalObject: $( this ) }, plugin.settings.delete_callback );
+										hasCallback = true;
+								}
+								else
+								{
+										console.log( plugin.settings.delete_callback + ' is not a valid callback' );
+								}
+						}
+						if ( !hasCallback &&  '' !== event.currentTarget.href )
+						{
+								deleteBtn.attr( 'href', event.currentTarget.href );
+						}
+
+						if ( null !== plugin.settings.cancel_callback )
+						{
+								cancelBtn.off('.bs-confirm-delete').on( 'click.bs-confirm-delete', { originalObject: $( this ) }, plugin.settings.cancel_callback );
+						}
+				};
+		};
+
+		$.fn.bootstrap_confirm = function ( options )
+		{
+				return this.each( function ()
+				{
+						var element = $( this );
+
+						if ( element.data( 'bootstrap_confirm' ) )
+						{
+								return element.data( 'bootstrap_confirm' );
+						}
+
+						var plugin = new bootstrap_confirm( this, options );
+
+						element.data( 'bootstrap_confirm', plugin );
+						element.off('.bs-confirm-delete').on( 'click.bs-confirm-delete', plugin.onDelete );
+
+						return plugin;
+				} );
+		};
+}( jQuery, window, document, undefined ));
+
+//
 // jQuery Number Format
 //
 

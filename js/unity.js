@@ -110,6 +110,40 @@ $('[data-toggle="popover"]').popover({
     container: '.wrapper'
 });
 
+//
+// Bootsrap Modals
+// Fix navbar shifting when modal is fired
+//
+
+var modal = $('.modal'),
+    navbar = $('.navbar'),
+    zoomed = $('.modal.zoom');
+
+modal.on('show.bs.modal', function (e) {
+    navbar.toggleClass('modal-fix');
+})
+
+modal.on('hide.bs.modal', function (e) {
+    zoomed.toggleClass('zoomed');
+})
+
+modal.on('hidden.bs.modal', function (e) {
+    navbar.toggleClass('modal-fix');
+    setTimeout( () => zoomed.toggleClass('zoomed'), 200);
+})
+
+//
+// Auto SlideUp & Close
+//
+
+setInterval(function(){
+    var target = $('[data-auto-close]'),
+        targetValue = target.attr('data-auto-close'),
+        delay = targetValue * 1000;
+	target.delay(delay).slideUp("slow", function(){
+		$(this).remove();
+	});
+}, 5000);
 
 
 })();

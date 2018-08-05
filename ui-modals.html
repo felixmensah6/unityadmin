@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <title>Modals & Dialogs - Unity Admin Panel</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/unity.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Header -->
+            <nav class="navbar sidebar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/unity.svg" width="18" height="18" class="d-inline-block align-top" alt="">
+                    Unity Websoft Admin
+                </a>
+            </nav>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-content optiscroll">
+
+                <!-- Sidebar Nav -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-group">Overview</li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <ul>
+                        <li class="sidebar-nav-group">Layout</li>
+                        <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
+                        <li><a href="layout-cards.html"><i class="icon-credit-card-o"></i> Cards</a></li>
+                        <li><a href="layout-typography.html"><i class="icon-text-height"></i> Typography</a></li>
+                        <li><a href="layout-jumbotron.html"><i class="icon-minus-square"></i> Jumbotron</a></li>
+                        <li><a href="layout-grids.html"><i class="icon-align-justify"></i> Grids</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Forms</li>
+                        <li><a href="forms-elements.html"><i class="icon-wpforms"></i> Elements</a></li>
+                        <li><a href="forms-date-time.html"><i class="icon-box"></i> Components</a></li>
+                        <li><a href="forms-validation.html"><i class="icon-check"></i> Validation</a></li>
+                        <li><a href="forms-widgets.html"><i class="icon-boxes"></i> Widgets</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Tables</li>
+                        <li><a href="tables-basic-styles.html"><i class="icon-table"></i> Basic Styles</a></li>
+                        <li><a href="tables-datatables.html"><i class="icon-database"></i> Datatables</a></li>
+                        <li><a href="tables-pricing.html"><i class="icon-tag"></i> Pricing</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Charts</li>
+                        <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
+                        <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
+                        <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
+                        <li><a href="charts-canvasjs.html"><i class="icon-chart-area"></i> CanvasJS</a></li>
+                        <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
+                        <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
+                        <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">UI Elements</li>
+                        <li><a href="ui-icons.html"><i class="icon-dropbox"></i> Icons</a></li>
+                        <li><a href="ui-buttons.html"><i class="icon-equals"></i> Buttons</a></li>
+                        <li><a href="ui-dropdowns.html"><i class="icon-folder"></i> Dropdowns</a></li>
+                        <li><a href="ui-progress-bars.html"><i class="icon-align-left"></i> Progress Bars</a></li>
+                        <li><a href="ui-tooltips.html"><i class="icon-comment-alt"></i> Tooltips</a></li>
+                        <li><a href="ui-animations.html"><i class="icon-hubspot"></i> Animations</a></li>
+                        <li><a href="ui-modals.html" class="active"><i class="icon-window-maximize-o"></i> Modals</a></li>
+                        <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
+                        <li><a href="ui-colors.html"><i class="icon-palette"></i> Colors</a></li>
+                        <li><a href="ui-others.html"><i class="icon-circle-o"></i> Others</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Users</li>
+                        <li><a href="users-profile.html"><i class="icon-user-circle"></i> Profile</a></li>
+                        <li><a href="users-login.html"><i class="icon-sign-in-alt"></i> Login</a></li>
+                        <li><a href="users-registration.html"><i class="icon-list-alt"></i> Registration</a></li>
+                        <li><a href="users-lock-screen.html"><i class="icon-portrait"></i> Lock Screen</a></li>
+                        <li><a href="users-password-reset.html"><i class="icon-lock"></i> Password Reset</a></li>
+                        <li><a href="users-forgot-password.html"><i class="icon-ban"></i> Forgot Password</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Widgets</li>
+                        <li><a href="widgets-calendar.html"><i class="icon-calendar-alt"></i> Calendar</a></li>
+                        <li><a href="widgets-inbox.html"><i class="icon-inbox"></i> Inbox</a></li>
+                        <li><a href="widgets-contacts.html"><i class="icon-address-card"></i> Contacts</a></li>
+                        <li><a href="widgets-photo-gallery.html"><i class="icon-images"></i> Photo Gallery</a></li>
+                        <li><a href="widgets-filtering.html"><i class="icon-filter"></i> Filtering</a></li>
+                        <li><a href="widgets-faq.html"><i class="icon-question-circle"></i> FAQ</a></li>
+                        <li><a href="widgets-todo.html"><i class="icon-clipboard-list"></i> Todo List</a></li>
+                        <li><a href="widgets-timeline.html"><i class="icon-sitemap"></i> Timeline</a></li>
+                        <li><a href="widgets-invoice.html"><i class="icon-receipt"></i> Invoice</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Misc</li>
+                        <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
+                        <li><a href="pages-maintenance.html"><i class="icon-wrench"></i> Maintenance</a></li>
+                        <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
+                        <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
+                        <li><a href="pages-error-404.html"><i class="icon-sad-tear"></i> Error 404</a></li>
+                        <li><a href="pages-error-500.html"><i class="icon-sad-tear"></i> Error 500</a></li>
+                        <li><a href="pages-utilities.html"><i class="icon-briefcase"></i> Utilities</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <form class="navbar-search">
+                    <button type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input type="search" name="search" placeholder="Type in to Search..." autocomplete="off">
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown d-none d-sm-block">
+                        <a class="nav-link dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <i class="icon-plus"></i> Add
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 class="dropdown-header text-body">Add New Features</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Products</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Departments</a>
+                            <a class="dropdown-item" href="#">Discounts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a class="nav-link" href="#" role="button" data-toggle="tooltip" data-placement="bottom" title="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-danger">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-user dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <img src="images/user.svg" class="rounded-circle" width="30" height="30" alt="User">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <span class="dropdown-item-text">
+                                John W. Smith
+                                <span class="d-block text-muted">smith.john@gmail.com</span>
+                            </span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-profile.html">Profile</a>
+                            <a class="dropdown-item d-flex align-items-center" href="widgets-inbox.html">
+                                Inbox
+                                <span class="badge badge-danger ml-auto">12</span>
+                            </a>
+                            <a class="dropdown-item" href="#">Notifications</a>
+                            <a class="dropdown-item" href="#">Help/Support</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button">
+                    <i class="icon-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-title">
+                    <h5>Modals & Dialogs</h5>
+                </div>
+                <div class="page-header-link">
+                    <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
+                        <i class="icon-question-circle"></i>
+                    </a>
+                    <div class="dropdown d-inline-block">
+                        <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
+                            <i class="icon-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Preferences</a>
+                            <a class="dropdown-item" href="#">Layout Theme</a>
+                            <a class="dropdown-item" href="#">Favorite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content boxed" style="height:1000px">
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Default Modals</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <p>Live Modal</p>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Launch Demo Modal</button>
+                        <p>Scrolling Long Content</p>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModalLong">Launch Demo Modal</button>
+                        <p>Vertically Centered with Zoom Animation</p>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModalCenter">Launch Demo Modal</button>
+                        <p>No Header & Footer</p>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleModalOnly">Launch Demo Modal</button>
+                        <p>Delete Modal</p>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleDeleteModal">Launch Demo Modal</button>
+                        <p>Modal Sizes</p>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleLargeModal">Launch Large Modal</button>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleSmallModal">Launch Small Modal</button>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Bootstrap Confirm</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <p>Basic Confirm</p>
+                        <button class="btn btn-secondary" id="basic-confirm" data-type="my-document.pdf">Basic Confirm</button>
+                        <button class="btn btn-secondary" id="basic-confirm-icon">Custom Icon</button>
+                        <button class="btn btn-secondary" id="basic-confirm-message">Custom Message</button>
+                        <button class="btn btn-secondary" id="basic-confirm-ok-label">Custom OK Label</button>
+                        <button class="btn btn-secondary" id="basic-confirm-cancel-label">Custom Cancel Label</button>
+                        <p class="mt-3">Confirm Callbacks (Check console)</p>
+                        <button class="btn btn-secondary" id="button-callback">Button Callback</button>
+                        <a href="dashboard.html" class="btn btn-secondary" id="go-to-dashboard">Go to Dashboard</a>
+                        <a href="#" class="btn btn-secondary" id="delete-callback">Delete Callback</a>
+                        <a href="#" class="btn btn-secondary" id="cancel-callback">Cancel Callback</a>
+                        <button data-target="delete.php?id=10" class="btn btn-secondary" id="data-value">Get Data Value</button>
+                        <a href="delete.php?id=10" class="btn btn-secondary" id="link-value">Get Link</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-8">
+                        Copyright © Unity Websoft
+                    </div>
+                    <div class="col-sm-4 text-sm-right">
+                        Version: 1.0.0
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Woohoo, you're reading this text in a modal! <br>
+                    You cannot close me by clicking the backdrop.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal zoom" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Large Modal -->
+    <div class="modal fade exampleLargeModal" tabindex="-1" role="dialog" aria-labelledby="exampleLargeModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small Modal -->
+    <div class="modal fade exampleSmallModal" tabindex="-1" role="dialog" aria-labelledby="exampleSmallModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal zoom exampleModalOnly" tabindex="-1" role="dialog" aria-labelledby="exampleModalOnly" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nobis soluta repellendus, culpa nisi, fugiat temporibus maxime velit eveniet, ipsum distinctio saepe laudantium minima magnam, minus assumenda unde libero enim.
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal zoom exampleDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleDeleteModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Your Account</h5>
+                </div>
+                <div class="modal-body text-center">
+                    Are you sure you want to delete your account?
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-success btn-label">
+                        Yes<span class="btn-label-right"><i class="icon-check"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/unity.core.min.js"></script>
+    <script src="js/unity.js"></script>
+    <script>
+
+        $(window).on("load", function () {
+
+            // Auto trigger on page load
+            $('#basic-confirm').click();
+
+        });
+
+        $(document).ready(function(){
+
+            // Basic confirm
+            $('#basic-confirm').bootstrap_confirm();
+
+            // Custom Icon
+            $('#basic-confirm-icon').bootstrap_confirm({
+                heading: 'Recycle Bin',
+                icon: '<i class="icon-recycle text-success"></i>',
+                message: 'Are you sure you want to move to recycle bin?'
+            });
+
+            // Custom Message
+            $('#basic-confirm-message').bootstrap_confirm({
+                icon: '<i class="icon-exclamation-circle text-warning"></i>',
+                message: 'The action you are about to take can affect system performance!',
+                btn_ok_label: 'Proceed'
+            });
+
+            // Custom OK Label
+            $('#basic-confirm-ok-label').bootstrap_confirm({
+                icon: '<i class="icon-globe-americas text-primary"></i>',
+                message: 'Are you sure you want to leave this page?',
+                btn_ok_label: 'Continue'
+            });
+
+            // Custom Cancel Label
+            $('#basic-confirm-cancel-label').bootstrap_confirm({
+                icon: '<i class="icon-power-off text-secondary"></i>',
+                message: 'Are you sure you want to logout?',
+                btn_ok_label: 'Logout',
+                btn_cancel_label: 'Stay'
+            });
+
+            // Button Callback
+            $('#button-callback').bootstrap_confirm({
+                callback: function(event){
+                    var clicked_link = event.data.originalObject;
+
+                    clicked_link.text('Button Callback ->>> Executed');
+                    console.log('Button Callback ->>> Executed');
+                }
+            });
+
+            // Delete Callback
+            $('#delete-callback').bootstrap_confirm({
+                icon: '<i class="icon-recycle text-success"></i>',
+                message: 'Are you sure you want to move to recycle bin?',
+                btn_ok_label: 'Delete',
+                delete_callback: function(){
+                    console.log('Delete button clicked');
+                }
+            });
+
+            // Go to Dashboard
+            $('#go-to-dashboard').bootstrap_confirm({
+                icon: '<i class="icon-power-off text-secondary"></i>',
+                message: 'Are you sure you want to logout?',
+                btn_ok_label: 'Logout',
+                btn_cancel_label: 'Stay'
+            });
+
+            // Cancel Callback
+            $('#cancel-callback').bootstrap_confirm({
+                icon: '<i class="icon-recycle text-success"></i>',
+                message: 'Are you sure you want to move to recycle bin?',
+                btn_ok_label: 'Delete',
+                cancel_callback: function(){
+                    console.log('Cancel button clicked');
+                }
+            });
+
+            // Get Value from Data Attributes
+            $('#data-value').bootstrap_confirm({
+                    callback: function(event){
+
+                        var button = event.data.originalObject;
+
+                        var target = button.data("target");
+
+                        alert("Data Target Value is: " + target);
+                    }
+            });
+
+            // Get Value from Anchor Attributes
+            $('#link-value').bootstrap_confirm({
+                    callback: function(event){
+
+                        var href = event.data.originalObject;
+
+                        var link = href.attr("href");
+
+                        alert("Link Value is: " + link);
+                    }
+            });
+
+			/*$('.delete-user-row-with-ajax-button').bootstrap_confirm({
+					callback: function(event){
+						$.ajax({
+						    url: '/server.php',
+						    type: 'DELETE',
+						    success: function(result){
+								var button = event.data.originalObject;
+
+								button.closest( 'tr' ).remove();
+						    }
+						});
+					}
+			});*/
+
+        });
+
+    </script>
+</body>
+
+</html>
