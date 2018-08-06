@@ -64,7 +64,7 @@
         width: 200px;
 
         h5 {
-            padding: 0.9375rem 1.5rem;
+            padding: 1.5rem;
             font-size: 1.125rem;
             margin: 0;
             text-overflow: ellipsis;
@@ -99,7 +99,7 @@
     position: fixed;
     right: 0;
     left: 0;
-    top: 0;
+    top: -15px;
     margin-top: 0;
     @include transition(left 0.3s ease-in-out);
     @include box-shadow($navbar-shadow);
@@ -111,7 +111,7 @@
     flex-direction: column;
 
     &.boxed {
-        padding: 1rem;
+        padding: 0.3125rem 1rem;
     }
 
     .page-heading {
@@ -128,12 +128,19 @@
 
     }
 
+    .page-divider {
+        height: 1px;
+        width: 100%;
+        margin: 1rem 0;
+        border-bottom: $page-heading-border;
+    }
+
 }
 
 .panel {
     position: relative;
     @include border-radius($panel-border-radius);
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.5rem;
 
     &.panel-default {
         background-color: $panel-light-bg;
@@ -340,6 +347,190 @@
     text-align: center;
 }
 
+.summary, .summary-alt, .summary-linked, .summary-fluid {
+    min-height: 7.5rem;
+    position: relative;
+
+    .link, .header, .value, .description, .icon {
+        display: block;
+    }
+
+    .header, .value, .description {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .increase::after, .decrease::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 5px;
+        vertical-align: .255em;
+        content: "";
+    }
+
+    .increase::after {
+        border-top: 0;
+        border-right: 0.5rem solid transparent;
+        border-bottom: 0.5rem solid;
+        border-left: 0.5rem solid transparent;
+        color: $success;
+    }
+
+    .decrease::after {
+        border-top: 0.5rem solid;
+        border-right: 0.5rem solid transparent;
+        border-bottom: 0;
+        border-left: 0.5rem solid transparent;
+        color: $danger;
+    }
+
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    .icon {
+        font-size: 22px;
+        margin: -0.625rem 1rem 0 0.3125rem;
+    }
+
+    .value {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 40%;
+    }
+}
+
+.summary-alt {
+    min-height: 11.25rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    .value {
+        font-size: 2.375rem;
+
+        .icon {
+            padding: 0.625rem 0 0.375rem 0;
+            font-size: 2.125rem;
+        }
+    }
+
+    .header {
+        margin: 0.75rem 0 0.3125rem 0;
+    }
+
+    .btn {
+        display: inline-block;
+        align-self: center;
+        margin-top: 0.3125rem;
+    }
+
+    .link:not(.btn) {
+        padding: 0.625rem;
+    }
+
+}
+
+.summary-linked {
+
+    .link, .link:hover, .link:focus {
+        padding: 1rem;
+        color: $default;
+    }
+
+    .link:hover .icon, .link:focus .icon {
+        opacity: 1;
+        right: 0.625rem;
+    }
+
+    .header {
+        font-size: 0.8125rem;
+    }
+
+    .value {
+        font-size: 2rem;
+    }
+
+    .icon {
+        position: absolute;
+        right: 1rem;
+        top: calc(50% - 9px);
+        font-size: 1.125rem;
+        opacity: 0.3;
+        @include transition(opacity 0.3s ease-in-out, right 0.3s ease-in-out);
+    }
+
+    .progress {
+        background-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .progress-bar {
+        background-color: $default;
+    }
+
+    &.inverse {
+
+        .link, .link:hover, .link:focus {
+            color: $body-color;
+        }
+
+        .progress {
+            background-color: $progress-bg;
+        }
+
+        .progress-bar {
+            background-color: $progress-bar-bg;
+        }
+
+    }
+
+}
+
+.summary-fluid {
+    padding: 1.875rem 1rem 0.875rem 1rem;
+    text-align: center;
+
+    .value {
+        font-size: 2rem;
+        line-height: 2.375rem;
+    }
+
+    .description {
+        font-size: 0.75rem;
+
+        span, .icon {
+            font-size: inherit;
+            display: inline;
+            line-height: inherit;
+            font-weight: 500;
+        }
+
+        span {
+            margin-left: 0.3125rem;
+        }
+
+    }
+}
+
+.progress-visualizer {
+    font-size: 32px;
+    font-weight: 400;
+
+    small {
+        font-size: 50%;
+        margin-left: 1rem;
+    }
+}
+
 //
 // Small devices (landscape phones, 576px and up)
 //
@@ -347,7 +538,7 @@
 @media (min-width: $viewport-sm) {
 
     .content.boxed {
-        padding: 2rem;
+        padding: 0.3125rem 1.5rem;
     }
 
     .error-box .error-icon {

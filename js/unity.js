@@ -57,7 +57,7 @@ $(document).bind('scroll', function() {
         $pageHeader = $(".page-header"),
         $pageHeaderHeight = $pageHeader.height(),
         $navbarHeight = $(".navbar").height(),
-        $pageTitleHeight = $(".page-title").height(),
+        $pageTitleHeight = $(".page-title").outerHeight(),
         $contentDiv = $(".content"),
         $pageNav = $("#page-nav");
 	if($pageNav.hasClass("nav-scroller") && $scrollPosition > $pageTitleHeight) {

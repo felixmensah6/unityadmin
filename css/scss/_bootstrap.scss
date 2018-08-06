@@ -1,4 +1,18 @@
 //
+// Columns
+//
+
+.row {
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+//
 // Navbars
 //
 
@@ -162,6 +176,11 @@
     font-size: 0.75rem !important;
 }
 
+.btn-group-sm>.btn,
+.btn-sm {
+    padding: .25rem .5rem;
+}
+
 .btn-group-lg>.btn,
 .btn-lg {
     font-size: 1.25rem !important;
@@ -173,7 +192,7 @@
 
     .btn-label-left,
     .btn-label-right {
-        background-color: rgba(0, 0, 0, .15);
+        background-color: rgba(0, 0, 0, .10);
         display: inline-block;
         padding: 0.4375rem 0.8125rem;
         position: relative;
@@ -195,26 +214,28 @@
 @include btn('default', $default, $default, 10%, 20%);
 @include btn('primary', $primary, $primary, 10%, 0%);
 @include btn('secondary', $secondary, $secondary, 10%, 0%);
-@include btn('success', $success, $success, 8%, 0%, #fff);
+@include btn('success', $success, $success, 8%, 0%, $default);
 @include btn('danger', $danger, $danger, 15%, 0%);
-@include btn('warning', $warning, $warning, 8%, 0%, #fff);
-@include btn('info', $info, $info, 8%, 0%);
+@include btn('warning', $warning, $warning, 8%, 0%, $default);
+@include btn('info', $info, $info, 8%, 0%, $default);
 @include btn('tertiary', $tertiary, $tertiary, 8%, 0%);
+@include btn('system', $system, $system, 8%, 0%);
 @include btn('light', $light, $light, 8%, 0%);
 @include btn('dark', $dark, $dark, 8%, 0%);
 @include btn('facebook', $facebook, $facebook, 8%, 0%);
-@include btn('google', $google, $google, 8%, 0%, #fff);
+@include btn('google', $google, $google, 8%, 0%, $default);
 @include btn('twitter', $twitter, $twitter, 8%, 0%);
 
 // Outline Buttons
 @include btn-outline('default', $default);
 @include btn-outline('primary', $primary);
 @include btn-outline('secondary', $secondary);
-@include btn-outline('success', $success, #fff);
+@include btn-outline('success', $success, $default);
 @include btn-outline('danger', $danger);
-@include btn-outline('warning', $warning, #fff);
-@include btn-outline('info', $info);
+@include btn-outline('warning', $warning, $default);
+@include btn-outline('info', $info, $default);
 @include btn-outline('tertiary', $tertiary);
+@include btn-outline('system', $system);
 @include btn-outline('light', $light);
 @include btn-outline('dark', $dark);
 
@@ -223,6 +244,7 @@
 @include btn-lighter('success', $success-light, $success, 3%);
 @include btn-lighter('danger', $danger-light, $danger, 3%);
 @include btn-lighter('warning', $warning-light, $warning, 3%);
+@include btn-lighter('info', $info-light, $info, 3%);
 @include btn-lighter('tertiary', $tertiary-light, $tertiary, 3%);
 
 // Link Button
@@ -749,6 +771,7 @@ div.loader {
 
 .table thead th {
     border-top: 0;
+    border-bottom-width: 1px;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <title>Data Summaries & Shortcuts - Unity Admin Panel</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/unity.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Header -->
+            <nav class="navbar sidebar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/unity.svg" width="18" height="18" class="d-inline-block align-top" alt="">
+                    Unity Websoft Admin
+                </a>
+            </nav>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-content optiscroll">
+
+                <!-- Sidebar Nav -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-group">Overview</li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <ul>
+                        <li class="sidebar-nav-group">Layout</li>
+                        <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
+                        <li><a href="layout-cards.html"><i class="icon-credit-card-o"></i> Cards</a></li>
+                        <li><a href="layout-typography.html"><i class="icon-text-height"></i> Typography</a></li>
+                        <li><a href="layout-jumbotron.html"><i class="icon-minus-square"></i> Jumbotron</a></li>
+                        <li><a href="layout-grids.html"><i class="icon-align-justify"></i> Grids</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Forms</li>
+                        <li><a href="forms-elements.html"><i class="icon-wpforms"></i> Elements</a></li>
+                        <li><a href="forms-date-time.html"><i class="icon-box"></i> Components</a></li>
+                        <li><a href="forms-validation.html"><i class="icon-check"></i> Validation</a></li>
+                        <li><a href="forms-widgets.html"><i class="icon-boxes"></i> Widgets</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Tables</li>
+                        <li><a href="tables-basic-styles.html"><i class="icon-table"></i> Basic Styles</a></li>
+                        <li><a href="tables-datatables.html"><i class="icon-database"></i> Datatables</a></li>
+                        <li><a href="tables-pricing.html"><i class="icon-tag"></i> Pricing</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Charts</li>
+                        <li><a href="charts-summaries.html" class="active"><i class="icon-chart-pie"></i> Summaries</a></li>
+                        <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
+                        <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
+                        <li><a href="charts-canvasjs.html"><i class="icon-chart-area"></i> CanvasJS</a></li>
+                        <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
+                        <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
+                        <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">UI Elements</li>
+                        <li><a href="ui-icons.html"><i class="icon-dropbox"></i> Icons</a></li>
+                        <li><a href="ui-buttons.html"><i class="icon-equals"></i> Buttons</a></li>
+                        <li><a href="ui-dropdowns.html"><i class="icon-folder"></i> Dropdowns</a></li>
+                        <li><a href="ui-progress-bars.html"><i class="icon-align-left"></i> Progress Bars</a></li>
+                        <li><a href="ui-tooltips.html"><i class="icon-comment-alt"></i> Tooltips</a></li>
+                        <li><a href="ui-animations.html"><i class="icon-hubspot"></i> Animations</a></li>
+                        <li><a href="ui-modals.html"><i class="icon-window-maximize-o"></i> Modals</a></li>
+                        <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
+                        <li><a href="ui-colors.html"><i class="icon-palette"></i> Colors</a></li>
+                        <li><a href="ui-others.html"><i class="icon-circle-o"></i> Others</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Users</li>
+                        <li><a href="users-profile.html"><i class="icon-user-circle"></i> Profile</a></li>
+                        <li><a href="users-login.html"><i class="icon-sign-in-alt"></i> Login</a></li>
+                        <li><a href="users-registration.html"><i class="icon-list-alt"></i> Registration</a></li>
+                        <li><a href="users-lock-screen.html"><i class="icon-portrait"></i> Lock Screen</a></li>
+                        <li><a href="users-password-reset.html"><i class="icon-lock"></i> Password Reset</a></li>
+                        <li><a href="users-forgot-password.html"><i class="icon-ban"></i> Forgot Password</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Widgets</li>
+                        <li><a href="widgets-calendar.html"><i class="icon-calendar-alt"></i> Calendar</a></li>
+                        <li><a href="widgets-inbox.html"><i class="icon-inbox"></i> Inbox</a></li>
+                        <li><a href="widgets-contacts.html"><i class="icon-address-card"></i> Contacts</a></li>
+                        <li><a href="widgets-photo-gallery.html"><i class="icon-images"></i> Photo Gallery</a></li>
+                        <li><a href="widgets-filtering.html"><i class="icon-filter"></i> Filtering</a></li>
+                        <li><a href="widgets-faq.html"><i class="icon-question-circle"></i> FAQ</a></li>
+                        <li><a href="widgets-todo.html"><i class="icon-clipboard-list"></i> Todo List</a></li>
+                        <li><a href="widgets-timeline.html"><i class="icon-sitemap"></i> Timeline</a></li>
+                        <li><a href="widgets-invoice.html"><i class="icon-receipt"></i> Invoice</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Misc</li>
+                        <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
+                        <li><a href="pages-maintenance.html"><i class="icon-wrench"></i> Maintenance</a></li>
+                        <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
+                        <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
+                        <li><a href="pages-error-404.html"><i class="icon-sad-tear"></i> Error 404</a></li>
+                        <li><a href="pages-error-500.html"><i class="icon-sad-tear"></i> Error 500</a></li>
+                        <li><a href="pages-utilities.html"><i class="icon-briefcase"></i> Utilities</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <form class="navbar-search">
+                    <button type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input type="search" name="search" placeholder="Type in to Search..." autocomplete="off">
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown d-none d-sm-block">
+                        <a class="nav-link dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <i class="icon-plus"></i> Add
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 class="dropdown-header text-body">Add New Features</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Products</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Departments</a>
+                            <a class="dropdown-item" href="#">Discounts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a class="nav-link" href="#" role="button" data-toggle="tooltip" data-placement="bottom" title="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-danger">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-user dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <img src="images/user.svg" class="rounded-circle" width="30" height="30" alt="User">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <span class="dropdown-item-text">
+                                John W. Smith
+                                <span class="d-block text-muted">smith.john@gmail.com</span>
+                            </span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-profile.html">Profile</a>
+                            <a class="dropdown-item d-flex align-items-center" href="widgets-inbox.html">
+                                Inbox
+                                <span class="badge badge-danger ml-auto">12</span>
+                            </a>
+                            <a class="dropdown-item" href="#">Notifications</a>
+                            <a class="dropdown-item" href="#">Help/Support</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button">
+                    <i class="icon-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-title">
+                    <h5>Data Summaries & Shortcuts</h5>
+                </div>
+                <div class="page-header-link">
+                    <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
+                        <i class="icon-question-circle"></i>
+                    </a>
+                    <div class="dropdown d-inline-block">
+                        <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
+                            <i class="icon-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Preferences</a>
+                            <a class="dropdown-item" href="#">Layout Theme</a>
+                            <a class="dropdown-item" href="#">Favorite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content boxed">
+
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary">
+                            <i class="icon icon-users text-tertiary"></i>
+                            <span class="value">
+                                12
+                                <small class="description text-muted">New Contacts</small>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary">
+                            <i class="icon icon-history text-warning"></i>
+                            <span class="value">
+                                1,895
+                                <small class="description text-muted">Pending Emails</small>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary">
+                            <i class="icon icon-wallet text-success"></i>
+                            <span class="value">
+                                $7,951
+                                <small class="description text-muted">Won from 16 Deals</small>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary">
+                            <i class="icon icon-trash text-danger"></i>
+                            <span class="value">
+                                15
+                                <small class="description text-muted">Items in trash</small>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Page Divider -->
+                <div class="page-divider mt-0 mb-4"></div>
+
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default bg-success summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Revenue Generated</h6>
+                                <span class="value">$7,586</span>
+                                <small class="description">8 Invoices paid</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default bg-primary summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Total Outstanding Invoices</h6>
+                                <span class="value">$4,586</span>
+                                <small class="description">6 Invoices outstanding</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default bg-danger summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Total Orders</h6>
+                                <span class="value">10,670</span>
+                                <small class="description">142 Orders pending</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default bg-warning summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Online</h6>
+                                <span class="value">45</span>
+                                <small class="description">12 Unique users</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default bg-tertiary summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Projects Progress</h6>
+                                <span class="value">82%</span>
+                                <small class="description">18% To completion</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default bg-system summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Project Duration</h6>
+                                <span class="value">30 Days</span>
+                                <small class="description">5 Days remaining</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default bg-secondary summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Total Arrears</h6>
+                                <span class="value">$24,584,021</span>
+                                <small class="description">$5,241 For scholarship</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default bg-dark summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Payment Progress</h6>
+                                <span class="value">25%</span>
+                                <div class="progress" style="height: 10px; margin-top: 7px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Page Divider -->
+                <div class="page-divider mt-0 mb-4"></div>
+
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default inverse summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Projects Progress</h6>
+                                <span class="value">82%</span>
+                                <small class="description">18% To completion</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default inverse summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Project Duration</h6>
+                                <span class="value">30 Days</span>
+                                <small class="description">5 Days remaining</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default inverse summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Total Arrears</h6>
+                                <span class="value">$24,584,021</span>
+                                <small class="description">$5,241 For scholarship</small>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default inverse summary-linked">
+                            <a href="#" class="link">
+                                <h6 class="header">Payment Progress</h6>
+                                <span class="value">25%</span>
+                                <div class="progress" style="height: 10px; margin-top: 7px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Page Divider -->
+                <div class="page-divider mt-0 mb-4"></div>
+
+                <div class="panel panel-default summary-fluid">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-lg-3 mb-3">
+                            <span class="value">2</span>
+                            <small class="description text-muted">
+                                Connected Systems
+                                <span class="text-danger">5<i class="icon-caret-down"></i></span>
+                            </small>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3 mb-3">
+                            <span class="value">16,428</span>
+                            <small class="description text-muted">
+                                Records in Queue
+                                <span class="text-success">+158<i class="icon-caret-up"></i></span>
+                            </small>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3 mb-3">
+                            <span class="value">1,077</span>
+                            <small class="description text-muted">New Users</small>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3 mb-3">
+                            <span class="value">125</span>
+                            <small class="description text-muted">Total Sales</small>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Page Divider -->
+                <div class="page-divider mt-0 mb-4"></div>
+
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value">
+                                <i class="icon icon-users text-tertiary"></i>
+                            </span>
+                            <h6 class="header">Organize a Call</h6>
+                            <a href="#" class="link">Invite People</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value">14</span>
+                            <h6 class="header">Calls This Month</h6>
+                            <a href="#" class="link">View Reports</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value">450</span>
+                            <h6 class="header">Total Members</h6>
+                            <a href="#" class="link">Add New Member</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value">
+                                <i class="icon icon-cog text-secondary"></i>
+                            </span>
+                            <h6 class="header">Account Settings</h6>
+                            <a href="#" class="link">Setup Billing Info</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value">
+                                <i class="icon icon-chart-pie text-success"></i>
+                            </span>
+                            <h6 class="header">Sales Charts</h6>
+                            <a href="#" class="btn btn-light-success">View Trend</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value">
+                                <i class="icon icon-camera text-secondary"></i>
+                            </span>
+                            <h6 class="header">Manage Photos</h6>
+                            <a href="#" class="btn btn-info">Take a Photo</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value">
+                                <i class="icon icon-comments text-tertiary"></i>
+                            </span>
+                            <h6 class="header">Customer Reviews</h6>
+                            <button type="button" class="btn btn-light-tertiary btn-label">
+                                Read Reviews<span class="btn-label-right"><i class="icon-chevron-right"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value">
+                                <i class="icon icon-user-shield text-danger"></i>
+                            </span>
+                            <h6 class="header">User Security</h6>
+                            <a href="#" class="btn btn-outline-danger">Change Pin</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value increase">+10,670</span>
+                            <h6 class="header">Total Orders</h6>
+                            <a href="#" class="link">View Orders</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value decrease">$8,204</span>
+                            <h6 class="header">Total Revenue</h6>
+                            <a href="#" class="link">View Summary</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value increase">$1,005.00</span>
+                            <h6 class="header">Total Sales</h6>
+                            <a href="#" class="link">View Sales</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-alt">
+                            <span class="value decrease">$204</span>
+                            <h6 class="header">Total Expenses</h6>
+                            <a href="#" class="link">View Expenses</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Page Divider -->
+                <div class="page-divider mt-0 mb-4"></div>
+
+                <!-- Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Data Managed</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <h6 class="progress-visualizer">
+                            2,312
+                            <small class="text-muted">External Records</small>
+                        </h6>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 9%" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 6%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <table class="table table-sm">
+                            <tbody>
+                                <tr>
+                                    <td class="border-top-0"><i class="icon-stop text-primary"></i></td>
+                                    <td class="border-top-0">Salesforce</td>
+                                    <td class="border-top-0">450 Records</td>
+                                    <td class="border-top-0">45%</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="icon-stop text-danger"></i></td>
+                                    <td>Marketo</td>
+                                    <td>90 Records</td>
+                                    <td>9%</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="icon-stop text-warning"></i></td>
+                                    <td>Mailchimp</td>
+                                    <td>60 Records</td>
+                                    <td>6%</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="icon-stop text-success"></i></td>
+                                    <td>Google</td>
+                                    <td>320 Records</td>
+                                    <td>32%</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="icon-stop text-secondary"></i></td>
+                                    <td>Other</td>
+                                    <td>100 Records</td>
+                                    <td>10%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-8">
+                        Copyright © Unity Websoft
+                    </div>
+                    <div class="col-sm-4 text-sm-right">
+                        Version: 1.0.0
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/unity.core.min.js"></script>
+    <script src="js/unity.js"></script>
+</body>
+
+</html>

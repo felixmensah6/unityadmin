@@ -14,13 +14,14 @@ $orange:          hsl(36, 100%, 50%);
 $azure:           hsl(199, 98%, 48%);
 $purple:          hsl(262, 52%, 47%);
 $teal:            hsl(174, 100%, 29%);
+$sky:             hsl(193, 69, 55);
 $indigo:          hsl(231, 48%, 48%);
 
 //
 // Theme
 //
 
-$theme-link:                       hsl(199, 98%, 38%);
+$theme-link:                       hsl(199, 92%, 45%);
 $theme-sidebar:                    hsl(213, 26%, 13%);
 $theme-sidebar-link-active:        hsl(199, 92%, 64%);
 $theme-page-header:                hsl(210, 33%, 96%);
@@ -35,18 +36,20 @@ $secondary:      $anchor;
 $success:        $green;
 $danger:         $red;
 $warning:        $orange;
-$info:           $teal;
+$info:           $sky;
 $tertiary:       $purple;
+$system:         $teal;
 $light:          $gray;
 $dark:           $iron;
 
 //------ Lighter Shades -------//
 
-$primary-light:        hsl(207, 90%, 95%);
-$success-light:        hsl(122, 39%, 90%);
-$danger-light:         hsl(4, 90%, 94%);
-$warning-light:        hsl(36, 100%, 93%);
-$tertiary-light:       hsl(262, 52%, 92%);
+$primary-light:        hsl(207, 90%, 97%);
+$success-light:        hsl(122, 39%, 95%);
+$danger-light:         hsl(4, 90%, 96%);
+$warning-light:        hsl(36, 100%, 95%);
+$info-light:           hsl(191, 67%, 95%);
+$tertiary-light:       hsl(262, 52%, 95%);
 
 //------ Social Media -------//
 
@@ -63,7 +66,8 @@ $colors: (
     danger: $danger,
     warning: $warning,
     info: $info,
-    tertiary: $tertiary
+    tertiary: $tertiary,
+    system: $system
 );
 
 //

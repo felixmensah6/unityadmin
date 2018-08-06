@@ -172,12 +172,14 @@
 
 	.btn-light-#{$name}:hover,
 	.btn-light-#{$name}:focus {
+		color: $color;
 	    background-color: darken($bg, $hover-percentage);
 	    border-color: darken($bg, $hover-percentage);
 	}
 
 	.btn-light-#{$name}.disabled,
 	.btn-light-#{$name}:disabled {
+		color: $color;
 	    background-color: $bg;
 	    border-color: $bg;
 	}
@@ -185,6 +187,7 @@
 	.btn-light-#{$name}:not(:disabled):not(.disabled).active,
 	.btn-light-#{$name}:not(:disabled):not(.disabled):active,
 	.show > .btn-#{$name}.dropdown-toggle {
+		color: $color;
 	    background-color: darken($bg, $hover-percentage);
 	    border-color: darken($bg, $hover-percentage);
 	}
