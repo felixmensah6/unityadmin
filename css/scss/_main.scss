@@ -57,6 +57,11 @@
     margin-top: 3.125rem;
     display: flex;
     flex-flow: row wrap;
+    @include transition(background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out);
+
+    &.has-menu {
+        margin-bottom: 1.5rem;
+    }
 
     .page-title {
         flex: 1;
@@ -99,8 +104,9 @@
     position: fixed;
     right: 0;
     left: 0;
-    top: -15px;
+    top: -1rem;
     margin-top: 0;
+    background-color: $page-header-fixed-bg;
     @include transition(left 0.3s ease-in-out);
     @include box-shadow($navbar-shadow);
     z-index: 800;
@@ -347,6 +353,24 @@
     text-align: center;
 }
 
+.increase::after, .decrease::after {
+    display: inline-block;
+    font-weight: 500;
+    margin-left: 0.1875rem;
+    font-family: "Fontawesome";
+    font-size: 65%;
+}
+
+.increase::after {
+    color: $success;
+    content: "\e99a";
+}
+
+.decrease::after {
+    color: $danger;
+    content: "\e98f";
+}
+
 .summary, .summary-alt, .summary-linked, .summary-fluid {
     min-height: 7.5rem;
     position: relative;
@@ -359,31 +383,6 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-    }
-
-    .increase::after, .decrease::after {
-        display: inline-block;
-        width: 0;
-        height: 0;
-        margin-left: 5px;
-        vertical-align: .255em;
-        content: "";
-    }
-
-    .increase::after {
-        border-top: 0;
-        border-right: 0.5rem solid transparent;
-        border-bottom: 0.5rem solid;
-        border-left: 0.5rem solid transparent;
-        color: $success;
-    }
-
-    .decrease::after {
-        border-top: 0.5rem solid;
-        border-right: 0.5rem solid transparent;
-        border-bottom: 0;
-        border-left: 0.5rem solid transparent;
-        color: $danger;
     }
 
 }

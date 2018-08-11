@@ -434,17 +434,15 @@
 
         $(document).ready(function(){
 
-            var container = $('body');
-
             $('#notify-default').on('click', function(e) {
-                container.notify({
+                $.notify({
                     message: 'This is a default notification.',
                 });
 				e.preventDefault();
 			});
 
             $('#notify-success').on('click', function(e) {
-                container.notify({
+                $.notify({
                     type: 'success',
                     header: 'Delay is 10 seconds',
                     message: 'Order successful. <a href="#">View Order</a>',
@@ -454,7 +452,7 @@
 			});
 
             $('#notify-info').on('click', function(e) {
-                container.notify({
+                $.notify({
                     type: 'info',
                     header: 'Sticky notification',
                     message: 'I will stick here for a long time unless you close me.',
@@ -464,7 +462,7 @@
 			});
 
             $('#notify-warning').on('click', function(e) {
-                container.notify({
+                $.notify({
                     type: 'warning',
                     iconClass: 'icon-exclamation-circle',
                     header: 'Custom wrapper width!',
@@ -476,7 +474,7 @@
 			});
 
             $('#notify-danger').on('click', function(e) {
-                container.notify({
+                $.notify({
                     type: 'danger',
                     iconClass: 'icon-times-circle-o',
                     header: 'System error!',

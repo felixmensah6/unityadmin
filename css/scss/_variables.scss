@@ -89,7 +89,6 @@ $font-family:               Roboto;
 $body-font-size:            0.875rem;
 $body-bg-image:             url(../images/bg.jpg);
 $body-bg-overlay:           rgba(0, 0, 0, 0.65);
-$blur-bg:                   '<svg version="1.1" xmlns="http://www.w3.org/2000/svg"><filter id="blur"><feGaussianBlur stdDeviation="3"></feGaussianBlur></filter></svg>';
 $link-color:                $theme-link;
 $dropdown-link:             #212529;
 $dropdown-hover:            rgba(0, 0, 0, 0.04);
@@ -132,6 +131,7 @@ $navbar-link:      hsl(220, 3%, 58%);
 //
 
 $page-header-bg:                $theme-page-header;
+$page-header-fixed-bg:          $default;
 $page-header-color:             inherit;
 $page-header-link:              rgba(51, 51, 51, .7);
 $page-header-link-hover:        rgba(51, 51, 51, 1);

@@ -60,9 +60,9 @@ $(document).bind('scroll', function() {
         $pageTitleHeight = $(".page-title").outerHeight(),
         $contentDiv = $(".content"),
         $pageNav = $("#page-nav");
-	if($pageNav.hasClass("nav-scroller") && $scrollPosition > $pageTitleHeight) {
+	if($pageNav.hasClass("nav-scroller") && $scrollPosition > ($pageTitleHeight - 2)) {
 		$pageHeader.addClass("fixed-header");
-        $contentDiv.css({'margin-top' : ($pageHeaderHeight + $navbarHeight) + 'px'});
+        $contentDiv.css({'margin-top' : ($pageHeaderHeight + $navbarHeight + 24) + 'px'});
 	}else{
 		$pageHeader.removeClass("fixed-header");
         $contentDiv.css({'margin-top' : '0px'});

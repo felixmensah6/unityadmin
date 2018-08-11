@@ -901,7 +901,7 @@ function _throttle(fn, threshhold) {
 
 (function($) {
 
-    $.fn.notify = function(options) {
+    $.notify = function(options) {
 
         // Default settings
         // [string] type: success, info, warning & danger. Default is default.
@@ -912,11 +912,12 @@ function _throttle(fn, threshhold) {
             message: null,
             delay: 5000, // 5 seconds
             sticky: false,
-            wrapperWidth: 320
+            wrapperWidth: 320,
+            container: 'body'
         }, options);
 
         // Loop through and return
-        return this.each( function() {
+        //return this.each( function() {
 
             // Variables
             var markup,
@@ -999,13 +1000,13 @@ function _throttle(fn, threshhold) {
 
             }else{
 
-                $(this).append('<div class="notify" style="position:fixed;width:' + settings.wrapperWidth + 'px;right:0px;bottom:20px;z-index:1000;"></div>');
+                $(settings.container).append('<div class="notify" style="position:fixed;width:' + settings.wrapperWidth + 'px;right:0px;bottom:20px;z-index:1000;"></div>');
 
                 showNotification('.notify', markup, settings.delay, settings.wrapperWidth);
 
             }
 
-        });
+        //});
 
     }
 
