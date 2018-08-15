@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Morris Charts : Bar - Unity Admin Panel</title>
+    <title>Morris Charts : Donut - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -175,7 +175,7 @@
             <!-- Page Header -->
             <div class="page-header has-menu">
                 <div class="page-title">
-                    <h5>Morris Charts : Bar</h5>
+                    <h5>Morris Charts : Donut</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
@@ -195,10 +195,10 @@
                 <div class="nav-scroller" id="page-nav">
                     <nav class="ns-nav">
                         <div class="ns-content">
-                            <a href="charts-morris.html" class="ns-item active">Bar</a>
+                            <a href="charts-morris.html" class="ns-item">Bar</a>
                             <a href="charts-morris-line.html" class="ns-item">Line</a>
                             <a href="charts-morris-area.html" class="ns-item">Area</a>
-                            <a href="charts-morris-donut.html" class="ns-item">Donut</a>
+                            <a href="charts-morris-donut.html" class="ns-item active">Donut</a>
                             <a href="charts-morris-options.html" class="ns-item">Options</a>
                         </div>
                     </nav>
@@ -219,11 +219,11 @@
                 <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Default Panel</h6>
+                            <h6>Donut Chart</h6>
                         </div>
                     </div>
                     <div class="panel-body">
-                        ...
+                        <div id="graph"></div>
                     </div>
                 </div>
 
@@ -231,11 +231,23 @@
                 <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Default Panel</h6>
+                            <h6>Donut Chart Colors</h6>
                         </div>
                     </div>
                     <div class="panel-body">
-                        ...
+                        <div id="graph2"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Donut Formatter</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="graph3"></div>
                     </div>
                 </div>
 
@@ -261,9 +273,72 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="plugins/morris/js/morris.min.js"></script>
+    <script src="plugins/morris/js/raphael.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
     <script>
+
+        //
+        // Donut Chart
+        //
+
+        Morris.Donut({
+            element: 'graph',
+            data: [
+                {value: 70, label: 'foo'},
+                {value: 15, label: 'bar'},
+                {value: 10, label: 'baz'},
+                {value: 5, label: 'A really really long label'}
+            ],
+            resize: true,
+            formatter: function(x) {
+                return x + "%"
+            }
+        }).on('click', function(i, row) {
+            console.log(i, row);
+        });
+
+
+        //
+        // Donut Chart Colors
+        //
+
+        Morris.Donut({
+            element: 'graph2',
+            data: [
+                {value: 70, label: 'foo'},
+                {value: 15, label: 'bar'},
+                {value: 10, label: 'baz'},
+                {value: 5, label: 'A really really long label'}
+            ],
+            backgroundColor: '#ddd',
+            labelColor: '#060',
+            colors: ['#0BA462','#39B580','#67C69D','#95D7BB'
+            ],
+            resize: true,
+            formatter: function(x) {
+                return x + "%"
+            }
+        });
+
+
+        //
+        // Donut Formatter
+        //
+
+        Morris.Donut({
+            element: 'graph3',
+            data: [
+                {value: 70, label: 'foo', formatted: 'at least 70%' },
+                {value: 15, label: 'bar', formatted: 'approx. 15%' },
+                {value: 10, label: 'baz', formatted: 'approx. 10%' },
+                {value: 5, label: 'A really really long label', formatted: 'at most 5%' }
+            ],
+            resize: true,
+            formatter: function(x, data) {
+                return data.formatted;
+            }
+        });
 
 
     </script>

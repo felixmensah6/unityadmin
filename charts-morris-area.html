@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Morris Charts : Bar - Unity Admin Panel</title>
+    <title>Morris Charts : Area - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -175,7 +175,7 @@
             <!-- Page Header -->
             <div class="page-header has-menu">
                 <div class="page-title">
-                    <h5>Morris Charts : Bar</h5>
+                    <h5>Morris Charts : Area</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
@@ -195,9 +195,9 @@
                 <div class="nav-scroller" id="page-nav">
                     <nav class="ns-nav">
                         <div class="ns-content">
-                            <a href="charts-morris.html" class="ns-item active">Bar</a>
+                            <a href="charts-morris.html" class="ns-item">Bar</a>
                             <a href="charts-morris-line.html" class="ns-item">Line</a>
-                            <a href="charts-morris-area.html" class="ns-item">Area</a>
+                            <a href="charts-morris-area.html" class="ns-item active">Area</a>
                             <a href="charts-morris-donut.html" class="ns-item">Donut</a>
                             <a href="charts-morris-options.html" class="ns-item">Options</a>
                         </div>
@@ -219,7 +219,7 @@
                 <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Bar Chart</h6>
+                            <h6>Area Chart</h6>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -231,7 +231,7 @@
                 <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Bar Chart Colors</h6>
+                            <h6>Area Charts Behaving like Line Charts</h6>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -243,35 +243,11 @@
                 <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Bar Chart - No Axis</h6>
+                            <h6>Daylight-Savings Time</h6>
                         </div>
                     </div>
                     <div class="panel-body">
                         <div id="graph3"></div>
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>Bar Chart - Diagonal X Labels</h6>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div id="graph4"></div>
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>Stacked Bars chart</h6>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div id="graph5"></div>
                     </div>
                 </div>
 
@@ -303,20 +279,22 @@
     <script>
 
         //
-        // Bar Chart
+        // Area Chart
         //
 
-        Morris.Bar({
+        Morris.Area({
             element: 'graph',
             data: [
-                {x: '2011 Q1', y: 3, z: 2, a: 3},
-                {x: '2011 Q2', y: 2, z: null, a: 1},
-                {x: '2011 Q3', y: 0, z: 2, a: 4},
-                {x: '2011 Q4', y: 2, z: 4, a: 3}
+                {x: '2010 Q4', y: 3, z: 7},
+                {x: '2011 Q1', y: 3, z: 4},
+                {x: '2011 Q2', y: null, z: 1},
+                {x: '2011 Q3', y: 2, z: 5},
+                {x: '2011 Q4', y: 8, z: 2},
+                {x: '2012 Q1', y: 4, z: 4}
             ],
             xkey: 'x',
-            ykeys: ['y', 'z', 'a'],
-            labels: ['Y', 'Z', 'A'],
+            ykeys: ['y', 'z'],
+            labels: ['Y', 'Z'],
             hideHover: 'auto',
             resize: true
         }).on('click', function(i, row) {
@@ -325,96 +303,43 @@
 
 
         //
-        // Bar Chart Colors
+        // Area Charts Behaving like Line Charts
         //
 
-        Morris.Bar({
+        Morris.Area({
             element: 'graph2',
+            behaveLikeLine: true,
             data: [
-                {x: '2011 Q1', y: 0, z: 2, a: 5},
-                {x: '2011 Q2', y: 1, z: 4, a: 3},
-                {x: '2011 Q3', y: 2, z: 6, a: 8},
-                {x: '2011 Q4', y: 3, z: 8, a: 1},
-                {x: '2012 Q1', y: 4, z: 10, a: 15},
-                {x: '2012 Q2', y: 5, z: 12, a: 4},
-                {x: '2012 Q3', y: 6, z: 14, a: 10},
-                {x: '2012 Q4', y: 7, z: 16, a: 18},
-                {x: '2013 Q1', y: 8, z: 18, a: 9}
+              {x: '2011 Q1', y: 3, z: 3},
+              {x: '2011 Q2', y: 2, z: 1},
+              {x: '2011 Q3', y: 2, z: 4},
+              {x: '2011 Q4', y: 3, z: 3}
             ],
             xkey: 'x',
-            ykeys: ['y','z','a'],
-            labels: ['Y','Z','A'],
-            barColors: ['#1fbba6', '#f8aa33', '#4da74d', '#afd8f8', '#edc240', '#cb4b4b', '#9440ed'],
+            ykeys: ['y', 'z'],
+            labels: ['Y', 'Z'],
             hideHover: 'auto',
             resize: true
         });
 
 
         //
-        // Bar Chart - No Axis
+        // Daylight-Savings Time
         //
 
-        Morris.Bar({
+        Morris.Area({
             element: 'graph3',
-            axes: false,
             data: [
-                {x: '2011 Q1', y: 3, z: 2, a: 3},
-                {x: '2011 Q2', y: 2, z: null, a: 1},
-                {x: '2011 Q3', y: 0, z: 2, a: 4},
-                {x: '2011 Q4', y: 2, z: 4, a: 3}
+                {x: '2013-03-30 22:00:00', y: 3, z: 3},
+                {x: '2013-03-31 00:00:00', y: 2, z: 0},
+                {x: '2013-03-31 02:00:00', y: 0, z: 2},
+                {x: '2013-03-31 04:00:00', y: 4, z: 4}
             ],
             xkey: 'x',
-            ykeys: ['y', 'z', 'a'],
-            labels: ['Y', 'Z', 'A'],
+            ykeys: ['y', 'z'],
+            labels: ['Y', 'Z'],
             hideHover: 'auto',
             resize: true
-        });
-
-
-        //
-        // Bar Chart - Diagonal X Labels
-        //
-
-        var day_data = [
-            {"period": "2012-10-01", "licensed": 3407, "sorned": 660},
-            {"period": "2012-09-30", "licensed": 3351, "sorned": 629},
-            {"period": "2012-09-29", "licensed": 3269, "sorned": 618},
-            {"period": "2012-09-20", "licensed": 3246, "sorned": 661},
-            {"period": "2012-09-19", "licensed": 3257, "sorned": 667},
-            {"period": "2012-09-18", "licensed": 3248, "sorned": 627},
-            {"period": "2012-09-17", "licensed": 3171, "sorned": 660},
-            {"period": "2012-09-16", "licensed": 3171, "sorned": 676},
-            {"period": "2012-09-15", "licensed": 3201, "sorned": 656},
-            {"period": "2012-09-10", "licensed": 3215, "sorned": 622}
-        ];
-        Morris.Bar({
-            element: 'graph4',
-            data: day_data,
-            xkey: 'period',
-            ykeys: ['licensed', 'sorned'],
-            labels: ['Licensed', 'SORN'],
-            xLabelAngle: 60,
-            hideHover: 'auto',
-            resize: true
-        });
-
-
-        //
-        // Stacked Bars Chart
-        //
-
-        Morris.Bar({
-            element: 'graph5',
-            data: [
-                {x: '2011 Q1', y: 3, z: 2, a: 3},
-                {x: '2011 Q2', y: 2, z: null, a: 1},
-                {x: '2011 Q3', y: 0, z: 2, a: 4},
-                {x: '2011 Q4', y: 2, z: 4, a: 3}
-            ],
-            xkey: 'x',
-            ykeys: ['y', 'z', 'a'],
-            labels: ['Y', 'Z', 'A'],
-            stacked: true
         });
 
     </script>
