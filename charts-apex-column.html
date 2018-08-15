@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <title>Apex Charts : Column - Unity Admin Panel</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/apexcharts/css/apexcharts.css" rel="stylesheet">
+    <link href="css/unity.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Header -->
+            <nav class="navbar sidebar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/unity.svg" width="18" height="18" class="d-inline-block align-top" alt="">
+                    Unity Websoft Admin
+                </a>
+            </nav>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-content optiscroll">
+
+                <!-- Sidebar Nav -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-group">Overview</li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <ul>
+                        <li class="sidebar-nav-group">Layout</li>
+                        <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
+                        <li><a href="layout-cards.html"><i class="icon-credit-card-o"></i> Cards</a></li>
+                        <li><a href="layout-typography.html"><i class="icon-text-height"></i> Typography</a></li>
+                        <li><a href="layout-jumbotron.html"><i class="icon-minus-square"></i> Jumbotron</a></li>
+                        <li><a href="layout-grids.html"><i class="icon-align-justify"></i> Grids</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Forms</li>
+                        <li><a href="forms-elements.html"><i class="icon-wpforms"></i> Elements</a></li>
+                        <li><a href="forms-date-time.html"><i class="icon-box"></i> Components</a></li>
+                        <li><a href="forms-validation.html"><i class="icon-check"></i> Validation</a></li>
+                        <li><a href="forms-widgets.html"><i class="icon-boxes"></i> Widgets</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Tables</li>
+                        <li><a href="tables-basic-styles.html"><i class="icon-table"></i> Basic Styles</a></li>
+                        <li><a href="tables-datatables.html"><i class="icon-database"></i> Datatables</a></li>
+                        <li><a href="tables-pricing.html"><i class="icon-tag"></i> Pricing</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Charts</li>
+                        <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
+                        <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
+                        <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
+                        <li><a href="charts-apex.html" class="active"><i class="icon-chart-area"></i> Apex Charts</a></li>
+                        <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
+                        <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
+                        <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">UI Elements</li>
+                        <li><a href="ui-icons.html"><i class="icon-dropbox"></i> Icons</a></li>
+                        <li><a href="ui-buttons.html"><i class="icon-equals"></i> Buttons</a></li>
+                        <li><a href="ui-dropdowns.html"><i class="icon-folder"></i> Dropdowns</a></li>
+                        <li><a href="ui-progress-bars.html"><i class="icon-align-left"></i> Progress Bars</a></li>
+                        <li><a href="ui-tooltips.html"><i class="icon-comment-alt"></i> Tooltips</a></li>
+                        <li><a href="ui-animations.html"><i class="icon-hubspot"></i> Animations</a></li>
+                        <li><a href="ui-modals.html"><i class="icon-window-maximize-o"></i> Modals</a></li>
+                        <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
+                        <li><a href="ui-colors.html"><i class="icon-palette"></i> Colors</a></li>
+                        <li><a href="ui-others.html"><i class="icon-circle-o"></i> Others</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Users</li>
+                        <li><a href="users-profile.html"><i class="icon-user-circle"></i> Profile</a></li>
+                        <li><a href="users-login.html"><i class="icon-sign-in-alt"></i> Login</a></li>
+                        <li><a href="users-registration.html"><i class="icon-list-alt"></i> Registration</a></li>
+                        <li><a href="users-lock-screen.html"><i class="icon-portrait"></i> Lock Screen</a></li>
+                        <li><a href="users-password-reset.html"><i class="icon-lock"></i> Password Reset</a></li>
+                        <li><a href="users-forgot-password.html"><i class="icon-ban"></i> Forgot Password</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Widgets</li>
+                        <li><a href="widgets-calendar.html"><i class="icon-calendar-alt"></i> Calendar</a></li>
+                        <li><a href="widgets-inbox.html"><i class="icon-inbox"></i> Inbox</a></li>
+                        <li><a href="widgets-contacts.html"><i class="icon-address-card"></i> Contacts</a></li>
+                        <li><a href="widgets-photo-gallery.html"><i class="icon-images"></i> Photo Gallery</a></li>
+                        <li><a href="widgets-filtering.html"><i class="icon-filter"></i> Filtering</a></li>
+                        <li><a href="widgets-faq.html"><i class="icon-question-circle"></i> FAQ</a></li>
+                        <li><a href="widgets-todo.html"><i class="icon-clipboard-list"></i> Todo List</a></li>
+                        <li><a href="widgets-timeline.html"><i class="icon-sitemap"></i> Timeline</a></li>
+                        <li><a href="widgets-invoice.html"><i class="icon-receipt"></i> Invoice</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Misc</li>
+                        <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
+                        <li><a href="pages-maintenance.html"><i class="icon-wrench"></i> Maintenance</a></li>
+                        <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
+                        <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
+                        <li><a href="pages-error-404.html"><i class="icon-sad-tear"></i> Error 404</a></li>
+                        <li><a href="pages-error-500.html"><i class="icon-sad-tear"></i> Error 500</a></li>
+                        <li><a href="pages-utilities.html"><i class="icon-briefcase"></i> Utilities</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <form class="navbar-search">
+                    <button type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input type="search" name="search" placeholder="Type in to Search..." autocomplete="off">
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown d-none d-sm-block">
+                        <a class="nav-link dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <i class="icon-plus"></i> Add
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 class="dropdown-header text-body">Add New Features</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Products</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Departments</a>
+                            <a class="dropdown-item" href="#">Discounts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a class="nav-link" href="#" role="button" data-toggle="tooltip" data-placement="bottom" title="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-danger">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-user dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <img src="images/user.svg" class="rounded-circle" width="30" height="30" alt="User">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <span class="dropdown-item-text">
+                                John W. Smith
+                                <span class="d-block text-muted">smith.john@gmail.com</span>
+                            </span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-profile.html">Profile</a>
+                            <a class="dropdown-item d-flex align-items-center" href="widgets-inbox.html">
+                                Inbox
+                                <span class="badge badge-danger ml-auto">12</span>
+                            </a>
+                            <a class="dropdown-item" href="#">Notifications</a>
+                            <a class="dropdown-item" href="#">Help/Support</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button">
+                    <i class="icon-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header has-menu">
+                <div class="page-title">
+                    <h5>Apex Charts : Column</h5>
+                </div>
+                <div class="page-header-link">
+                    <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
+                        <i class="icon-question-circle"></i>
+                    </a>
+                    <div class="dropdown d-inline-block">
+                        <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
+                            <i class="icon-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Preferences</a>
+                            <a class="dropdown-item" href="#">Layout Theme</a>
+                            <a class="dropdown-item" href="#">Favorite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-scroller" id="page-nav">
+                    <nav class="ns-nav">
+                        <div class="ns-content">
+                            <a href="charts-apex.html" class="ns-item">Dashboard</a>
+                            <a href="charts-apex-line.html" class="ns-item">Line</a>
+                            <a href="charts-apex-area.html" class="ns-item">Area</a>
+                            <a href="charts-apex-column.html" class="ns-item active">Column</a>
+                            <a href="charts-apex-bar.html" class="ns-item">Bar</a>
+                            <a href="charts-apex-mixed.html" class="ns-item">Mixed</a>
+                            <a href="charts-apex-bubble.html" class="ns-item">Bubble</a>
+                            <a href="charts-apex-scatter.html" class="ns-item">Scatter</a>
+                            <a href="charts-apex-pie.html" class="ns-item">Pie</a>
+                            <a href="charts-apex-radial.html" class="ns-item">Radial</a>
+                        </div>
+                    </nav>
+                    <button class="ns-btn ns-btn-left" aria-label="Scroll left">
+                        <i class="icon-chevron-left"></i>
+                    </button>
+                    <button class="ns-btn ns-btn-right" aria-label="Scroll right">
+                        <i class="icon-chevron-right"></i>
+                    </button>
+                    <div class="ns-border"></div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content boxed">
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Basic Column Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Column Chart with Data Labels</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart2"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Stacked Columns Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart3"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>100% Stacked Columns Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart4"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Column Chart with Rotated Labels</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart5"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Column Chart with Negative Values</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart6"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Dynamic Loaded Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <select id="model" class="form-control">
+                            <option value="iphone5">iPhone 5</option>
+                            <option value="iphone6">iPhone 6</option>
+                            <option value="iphone7">iPhone 7</option>
+                        </select>
+                        <div class="wrap">
+                            <div id="chart-year" class="chart-box"></div>
+                            <div id="chart-quarter" class="chart-box"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Distributed Column Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart7"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-8">
+                        Copyright © Unity Websoft
+                    </div>
+                    <div class="col-sm-4 text-sm-right">
+                        Version: 1.0.0
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/apexcharts/js/apexcharts.min.js"></script>
+    <script src="js/unity.core.min.js"></script>
+    <script src="js/unity.js"></script>
+
+    <!-- Chart Data -->
+    <script src="plugins/apexcharts/assets/irregular-data-series.js"></script>
+    <script src="plugins/apexcharts/assets/stock-prices.js"></script>
+    <script src="plugins/apexcharts/assets/data.js"></script>
+    <script>
+
+        //
+        // Basic Column Chart
+        //
+
+        var options = {
+            chart: {
+                height: 380,
+                type: 'bar',
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    endingShape: 'rounded',
+                    columnWidth: '55%',
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            series: [{
+                name: 'Net Profit',
+                data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+            }, {
+                name: 'Revenue',
+                data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+            }, {
+                name: 'Free Cash Flow',
+                data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+            }],
+            xaxis: {
+                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            },
+            yaxis: {
+                title: {
+                    text: '$ (thousands)'
+                }
+            },
+            fill: {
+                opacity: 1
+
+            },
+            // legend: {
+            //     floating: true
+            // },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val + " thousands"
+                    }
+                }
+            }
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart"),
+            options
+        );
+
+        chart.render();
+
+
+        //
+        // Column Chart with Data Labels
+        //
+
+        var options2 = {
+            chart: {
+                height: 380,
+                type: 'bar',
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        position: 'top', // top, center, bottom
+                    },
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                formatter: function (val) {
+                    return val + "%";
+                },
+                offsetY: -20,
+                style: {
+                    fontSize: '12px',
+                    colors: ["#304758"]
+                }
+            },
+            series: [{
+                name: 'Inflation',
+                data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+            }],
+            xaxis: {
+                categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                position: 'top',
+                labels: {
+                    offsetY: -18,
+
+                },
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                },
+                crosshairs: {
+                    fill: {
+                        type: 'gradient',
+                        gradient: {
+                            colorFrom: '#D8E3F0',
+                            colorTo: '#BED1E6',
+                            stops: [0, 100],
+                            opacityFrom: 0.4,
+                            opacityTo: 0.5,
+                        }
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    offsetY: -35,
+
+                }
+            },
+            fill: {
+                gradient: {
+                    enabled: false,
+                    shade: 'light',
+                    type: "horizontal",
+                    shadeIntensity: 0.25,
+                    gradientToColors: undefined,
+                    inverseColors: true,
+                    opacityFrom: 1,
+                    opacityTo: 1,
+                    stops: [50, 0, 100, 100]
+                },
+            },
+            yaxis: {
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false,
+                },
+                labels: {
+                    show: false,
+                    formatter: function (val) {
+                        return val + "%";
+                    }
+                }
+
+            },
+            title: {
+                text: 'Monthly Inflation in Argentina, 2002',
+                floating: true,
+                offsetY: 350,
+                align: 'center',
+                style: {
+                    color: '#444'
+                }
+            },
+        }
+
+        var chart2 = new ApexCharts(
+            document.querySelector("#chart2"),
+            options2
+        );
+
+        chart2.render();
+
+
+        //
+        // Stacked Columns Chart
+        //
+
+        var options3 = {
+            chart: {
+                height: 380,
+                type: 'bar',
+                stacked: true,
+            },
+            responsive: [{
+                breakpoint: 700,
+                options: {
+                    legend: {
+                        position: 'bottom',
+                        offsetX: -10,
+                        offsetY: 0
+                    }
+                }
+            }],
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                },
+            },
+            series: [{
+                name: 'PRODUCT A',
+                data: [44, 55, 41, 67, 22, 43, 21, 49]
+            },{
+                name: 'PRODUCT B',
+                data: [13, 23, 20, 8, 13, 27, 33, 12]
+            },{
+                name: 'PRODUCT C',
+                data: [11, 17, 15, 15, 21, 14, 15, 13]
+            }],
+            xaxis: {
+                categories: ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2', '2012 Q3', '2012 Q4'],
+            },
+            fill: {
+                opacity: 1
+            },
+
+            legend: {
+                position: 'right',
+                verticalAlign: 'top',
+                offsetX: 0,
+                offsetY: 50
+            },
+        }
+
+        var chart3 = new ApexCharts(
+            document.querySelector("#chart3"),
+            options3
+        );
+
+        chart3.render();
+
+
+        //
+        // 100% Stacked Columns Chart
+        //
+
+        var options4 = {
+            chart: {
+                height: 380,
+                type: 'bar',
+                stacked: true,
+                stackType: '100%'
+            },
+            responsive: [{
+                breakpoint: 700,
+                options: {
+                    legend: {
+                        position: 'bottom',
+                        offsetX: -10,
+                        offsetY: 0
+                    }
+                }
+            }],
+            series: [{
+                name: 'PRODUCT A',
+                data: [44, 55, 41, 67, 22, 43, 21, 49]
+            },{
+                name: 'PRODUCT B',
+                data: [13, 23, 20, 8, 13, 27, 33, 12]
+            },{
+                name: 'PRODUCT C',
+                data: [11, 17, 15, 15, 21, 14, 15, 13]
+            }],
+            xaxis: {
+                categories: ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2', '2012 Q3', '2012 Q4'],
+            },
+            fill: {
+                opacity: 1
+            },
+
+            legend: {
+                position: 'right',
+                verticalAlign: 'top',
+                offsetX: 0,
+                offsetY: 50
+            },
+        }
+
+        var chart4 = new ApexCharts(
+            document.querySelector("#chart4"),
+            options4
+        );
+
+        chart4.render();
+
+
+        //
+        // Column Chart with Rotated Labels
+        //
+
+        var options5 = {
+          annotations: {
+            points: [{
+              x: 'Bananas',
+              seriesIndex: 0,
+              label: {
+                borderColor: '#775DD0',
+                offsetY: 0,
+                style: {
+                  color: '#fff',
+                  background: '#775DD0',
+                },
+                text: 'Bananas are good',
+              }
+            }]
+          },
+          chart: {
+            height: 380,
+            type: 'bar',
+          },
+          plotOptions: {
+            bar: {
+              columnWidth: '50%',
+              endingShape: 'rounded'
+            }
+          },
+          dataLabels: {
+            enabled: false
+          },
+          stroke: {
+            width: 2
+          },
+          series: [{
+            name: 'Servings',
+            data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65, 35]
+          }],
+          grid: {
+            row: {
+              colors: ['#fff', '#f2f2f2']
+            }
+          },
+          xaxis: {
+            labels: {
+              rotate: -45
+            },
+            categories: ['Apples', 'Oranges', 'Strawberries', 'Pineapples', 'Mangoes', 'Bananas',
+              'Blackberries', 'Pears', 'Watermelons', 'Cherries', 'Pomegranates', 'Tangerines', 'Papayas'
+            ],
+          },
+          yaxis: {
+            title: {
+              text: 'Servings',
+            },
+
+          },
+          fill: {
+            type: 'gradient',
+            gradient: {
+              shade: 'light',
+              type: "horizontal",
+              shadeIntensity: 0.25,
+              gradientToColors: undefined,
+              inverseColors: true,
+              opacityFrom: 0.85,
+              opacityTo: 0.85,
+              stops: [50, 0, 100]
+            },
+          },
+
+        }
+
+        var chart5 = new ApexCharts(
+          document.querySelector("#chart5"),
+          options5
+        );
+
+        chart5.render();
+
+
+        //
+        // Column Chart with Negative Values
+        //
+
+        var options6 = {
+            chart: {
+                height: 380,
+                type: 'bar',
+            },
+            plotOptions: {
+                bar: {
+                    colors: {
+                        ranges: [
+                            {
+                                from: -100,
+                                to: -46,
+                                color: '#F15B46'
+                            }, {
+                                from: -45,
+                                to: 0,
+                                color: '#FEB019'
+                            }
+                        ]
+                    },
+                    columnWidth: '80%',
+                }
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            series: [{
+                name: 'Cash Flow',
+                data: [1.45, 5.42, 5.9, -0.42, -12.6, -18.1, -18.2, -14.16, -11.1, -6.09, 0.34, 3.88, 13.07,
+                    5.8, 2, 7.37, 8.1, 13.57, 15.75, 17.1, 19.8, -27.03, -54.4, -47.2, -43.3, -18.6, -
+                    48.6, -41.1, -39.6, -37.6, -29.4, -21.4, -2.4
+                ]
+            }],
+
+            yaxis: {
+                title: {
+                    text: 'Growth',
+                },
+                labels: {
+                    formatter: function (y) {
+                        return y.toFixed(0) + "%";
+                    }
+                }
+
+            },
+            xaxis: {
+                // TODO: uncomment below and fix the error
+                //type: 'datetime',
+                categories: [
+                    '2011-01-01', '2011-02-01', '2011-03-01', '2011-04-01', '2011-05-01', '2011-06-01',
+                    '2011-07-01', '2011-08-01', '2011-09-01', '2011-10-01', '2011-11-01', '2011-12-01',
+                    '2012-01-01', '2012-02-01', '2012-03-01', '2012-04-01', '2012-05-01', '2012-06-01',
+                    '2012-07-01', '2012-08-01', '2012-09-01', '2012-10-01', '2012-11-01', '2012-12-01',
+                    '2013-01-01', '2013-02-01', '2013-03-01', '2013-04-01', '2013-05-01', '2013-06-01',
+                    '2013-07-01', '2013-08-01', '2013-09-01'
+                ],
+                labels: {
+                    rotate: -90
+                }
+            },
+            tooltip: {
+
+            }
+        }
+
+        var chart6 = new ApexCharts(
+            document.querySelector("#chart6"),
+            options6
+        );
+
+        chart6.render();
+
+
+        //
+        // Dynamic Loaded Chart
+        //
+
+        Apex = {
+          chart: {
+            toolbar: {
+              show: false
+            }
+          },
+          tooltip: {
+            shared: false
+          },
+        }
+        var colors = ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#775DD0', '#00D9E9', '#FF66C3'];
+
+
+        var optionsYear = {
+          chart: {
+            id: 'barYear',
+            height: 300,
+            width: '100%',
+            type: 'bar',
+          },
+          plotOptions: {
+            bar: {
+              distributed: true,
+              horizontal: true,
+              endingShape: 'arrow',
+              barHeight: '75%',
+              dataLabels: {
+                position: 'bottom'
+              }
+            }
+          },
+          dataLabels: {
+              enabled: true,
+              textAnchor: 'start',
+              style: {
+                  colors: ['#fff']
+              },
+              formatter: function(val, opt) {
+                  return opt.globals.labels[opt.dataPointIndex]
+              },
+              offsetX: 0,
+              dropShadow: {
+                enabled: true
+              }
+          },
+
+          colors: colors,
+          series: [{
+            data: makeData()
+          }],
+          states: {
+            normal: {
+              filter: {
+                type: 'desaturate'
+              }
+            },
+            active: {
+              allowMultipleDataPointsSelection: true,
+              filter: {
+                type: 'darken',
+                value: 1
+              }
+            }
+          },
+          tooltip: {
+            x: {
+              show: false
+            },
+            y: {
+              title: {
+                formatter: function(val, opts) {
+                  console.log(opts)
+                  return opts.w.globals.labels[opts.dataPointIndex]
+                }
+              }
+            }
+          },
+          title: {
+            text: 'Yearly Results',
+            offsetX: 15
+          },
+          subtitle: {
+            text: '(Click on bar to see details)',
+            offsetX: 15
+          },
+          yaxis: {
+            labels: {
+              show: false
+            }
+          },
+        }
+
+        var yearChart = new ApexCharts(
+          document.querySelector("#chart-year"),
+          optionsYear
+        );
+
+        yearChart.render();
+
+
+        function updateQuarterChart(sourceChart, destChartIDToUpdate) {
+          var series = [];
+          var seriesIndex = 0;
+          var colors = []
+
+          if (sourceChart.w.globals.selectedDataPoints[0]) {
+            var selectedPoints = sourceChart.w.globals.selectedDataPoints;
+            for (var i = 0; i < selectedPoints[seriesIndex].length; i++) {
+              var selectedIndex = selectedPoints[seriesIndex][i];
+              var yearSeries = sourceChart.w.config.series[seriesIndex];
+              series.push({
+                name: yearSeries.data[selectedIndex].x,
+                data: yearSeries.data[selectedIndex].quarters
+              })
+              colors.push(yearSeries.data[selectedIndex].color)
+            }
+            return ApexCharts.exec(destChartIDToUpdate, 'updateOptions', {
+              series,
+              colors,
+              fill: {
+                colors
+              }
+            })
+
+          }
+
+        }
+
+
+        var optionsQuarters = {
+          chart: {
+            id: 'barQuarter',
+            height: 300,
+            width: '100%',
+            type: 'bar',
+            stacked: true
+          },
+          plotOptions: {
+            bar: {
+              columnWidth: '50%',
+              horizontal: false
+            }
+          },
+          series: [],
+          legend: {
+            show: false
+          },
+          grid: {
+            yaxis: {
+              lines: {
+                show: false,
+              }
+            },
+            xaxis: {
+              lines: {
+                show: true,
+              }
+            }
+          },
+          yaxis: {
+            labels: {
+              show: false
+            }
+          },
+          title: {
+            text: 'Quarterly Results',
+            offsetX: 10
+          },
+          tooltip: {
+            x: {
+              formatter: function(val, opts) {
+                return opts.w.globals.seriesNames[opts.seriesIndex]
+              }
+            },
+            y: {
+              title: {
+                formatter: function(val, opts) {
+                  return opts.w.globals.labels[opts.dataPointIndex]
+                }
+              }
+            }
+          }
+        }
+
+        var chartQuarters = new ApexCharts(
+          document.querySelector("#chart-quarter"),
+          optionsQuarters
+        )
+        chartQuarters.render();
+
+        yearChart.addEventListener('dataPointSelection', function (e, chart, opts) {
+          var quarterChartEl = document.querySelector("#chart-quarter");
+          var yearChartEl = document.querySelector("#chart-year");
+
+          var dataPointHandler = function (event) {
+            if (event.propertyName === 'transform') {
+              updateQuarterChart(chart, 'barQuarter')
+              quarterChartEl.removeEventListener("transitionend", dataPointHandler);
+            }
+
+          }
+
+          if (opts.selectedDataPoints[0].length === 1) {
+            if(quarterChartEl.classList.contains("active")) {
+              updateQuarterChart(chart, 'barQuarter');
+            }
+            else {
+              yearChartEl.classList.add("chart-quarter-activated");
+              quarterChartEl.classList.add("show-quarter");
+              quarterChartEl.classList.add("active");
+              quarterChartEl.addEventListener("transitionend", dataPointHandler);
+            }
+          } else {
+            updateQuarterChart(chart, 'barQuarter');
+          }
+
+          if (opts.selectedDataPoints[0].length === 0) {
+            yearChartEl.classList.remove("chart-quarter-activated")
+            quarterChartEl.classList.remove("show-quarter");
+            quarterChartEl.classList.remove("active");
+          }
+
+        })
+
+        yearChart.addEventListener('updated', function (chart) {
+          updateQuarterChart(chart, 'barQuarter')
+        })
+
+
+        document.querySelector("#model").addEventListener("change", function (e) {
+          yearChart.updateSeries([{
+            data: makeData()
+          }])
+        })
+
+
+        //
+        // Distributed Column Chart
+        //
+
+        var colors = ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#775DD0', '#546E7A', '#26a69a', '#D10CE8'];
+        var options7 = {
+            chart: {
+                height: 380,
+                type: 'bar',
+                events: {
+                    click: function(chart, w, e) {
+                        console.log(chart, w, e )
+                    }
+                },
+            },
+            colors: colors,
+            plotOptions: {
+                bar: {
+                    columnWidth: '45%',
+                    distributed: true
+                }
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            series: [{
+                data: [21, 22, 10, 28, 16, 21, 13, 30]
+            }],
+            xaxis: {
+                categories: ['John', 'Joe', 'Jake', 'Amber', 'Peter', 'Mary', 'David', 'Lily'],
+                labels: {
+                    style: {
+                        colors: colors,
+                        fontSize: '14px'
+                    }
+                }
+            }
+        }
+
+        var chart7 = new ApexCharts(
+            document.querySelector("#chart7"),
+            options7
+        );
+
+        chart7.render();
+
+    </script>
+</body>
+
+</html>

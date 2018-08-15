@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <title>Apex Charts : Dashboard - Unity Admin Panel</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/unity.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Header -->
+            <nav class="navbar sidebar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/unity.svg" width="18" height="18" class="d-inline-block align-top" alt="">
+                    Unity Websoft Admin
+                </a>
+            </nav>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-content optiscroll">
+
+                <!-- Sidebar Nav -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-group">Overview</li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <ul>
+                        <li class="sidebar-nav-group">Layout</li>
+                        <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
+                        <li><a href="layout-cards.html"><i class="icon-credit-card-o"></i> Cards</a></li>
+                        <li><a href="layout-typography.html"><i class="icon-text-height"></i> Typography</a></li>
+                        <li><a href="layout-jumbotron.html"><i class="icon-minus-square"></i> Jumbotron</a></li>
+                        <li><a href="layout-grids.html"><i class="icon-align-justify"></i> Grids</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Forms</li>
+                        <li><a href="forms-elements.html"><i class="icon-wpforms"></i> Elements</a></li>
+                        <li><a href="forms-date-time.html"><i class="icon-box"></i> Components</a></li>
+                        <li><a href="forms-validation.html"><i class="icon-check"></i> Validation</a></li>
+                        <li><a href="forms-widgets.html"><i class="icon-boxes"></i> Widgets</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Tables</li>
+                        <li><a href="tables-basic-styles.html"><i class="icon-table"></i> Basic Styles</a></li>
+                        <li><a href="tables-datatables.html"><i class="icon-database"></i> Datatables</a></li>
+                        <li><a href="tables-pricing.html"><i class="icon-tag"></i> Pricing</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Charts</li>
+                        <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
+                        <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
+                        <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
+                        <li><a href="charts-apex.html" class="active"><i class="icon-chart-area"></i> Apex Charts</a></li>
+                        <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
+                        <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
+                        <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">UI Elements</li>
+                        <li><a href="ui-icons.html"><i class="icon-dropbox"></i> Icons</a></li>
+                        <li><a href="ui-buttons.html"><i class="icon-equals"></i> Buttons</a></li>
+                        <li><a href="ui-dropdowns.html"><i class="icon-folder"></i> Dropdowns</a></li>
+                        <li><a href="ui-progress-bars.html"><i class="icon-align-left"></i> Progress Bars</a></li>
+                        <li><a href="ui-tooltips.html"><i class="icon-comment-alt"></i> Tooltips</a></li>
+                        <li><a href="ui-animations.html"><i class="icon-hubspot"></i> Animations</a></li>
+                        <li><a href="ui-modals.html"><i class="icon-window-maximize-o"></i> Modals</a></li>
+                        <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
+                        <li><a href="ui-colors.html"><i class="icon-palette"></i> Colors</a></li>
+                        <li><a href="ui-others.html"><i class="icon-circle-o"></i> Others</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Users</li>
+                        <li><a href="users-profile.html"><i class="icon-user-circle"></i> Profile</a></li>
+                        <li><a href="users-login.html"><i class="icon-sign-in-alt"></i> Login</a></li>
+                        <li><a href="users-registration.html"><i class="icon-list-alt"></i> Registration</a></li>
+                        <li><a href="users-lock-screen.html"><i class="icon-portrait"></i> Lock Screen</a></li>
+                        <li><a href="users-password-reset.html"><i class="icon-lock"></i> Password Reset</a></li>
+                        <li><a href="users-forgot-password.html"><i class="icon-ban"></i> Forgot Password</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Widgets</li>
+                        <li><a href="widgets-calendar.html"><i class="icon-calendar-alt"></i> Calendar</a></li>
+                        <li><a href="widgets-inbox.html"><i class="icon-inbox"></i> Inbox</a></li>
+                        <li><a href="widgets-contacts.html"><i class="icon-address-card"></i> Contacts</a></li>
+                        <li><a href="widgets-photo-gallery.html"><i class="icon-images"></i> Photo Gallery</a></li>
+                        <li><a href="widgets-filtering.html"><i class="icon-filter"></i> Filtering</a></li>
+                        <li><a href="widgets-faq.html"><i class="icon-question-circle"></i> FAQ</a></li>
+                        <li><a href="widgets-todo.html"><i class="icon-clipboard-list"></i> Todo List</a></li>
+                        <li><a href="widgets-timeline.html"><i class="icon-sitemap"></i> Timeline</a></li>
+                        <li><a href="widgets-invoice.html"><i class="icon-receipt"></i> Invoice</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Misc</li>
+                        <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
+                        <li><a href="pages-maintenance.html"><i class="icon-wrench"></i> Maintenance</a></li>
+                        <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
+                        <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
+                        <li><a href="pages-error-404.html"><i class="icon-sad-tear"></i> Error 404</a></li>
+                        <li><a href="pages-error-500.html"><i class="icon-sad-tear"></i> Error 500</a></li>
+                        <li><a href="pages-utilities.html"><i class="icon-briefcase"></i> Utilities</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <form class="navbar-search">
+                    <button type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input type="search" name="search" placeholder="Type in to Search..." autocomplete="off">
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown d-none d-sm-block">
+                        <a class="nav-link dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <i class="icon-plus"></i> Add
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 class="dropdown-header text-body">Add New Features</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Products</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Departments</a>
+                            <a class="dropdown-item" href="#">Discounts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a class="nav-link" href="#" role="button" data-toggle="tooltip" data-placement="bottom" title="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-danger">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-user dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <img src="images/user.svg" class="rounded-circle" width="30" height="30" alt="User">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <span class="dropdown-item-text">
+                                John W. Smith
+                                <span class="d-block text-muted">smith.john@gmail.com</span>
+                            </span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-profile.html">Profile</a>
+                            <a class="dropdown-item d-flex align-items-center" href="widgets-inbox.html">
+                                Inbox
+                                <span class="badge badge-danger ml-auto">12</span>
+                            </a>
+                            <a class="dropdown-item" href="#">Notifications</a>
+                            <a class="dropdown-item" href="#">Help/Support</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button">
+                    <i class="icon-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header has-menu">
+                <div class="page-title">
+                    <h5>Apex Charts : Dashbaord</h5>
+                </div>
+                <div class="page-header-link">
+                    <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
+                        <i class="icon-question-circle"></i>
+                    </a>
+                    <div class="dropdown d-inline-block">
+                        <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
+                            <i class="icon-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Preferences</a>
+                            <a class="dropdown-item" href="#">Layout Theme</a>
+                            <a class="dropdown-item" href="#">Favorite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-scroller" id="page-nav">
+                    <nav class="ns-nav">
+                        <div class="ns-content">
+                            <a href="charts-apex.html" class="ns-item active">Dashboard</a>
+                            <a href="charts-apex-line.html" class="ns-item">Line</a>
+                            <a href="charts-apex-area.html" class="ns-item">Area</a>
+                            <a href="charts-apex-column.html" class="ns-item">Column</a>
+                            <a href="charts-apex-bar.html" class="ns-item">Bar</a>
+                            <a href="charts-apex-mixed.html" class="ns-item">Mixed</a>
+                            <a href="charts-apex-bubble.html" class="ns-item">Bubble</a>
+                            <a href="charts-apex-scatter.html" class="ns-item">Scatter</a>
+                            <a href="charts-apex-pie.html" class="ns-item">Pie</a>
+                            <a href="charts-apex-radial.html" class="ns-item">Radial</a>
+                        </div>
+                    </nav>
+                    <button class="ns-btn ns-btn-left" aria-label="Scroll left">
+                        <i class="icon-chevron-left"></i>
+                    </button>
+                    <button class="ns-btn ns-btn-right" aria-label="Scroll right">
+                        <i class="icon-chevron-right"></i>
+                    </button>
+                    <div class="ns-border"></div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content boxed">
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body p-0">
+                                <div id="spark1" style="position:relative;top:15px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body p-0">
+                                <div id="spark2" style="position:relative;top:15px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body p-0">
+                                <div id="spark3" style="position:relative;top:15px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="spark4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="spark5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="spark6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="spark7"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="radialbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="radialbar2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body p-0">
+                                <div id="line" style="position:relative;top:35px;right:3px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-body p-0">
+                                <div id="area" style="position:relative;top:16px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-8">
+                        Copyright © Unity Websoft
+                    </div>
+                    <div class="col-sm-4 text-sm-right">
+                        Version: 1.0.0
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/apexcharts/js/apexcharts.min.js"></script>
+    <script src="js/unity.core.min.js"></script>
+    <script src="js/unity.js"></script>
+    <script>
+
+        Apex.grid = {
+          padding: {
+            right: 0,
+            left: 0
+          }
+        }
+
+        Apex.dataLabels = {
+          enabled: false
+        }
+
+        var randomizeArray = function (arg) {
+          var array = arg.slice();
+          var currentIndex = array.length, temporaryValue, randomIndex;
+
+          while (0 !== currentIndex) {
+
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+          }
+
+          return array;
+        }
+
+        // data for the sparklines that appear below header area
+        var sparklineData = [47, 45, 54, 38, 56, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46];
+
+        // the default colorPalette for this dashboard
+        //var colorPalette = ['#01BFD6', '#5564BE', '#F7A600', '#EDCD24', '#F74F58'];
+        var colorPalette = ['#00D8B6','#008FFB',  '#FEB019', '#FF4560', '#775DD0']
+
+        // Spark 1
+        var spark1 = {
+          chart: {
+            type: 'area',
+            height: 160,
+            sparkline: {
+              enabled: true
+            },
+          },
+          stroke: {
+            curve: 'straight'
+          },
+          fill: {
+            opacity: 1,
+          },
+          series: [{
+            data: randomizeArray(sparklineData)
+          }],
+          yaxis: {
+            min: 0
+          },
+          colors: ['#DCE6EC'],
+          title: {
+            text: '$424,652',
+            offsetX: 30,
+            style: {
+              fontSize: '24px',
+              cssClass: 'apexcharts-yaxis-title'
+            }
+          },
+          subtitle: {
+            text: 'Sales',
+            offsetX: 30,
+            style: {
+              fontSize: '14px',
+              cssClass: 'apexcharts-yaxis-title'
+            }
+          }
+        }
+
+        // Spark 2
+        var spark2 = {
+          chart: {
+            type: 'area',
+            height: 160,
+            sparkline: {
+              enabled: true
+            },
+          },
+          stroke: {
+            curve: 'straight'
+          },
+          fill: {
+            opacity: 1,
+          },
+          series: [{
+            data: randomizeArray(sparklineData)
+          }],
+          yaxis: {
+            min: 0
+          },
+          colors: ['#DCE6EC'],
+          title: {
+            text: '$235,312',
+            offsetX: 30,
+            style: {
+              fontSize: '24px',
+              cssClass: 'apexcharts-yaxis-title'
+            }
+          },
+          subtitle: {
+            text: 'Expenses',
+            offsetX: 30,
+            style: {
+              fontSize: '14px',
+              cssClass: 'apexcharts-yaxis-title'
+            }
+          }
+        }
+
+        // Spark 3
+        var spark3 = {
+          chart: {
+            type: 'area',
+            height: 160,
+            sparkline: {
+              enabled: true
+            },
+          },
+          stroke: {
+            curve: 'straight'
+          },
+          fill: {
+            opacity: 1,
+          },
+          series: [{
+            data: randomizeArray(sparklineData)
+          }],
+          xaxis: {
+            crosshairs: {
+              width: 1
+            },
+          },
+          yaxis: {
+            min: 0
+          },
+          colors: ['#008FFB'],
+          //colors: ['#5564BE'],
+          title: {
+            text: '$135,965',
+            offsetX: 30,
+            style: {
+              fontSize: '24px',
+              cssClass: 'apexcharts-yaxis-title'
+            }
+          },
+          subtitle: {
+            text: 'Profits',
+            offsetX: 30,
+            style: {
+              fontSize: '14px',
+              cssClass: 'apexcharts-yaxis-title'
+            }
+          }
+        }
+
+        // Spark 4
+        var spark4 = {
+          chart: {
+            type: 'line',
+            height: 140,
+            sparkline: {
+              enabled: true
+            },
+          },
+          series: [{
+            data: [25, 66, 41, 59, 25, 44, 12, 36, 9, 21]
+          }],
+          stroke: {
+            curve: 'smooth'
+          },
+          markers: {
+            size: 0
+          },
+          title: {
+            text: '439',
+            style: {
+              fontSize: '26px'
+            }
+          },
+          colors: ['#734CEA']
+        }
+
+
+        // Spark 5
+        var spark5 = {
+          chart: {
+            type: 'line',
+            height: 140,
+            sparkline: {
+              enabled: true
+            },
+          },
+          series: [{
+            data: [12, 14, 2, 47, 32, 44, 14, 55, 41, 69]
+          }],
+          stroke: {
+            curve: 'smooth'
+          },
+          markers: {
+            size: 0
+          },
+          title: {
+            text: 'Profits',
+            style: {
+              fontSize: '26px'
+            }
+          },
+          colors: ['#34bfa3']
+        }
+
+
+        // Spark 6
+        var spark6 = {
+          chart: {
+            type: 'line',
+            height: 140,
+            sparkline: {
+              enabled: true
+            },
+          },
+          series: [{
+            data: [47, 45, 74, 32, 56, 31, 44, 33, 45, 19]
+          }],
+          stroke: {
+            curve: 'smooth'
+          },
+          markers: {
+            size: 0
+          },
+          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          colors: ['#f4516c'],
+          title: {
+            text: '577',
+            style: {
+              fontSize: '26px'
+            }
+          },
+          xaxis: {
+            crosshairs: {
+              width: 1
+            },
+          }
+        }
+
+        // Spark 7
+        var spark7 = {
+          chart: {
+            type: 'line',
+            height: 140,
+            sparkline: {
+              enabled: true
+            },
+          },
+          series: [{
+            data: [15, 75, 47, 65, 14, 32, 19, 54, 44, 61]
+          }],
+          stroke: {
+            curve: 'smooth'
+          },
+          markers: {
+            size: 0
+          },
+          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          colors: ['#00c5dc'],
+          title: {
+            text: '615',
+            style: {
+              fontSize: '26px'
+            }
+          },
+          xaxis: {
+            crosshairs: {
+              width: 1
+            },
+          }
+        }
+
+        new ApexCharts(document.querySelector("#spark1"), spark1).render();
+        new ApexCharts(document.querySelector("#spark2"), spark2).render();
+        new ApexCharts(document.querySelector("#spark3"), spark3).render();
+        new ApexCharts(document.querySelector("#spark4"), spark4).render();
+        new ApexCharts(document.querySelector("#spark5"), spark5).render();
+        new ApexCharts(document.querySelector("#spark6"), spark6).render();
+        new ApexCharts(document.querySelector("#spark7"), spark7).render();
+
+        // radialbar
+        var optionsRadialBar = {
+          chart: {
+            type: 'radialBar',
+            height: 270,
+            width: 380,
+          },
+          colors: ['#775DD0', '#00C8E1', '#FFB900'],
+          labels: ['q4'],
+          series: [71, 63, 77],
+          labels: ['June', 'May', 'April'],
+          theme: {
+            monochrome: {
+              enabled: false
+            }
+          },
+          plotOptions: {
+            radialBar: {
+              offsetY: -30
+            }
+          },
+          legend: {
+            show: true,
+            position: 'left',
+            containerMargin: {
+              right: 0
+            }
+          },
+          title: {
+            text: 'Growth'
+          }
+        }
+
+        var chartRadialBar = new ApexCharts(document.querySelector('#radialbar'), optionsRadialBar);
+        chartRadialBar.render();
+
+        // Donut
+        var optionsDonut = {
+          chart: {
+            type: 'donut',
+            width: 330,
+            height: 270,
+            offsetY: 20,
+            offsetX: -10
+          },
+          plotOptions: {
+            pie: {
+              donut: {
+                size: '72%',
+              },
+              dataLabels: {
+                enabled: false
+              }
+            }
+          },
+          colors: ['#775DD0', '#00C8E1', '#FFB900'],
+          title: {
+            text: 'Visitors Source'
+          },
+          series: [2, 7, 5],
+          labels: ['Social Media', 'Blog', 'External'],
+          legend: {
+            margin: {
+              left: 0,
+              top: 0,
+            },
+            offsetX: -25,
+            offsetY: 20
+          }
+        }
+
+        var chartDonut = new ApexCharts(document.querySelector('#donut'), optionsDonut);
+        chartDonut.render();
+
+        // on smaller screen, change the legends position for donut
+        mobileDonut = function() {
+          if($(window).width() < 768) {
+            chartDonut.updateOptions({
+              plotOptions: {
+                pie: {
+                  offsetY: -15,
+                }
+              },
+              legend: {
+                position: 'bottom'
+              }
+            }, false, false)
+          }
+          else {
+            chartDonut.updateOptions({
+              plotOptions: {
+                pie: {
+                  offsetY: 20,
+                }
+              },
+              legend: {
+                position: 'left'
+              }
+            }, false, false)
+          }
+        }
+
+        $(window).resize(function() {
+          mobileDonut()
+        })
+
+        // Column Chart
+        var optionsBar = {
+          chart: {
+            type: 'bar',
+            height: 270,
+            width: '100%',
+            stacked: true,
+            foreColor: '#999'
+          },
+          plotOptions: {
+            bar: {
+              dataLabels: {
+                enabled: false
+              },
+              columnWidth: '75%',
+              endingShape: 'rounded'
+            }
+          },
+          colors: ["#00C5A4", '#F3F2FC'],
+          series: [{
+            name: "Sessions",
+            data: [20, 16, 24, 28, 26, 22, 15, 5, 14, 16, 22, 29, 24, 19, 15, 10, 11, 15, 19, 23],
+          }, {
+            name: "Views",
+            data: [20, 16, 24, 28, 26, 22, 15, 5, 14, 16, 22, 29, 24, 19, 15, 10, 11, 15, 19, 23],
+          }],
+          labels: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 1, 2, 3, 4],
+          xaxis: {
+            axisBorder: {
+              show: false
+            },
+            axisTicks: {
+              show: false
+            },
+            crosshairs: {
+              show: false
+            },
+            labels: {
+              show: false,
+              style: {
+                fontSize: '14px'
+              }
+            },
+          },
+          grid: {
+            xaxis: {
+              lines: {
+                show: false
+              },
+            },
+            yaxis: {
+              lines: {
+                show: false
+              },
+            }
+          },
+          yaxis: {
+            axisBorder: {
+              show: false
+            },
+            labels: {
+              show: false
+            },
+          },
+          legend: {
+            floating: true,
+            position: 'top',
+            horizontalAlign: 'right',
+            offsetY: -36
+          },
+          title: {
+            text: 'Web Statistics',
+            align: 'left',
+          },
+          subtitle: {
+            text: 'Sessions and Views'
+          },
+          tooltip: {
+            shared: true
+          }
+
+        }
+
+        var chartBar = new ApexCharts(document.querySelector('#bar'), optionsBar);
+        chartBar.render();
+
+        // RadialBar Chart 2
+        var optionsRadialBar2 = {
+          chart: {
+            type: 'radialBar',
+            height: 270,
+            zoom: {
+              enabled: false
+            },
+          },
+          colors: ['#E91E63'],
+          plotOptions: {
+            radialBar: {
+              dataLabels: {
+                label: {
+                  show: false
+                }
+              }
+            }
+          },
+          series: [65],
+          labels: ['Rate'],
+          theme: {
+            monochrome: {
+              enabled: false
+            }
+          },
+          title: {
+            text: 'Bounce Rate',
+            align: 'left'
+          }
+        }
+
+        var chartRadialBar2 = new ApexCharts(document.querySelector('#radialbar2'), optionsRadialBar2);
+        chartRadialBar2.render();
+
+        // Line Chart
+        function trigoSeries(cnt, strength) {
+          var data = [];
+          for (var i = 0; i < cnt; i++) {
+              data.push((Math.sin(i / strength) * (i / strength) + i / strength+1) * (strength*2));
+          }
+
+          return data;
+        }
+
+        var optionsLine = {
+          chart: {
+            height: 340,
+            type: 'line',
+            zoom: {
+              enabled: false
+            }
+          },
+          plotOptions: {
+            stroke: {
+              width: 4,
+              curve: 'smooth'
+            },
+          },
+          colors: colorPalette,
+          series: [
+            {
+              name: "Day Time",
+              data: trigoSeries(52, 20)
+            },
+            {
+              name: "Night Time",
+              data: trigoSeries(52, 27)
+            },
+          ],
+          title: {
+            floating: false,
+            text: 'Customers',
+            align: 'left',
+            style: {
+              fontSize: '18px'
+            }
+          },
+          subtitle: {
+            text: '168,215',
+            align: 'center',
+            margin: 30,
+            offsetY: 10,
+            style: {
+              color: '#222',
+              fontSize: '24px',
+            }
+          },
+          markers: {
+            size: 0
+          },
+
+          grid: {
+
+          },
+          xaxis: {
+            labels: {
+              show: false
+            },
+            axisTicks: {
+              show: false
+            },
+            tooltip: {
+              enabled: false
+            }
+          },
+          yaxis: {
+            tickAmount: 2,
+            labels: {
+              show: false
+            },
+            axisBorder: {
+              show: false,
+            },
+            axisTicks: {
+              show: false
+            },
+            min: 0,
+          },
+          legend: {
+            position: 'top',
+            horizontalAlign: 'left',
+            offsetY: -20,
+            offsetX: -30
+          }
+
+        }
+
+        var chartLine = new ApexCharts(document.querySelector('#line'), optionsLine);
+        chartLine.render();
+
+        // Area Chart
+        var optionsArea = {
+          chart: {
+            height: 341,
+            type: 'area',
+            background: '#fff',
+            stacked: true,
+            offsetY: 39,
+            zoom: {
+              enabled: false
+            }
+          },
+          plotOptions: {
+            line: {
+              dataLabels: {
+                enabled: false
+              }
+            }
+          },
+          stroke: {
+            curve: 'smooth' // smooth or straight
+          },
+          colors: ["#3F51B5", '#2196F3'],
+          series: [{
+              name: "Adwords Views",
+              data: [15, 26, 20, 33, 27, 43, 17, 26, 19]
+            },
+            {
+              name: "Adwords Clicks",
+              data: [33, 21, 42, 19, 32, 25, 36, 29, 49]
+            }
+          ],
+          fill: {
+            gradient: {
+              enabled: true,
+              inverseColors: false,
+              shade: 'light',
+              type: "vertical",
+              opacityFrom: 0.9,
+              opacityTo: 0.6,
+              stops: [0, 100, 100, 100]
+            }
+          },
+          title: {
+            text: 'Visitor Insights',
+            align: 'left',
+            offsetY: -5,
+            offsetX: 20
+          },
+          subtitle: {
+            text: 'Adwords Statistics',
+            offsetY: 5,
+            offsetX: 20
+          },
+          markers: {
+            size: 0,
+            style: 'hollow',
+            strokeWidth: 8,
+            strokeColor: "#fff",
+            strokeOpacity: 0.25,
+          },
+          grid: {
+            show: false,
+            padding: {
+              left: 0,
+              right: 0
+            }
+          },
+          labels: ['01/15/2002', '01/16/2002', '01/17/2002', '01/18/2002', '01/19/2002', '01/20/2002', '01/21/2002', '01/22/2002', '01/23/2002'],
+          xaxis: {
+            type: 'datetime',
+            labels: {
+                show: false
+            },
+            tooltip: {
+              enabled: false
+            },
+            axisBorder: {
+                show: false
+            }
+          },
+          legend: {
+            offsetY: -50,
+            position: 'top',
+            horizontalAlign: 'right'
+          }
+        }
+
+        var chartArea = new ApexCharts(document.querySelector('#area'), optionsArea);
+        chartArea.render();
+
+    </script>
+</body>
+
+</html>

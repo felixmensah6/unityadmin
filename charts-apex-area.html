@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <title>Apex Charts : Area - Unity Admin Panel</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/unity.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Header -->
+            <nav class="navbar sidebar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/unity.svg" width="18" height="18" class="d-inline-block align-top" alt="">
+                    Unity Websoft Admin
+                </a>
+            </nav>
+
+            <!-- Sidebar Content -->
+            <div class="sidebar-content optiscroll">
+
+                <!-- Sidebar Nav -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-group">Overview</li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <ul>
+                        <li class="sidebar-nav-group">Layout</li>
+                        <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
+                        <li><a href="layout-cards.html"><i class="icon-credit-card-o"></i> Cards</a></li>
+                        <li><a href="layout-typography.html"><i class="icon-text-height"></i> Typography</a></li>
+                        <li><a href="layout-jumbotron.html"><i class="icon-minus-square"></i> Jumbotron</a></li>
+                        <li><a href="layout-grids.html"><i class="icon-align-justify"></i> Grids</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Forms</li>
+                        <li><a href="forms-elements.html"><i class="icon-wpforms"></i> Elements</a></li>
+                        <li><a href="forms-date-time.html"><i class="icon-box"></i> Components</a></li>
+                        <li><a href="forms-validation.html"><i class="icon-check"></i> Validation</a></li>
+                        <li><a href="forms-widgets.html"><i class="icon-boxes"></i> Widgets</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Tables</li>
+                        <li><a href="tables-basic-styles.html"><i class="icon-table"></i> Basic Styles</a></li>
+                        <li><a href="tables-datatables.html"><i class="icon-database"></i> Datatables</a></li>
+                        <li><a href="tables-pricing.html"><i class="icon-tag"></i> Pricing</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Charts</li>
+                        <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
+                        <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
+                        <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
+                        <li><a href="charts-apex.html" class="active"><i class="icon-chart-area"></i> Apex Charts</a></li>
+                        <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
+                        <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
+                        <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">UI Elements</li>
+                        <li><a href="ui-icons.html"><i class="icon-dropbox"></i> Icons</a></li>
+                        <li><a href="ui-buttons.html"><i class="icon-equals"></i> Buttons</a></li>
+                        <li><a href="ui-dropdowns.html"><i class="icon-folder"></i> Dropdowns</a></li>
+                        <li><a href="ui-progress-bars.html"><i class="icon-align-left"></i> Progress Bars</a></li>
+                        <li><a href="ui-tooltips.html"><i class="icon-comment-alt"></i> Tooltips</a></li>
+                        <li><a href="ui-animations.html"><i class="icon-hubspot"></i> Animations</a></li>
+                        <li><a href="ui-modals.html"><i class="icon-window-maximize-o"></i> Modals</a></li>
+                        <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
+                        <li><a href="ui-colors.html"><i class="icon-palette"></i> Colors</a></li>
+                        <li><a href="ui-others.html"><i class="icon-circle-o"></i> Others</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Users</li>
+                        <li><a href="users-profile.html"><i class="icon-user-circle"></i> Profile</a></li>
+                        <li><a href="users-login.html"><i class="icon-sign-in-alt"></i> Login</a></li>
+                        <li><a href="users-registration.html"><i class="icon-list-alt"></i> Registration</a></li>
+                        <li><a href="users-lock-screen.html"><i class="icon-portrait"></i> Lock Screen</a></li>
+                        <li><a href="users-password-reset.html"><i class="icon-lock"></i> Password Reset</a></li>
+                        <li><a href="users-forgot-password.html"><i class="icon-ban"></i> Forgot Password</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Widgets</li>
+                        <li><a href="widgets-calendar.html"><i class="icon-calendar-alt"></i> Calendar</a></li>
+                        <li><a href="widgets-inbox.html"><i class="icon-inbox"></i> Inbox</a></li>
+                        <li><a href="widgets-contacts.html"><i class="icon-address-card"></i> Contacts</a></li>
+                        <li><a href="widgets-photo-gallery.html"><i class="icon-images"></i> Photo Gallery</a></li>
+                        <li><a href="widgets-filtering.html"><i class="icon-filter"></i> Filtering</a></li>
+                        <li><a href="widgets-faq.html"><i class="icon-question-circle"></i> FAQ</a></li>
+                        <li><a href="widgets-todo.html"><i class="icon-clipboard-list"></i> Todo List</a></li>
+                        <li><a href="widgets-timeline.html"><i class="icon-sitemap"></i> Timeline</a></li>
+                        <li><a href="widgets-invoice.html"><i class="icon-receipt"></i> Invoice</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sidebar-nav-group">Misc</li>
+                        <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
+                        <li><a href="pages-maintenance.html"><i class="icon-wrench"></i> Maintenance</a></li>
+                        <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
+                        <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
+                        <li><a href="pages-error-404.html"><i class="icon-sad-tear"></i> Error 404</a></li>
+                        <li><a href="pages-error-500.html"><i class="icon-sad-tear"></i> Error 500</a></li>
+                        <li><a href="pages-utilities.html"><i class="icon-briefcase"></i> Utilities</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <form class="navbar-search">
+                    <button type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input type="search" name="search" placeholder="Type in to Search..." autocomplete="off">
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown d-none d-sm-block">
+                        <a class="nav-link dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <i class="icon-plus"></i> Add
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 class="dropdown-header text-body">Add New Features</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Products</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Departments</a>
+                            <a class="dropdown-item" href="#">Discounts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a class="nav-link" href="#" role="button" data-toggle="tooltip" data-placement="bottom" title="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-danger">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-user dropdown-toggle caret-none" href="#" data-toggle="dropdown">
+                            <img src="images/user.svg" class="rounded-circle" width="30" height="30" alt="User">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <span class="dropdown-item-text">
+                                John W. Smith
+                                <span class="d-block text-muted">smith.john@gmail.com</span>
+                            </span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-profile.html">Profile</a>
+                            <a class="dropdown-item d-flex align-items-center" href="widgets-inbox.html">
+                                Inbox
+                                <span class="badge badge-danger ml-auto">12</span>
+                            </a>
+                            <a class="dropdown-item" href="#">Notifications</a>
+                            <a class="dropdown-item" href="#">Help/Support</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="users-login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button">
+                    <i class="icon-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header has-menu">
+                <div class="page-title">
+                    <h5>Apex Charts : Area</h5>
+                </div>
+                <div class="page-header-link">
+                    <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
+                        <i class="icon-question-circle"></i>
+                    </a>
+                    <div class="dropdown d-inline-block">
+                        <a href="#" class="link dropdown-toggle caret-none" role="button" data-toggle="dropdown">
+                            <i class="icon-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Preferences</a>
+                            <a class="dropdown-item" href="#">Layout Theme</a>
+                            <a class="dropdown-item" href="#">Favorite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-scroller" id="page-nav">
+                    <nav class="ns-nav">
+                        <div class="ns-content">
+                            <a href="charts-apex.html" class="ns-item">Dashboard</a>
+                            <a href="charts-apex-line.html" class="ns-item">Line</a>
+                            <a href="charts-apex-area.html" class="ns-item active">Area</a>
+                            <a href="charts-apex-column.html" class="ns-item">Column</a>
+                            <a href="charts-apex-bar.html" class="ns-item">Bar</a>
+                            <a href="charts-apex-mixed.html" class="ns-item">Mixed</a>
+                            <a href="charts-apex-bubble.html" class="ns-item">Bubble</a>
+                            <a href="charts-apex-scatter.html" class="ns-item">Scatter</a>
+                            <a href="charts-apex-pie.html" class="ns-item">Pie</a>
+                            <a href="charts-apex-radial.html" class="ns-item">Radial</a>
+                        </div>
+                    </nav>
+                    <button class="ns-btn ns-btn-left" aria-label="Scroll left">
+                        <i class="icon-chevron-left"></i>
+                    </button>
+                    <button class="ns-btn ns-btn-right" aria-label="Scroll right">
+                        <i class="icon-chevron-right"></i>
+                    </button>
+                    <div class="ns-border"></div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content boxed">
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Basic Area Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Spline Area Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart2"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Datetime X-Axis</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart3">
+                          <div class="toolbar">
+                            <button type="button" class="btn btn-light btn-sm" id="one_month">1M</button>
+                            <button type="button" class="btn btn-light btn-sm" id="six_months">6M</button>
+                            <button type="button" class="btn btn-light btn-sm active" id="one_year">1Y</button>
+                            <button type="button" class="btn btn-light btn-sm" id="ytd">YTD</button>
+                            <button type="button" class="btn btn-light btn-sm" id="all">ALL</button>
+                          </div>
+                          <div id="timeline-chart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Area Chart with Negative Values</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart4"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Stacked Area Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart5"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>TimeSeries With Irregular Data</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart6"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Missing / Null Values</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart7"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-8">
+                        Copyright © Unity Websoft
+                    </div>
+                    <div class="col-sm-4 text-sm-right">
+                        Version: 1.0.0
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/apexcharts/js/apexcharts.min.js"></script>
+    <script src="js/unity.core.min.js"></script>
+    <script src="js/unity.js"></script>
+
+    <!-- Chart Data -->
+    <script src="plugins/apexcharts/assets/irregular-data-series.js"></script>
+    <script src="plugins/apexcharts/assets/stock-prices.js"></script>
+    <script src="plugins/apexcharts/assets/series1000.js"></script>
+    <script>
+
+        //
+        // Basic Area Chart
+        //
+
+        var options = {
+            chart: {
+                height: 380,
+                type: 'area',
+                zoom: {
+                    enabled: false
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            series: [{
+                name: "STOCK ABC",
+                data: series.monthDataSeries1.prices
+            }],
+            title: {
+                text: 'Fundamental Analysis of Stocks',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Price Movements',
+                align: 'left'
+            },
+            labels: series.monthDataSeries1.dates,
+            xaxis: {
+                type: 'datetime',
+            },
+            yaxis: {
+                opposite: true
+            },
+            legend: {
+                horizontalAlign: 'left'
+            }
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart"),
+            options
+        );
+
+        chart.render();
+
+
+        //
+        // Spline Area Chart
+        //
+
+        var options2 = {
+            chart: {
+                height: 380,
+                type: 'area',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            series: [{
+                name: 'series1',
+                data: [31, 40, 28, 51, 42, 109, 100]
+            }, {
+                name: 'series2',
+                data: [11, 32, 45, 32, 34, 52, 41]
+            }],
+
+            xaxis: {
+                categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+            },
+            tooltip: {
+                fixed: {
+                    enabled: false,
+                    position: 'topRight'
+                }
+            }
+        }
+
+        var chart2 = new ApexCharts(
+            document.querySelector("#chart2"),
+            options2
+        );
+
+        chart2.render();
+
+
+        //
+        // Datetime X-Axis
+        //
+
+        var options3 = {
+          annotations: {
+            yaxis: [{
+              value: 30,
+              borderColor: '#999',
+              yAxisIndex: 0,
+              label: {
+                show: true,
+                text: 'Support',
+                style: {
+                  color: "#fff",
+                  background: '#00E396'
+                }
+              }
+            }],
+            xaxis: [{
+              value: new Date('14 Nov 2012').getTime(),
+              borderColor: '#999',
+              yAxisIndex: 0,
+              label: {
+                show: true,
+                text: 'Rally',
+                style: {
+                  color: "#fff",
+                  background: '#775DD0'
+                }
+              }
+            }]
+          },
+          chart: {
+            type: 'area',
+            height: 380,
+            scroller: {
+              enabled: true
+            }
+          },
+          dataLabels: {
+            enabled: false
+          },
+          series: [{
+              data: dateSeries1
+            },
+
+          ],
+          markers: {
+            size: 0,
+            style: 'hollow',
+          },
+          xaxis: {
+            type: 'datetime',
+            min: new Date('01 Mar 2012').getTime()
+          },
+          yaxis: {
+            // min: 24,
+          },
+          tooltip: {
+            key: {
+              format: 'dd MMM yyyy'
+            }
+          },
+          fill: {
+            type: 'gradient',
+            gradient: {
+              shadeIntensity: 1,
+              opacityFrom: 0.7,
+              opacityTo: 0,
+              stops: [0, 40, 100]
+            }
+          },
+
+        }
+
+        var chart3 = new ApexCharts(
+          document.querySelector("#timeline-chart"),
+          options3
+        );
+
+        chart3.render();
+
+        var resetCssClasses = function (activeEl) {
+          var els = document.querySelectorAll("button");
+          Array.prototype.forEach.call(els, function (el) {
+            el.classList.remove('active');
+          });
+
+          activeEl.target.classList.add('active')
+        }
+
+        document.querySelector("#one_month").addEventListener('click', function (e) {
+          resetCssClasses(e)
+          chart3.updateOptions({
+            xaxis: {
+              min: new Date('28 Jan 2013').getTime(),
+              max: new Date('27 Feb 2013').getTime(),
+            }
+          })
+        })
+
+        document.querySelector("#six_months").addEventListener('click', function (e) {
+          resetCssClasses(e)
+          chart3.updateOptions({
+            xaxis: {
+              min: new Date('27 Sep 2012').getTime(),
+              max: new Date('27 Feb 2013').getTime(),
+            }
+          })
+        })
+
+        document.querySelector("#one_year").addEventListener('click', function (e) {
+          resetCssClasses(e)
+          chart3.updateOptions({
+            xaxis: {
+              min: new Date('27 Feb 2012').getTime(),
+              max: new Date('27 Feb 2013').getTime(),
+            }
+          })
+        })
+
+        document.querySelector("#ytd").addEventListener('click', function (e) {
+          resetCssClasses(e)
+          chart3.updateOptions({
+            xaxis: {
+              min: new Date('01 Jan 2013').getTime(),
+              max: new Date('27 Feb 2013').getTime(),
+            }
+          })
+        })
+
+        document.querySelector("#all").addEventListener('click', function (e) {
+          resetCssClasses(e)
+          chart3.updateOptions({
+            xaxis: {
+              min: undefined,
+              max: undefined,
+            }
+          })
+        })
+
+        document.querySelector("#ytd").addEventListener('click', function () {
+
+        })
+
+
+        //
+        // Area Chart with Negative Values
+        //
+
+        var options4 = {
+            chart: {
+                height: 380,
+                type: 'area',
+                // zoom: {
+                //     enabled: false
+                // }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            series: [{
+                name: 'north',
+                data: [{
+                        x: 1996,
+                        y: 322
+                    },
+                    {
+                        x: 1997,
+                        y: 324
+                    },
+                    {
+                        x: 1998,
+                        y: 329
+                    },
+                    {
+                        x: 1999,
+                        y: 342
+                    },
+                    {
+                        x: 2000,
+                        y: 348
+                    },
+                    {
+                        x: 2001,
+                        y: 334
+                    },
+                    {
+                        x: 2002,
+                        y: 325
+                    },
+                    {
+                        x: 2003,
+                        y: 316
+                    },
+                    {
+                        x: 2004,
+                        y: 318
+                    },
+                    {
+                        x: 2005,
+                        y: 330
+                    },
+                    {
+                        x: 2006,
+                        y: 355
+                    },
+                    {
+                        x: 2007,
+                        y: 366
+                    },
+                    {
+                        x: 2008,
+                        y: 337
+                    },
+                    {
+                        x: 2009,
+                        y: 352
+                    },
+                    {
+                        x: 2010,
+                        y: 377
+                    },
+                    {
+                        x: 2011,
+                        y: 383
+                    },
+                    {
+                        x: 2012,
+                        y: 344
+                    },
+                    {
+                        x: 2013,
+                        y: 366
+                    },
+                    {
+                        x: 2014,
+                        y: 389
+                    },
+                    {
+                        x: 2015,
+                        y: 334
+                    }
+                ]
+            }, {
+                name: 'south',
+                data: [
+
+                    {
+                        x: 1996,
+                        y: 162
+                    },
+                    {
+                        x: 1997,
+                        y: 90
+                    },
+                    {
+                        x: 1998,
+                        y: 50
+                    },
+                    {
+                        x: 1999,
+                        y: 77
+                    },
+                    {
+                        x: 2000,
+                        y: 35
+                    },
+                    {
+                        x: 2001,
+                        y: -45
+                    },
+                    {
+                        x: 2002,
+                        y: -88
+                    },
+                    {
+                        x: 2003,
+                        y: -120
+                    },
+                    {
+                        x: 2004,
+                        y: -156
+                    },
+                    {
+                        x: 2005,
+                        y: -123
+                    },
+                    {
+                        x: 2006,
+                        y: -88
+                    },
+                    {
+                        x: 2007,
+                        y: -66
+                    },
+                    {
+                        x: 2008,
+                        y: -45
+                    },
+                    {
+                        x: 2009,
+                        y: -29
+                    },
+                    {
+                        x: 2010,
+                        y: -45
+                    },
+                    {
+                        x: 2011,
+                        y: -88
+                    },
+                    {
+                        x: 2012,
+                        y: -132
+                    },
+                    {
+                        x: 2013,
+                        y: -146
+                    },
+                    {
+                        x: 2014,
+                        y: -169
+                    },
+                    {
+                        x: 2015,
+                        y: -184
+                    }
+                ]
+            }],
+            title: {
+                text: 'Area with Negative Values',
+                align: 'center',
+                style: {
+                    fontSize: '22px'
+                }
+            },
+            xaxis: {
+                type: 'datetime',
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                }
+            },
+            yaxis: {
+                tickAmount: 4,
+                floating: false,
+
+                labels: {
+                    style: {
+                        color: '#8e8da4',
+                    },
+                    offsetY: -7,
+                    offsetX: 0,
+                },
+                axisBorder: {
+                    show: false,
+                },
+                axisTicks: {
+                    show: false
+                }
+            },
+            fill: {
+                opacity: 0.5,
+                gradient: {
+                    enabled: false
+                }
+            },
+            tooltip: {
+                x: {
+                    format: "yyyy",
+                },
+                fixed: {
+                    enabled: false,
+                    position: 'topRight'
+                }
+            },
+            grid: {
+                yaxis: {
+                    lines: {
+                        offsetX: -30
+                    }
+                },
+                padding: {
+                    left: 20
+                }
+            },
+        }
+
+        var chart4 = new ApexCharts(
+            document.querySelector("#chart4"),
+            options4
+        );
+
+        chart4.render();
+
+
+        //
+        // Stacked Area Chart
+        //
+
+        var options5 = {
+          chart: {
+            height: 380,
+            type: 'area',
+            stacked: true,
+            scroller: {
+              enabled: true
+            },
+            events: {
+              selection: function(chart, e) {
+                console.log(new Date(e.xaxis.min) )
+              }
+            },
+
+          },
+          colors: ['#008FFB', '#00E396', '#CED4DC'],
+          dataLabels: {
+              enabled: false
+          },
+          stroke: {
+            curve: 'smooth'
+          },
+
+          series: [{
+              name: 'South',
+              data: generateDayWiseTimeSeries(new Date('11 Feb 2017').getTime(), 20, {
+                min: 10,
+                max: 60
+              })
+            },
+            {
+              name: 'North',
+              data: generateDayWiseTimeSeries(new Date('11 Feb 2017').getTime(), 20, {
+                min: 10,
+                max: 20
+              })
+            },
+
+            {
+              name: 'Central',
+              data: generateDayWiseTimeSeries(new Date('11 Feb 2017').getTime(), 20, {
+                min: 10,
+                max: 15
+              })
+            }
+          ],
+          fill: {
+            gradient: {
+              enabled: true,
+              opacityFrom: 0.6,
+              opacityTo: 0.8,
+            }
+          },
+          legend: {
+            position: 'top',
+            horizontalAlign: 'left'
+          },
+          xaxis: {
+            type: 'datetime'
+          },
+        }
+
+        var chart5 = new ApexCharts(
+          document.querySelector("#chart5"),
+          options5
+        );
+
+        chart5.render();
+
+        /*
+          // this function will generate output in this format
+          // data = [
+              [timestamp, 23],
+              [timestamp, 33],
+              [timestamp, 12]
+              ...
+          ]
+          */
+        function generateDayWiseTimeSeries(baseval, count, yrange) {
+          var i = 0;
+          var series = [];
+          while (i < count) {
+            var x = baseval;
+            var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+
+            series.push([x, y]);
+            baseval += 86400000;
+            i++;
+          }
+          return series;
+        }
+
+
+        //
+        // TimeSeries With Irregular Data
+        //
+
+        var ts1 = 1388534400000;
+        var ts2 = 1388620800000;
+        var ts3 = 1389052800000;
+
+        var dataSet = [[],[],[]];
+
+        for(var i=0; i<12; i++) {
+            ts1 = ts1 + 86400000;
+            var innerArr = [ts1, dataSeries[2][i].value];
+            dataSet[0].push(innerArr)
+        }
+        for(var i=0; i<18; i++) {
+            ts2 = ts2 + 86400000;
+            var innerArr = [ts2, dataSeries[1][i].value];
+            dataSet[1].push(innerArr)
+        }
+        for(var i=0; i<12; i++) {
+            ts3 = ts3 + 86400000;
+            var innerArr = [ts3, dataSeries[0][i].value];
+            dataSet[2].push(innerArr)
+        }
+
+         var options6 = {
+          chart: {
+            type: 'area',
+            stacked: false,
+            height: 380,
+            zoom: {
+              enabled: false
+            },
+          },
+          plotOptions: {
+            line: {
+              curve: 'smooth',
+            }
+          },
+          dataLabels: {
+            enabled: false
+          },
+          series: [{
+            name: 'PRODUCT A',
+            data: dataSet[0]
+          }, {
+            name: 'PRODUCT B',
+            data: dataSet[1]
+          }, {
+            name: 'PRODUCT C',
+            data: dataSet[2]
+          }],
+          markers: {
+            size: 0,
+            style: 'full',
+          },
+          fill: {
+            gradient: {
+                enabled: true,
+                shadeIntensity: 1,
+                inverseColors: false,
+                opacityFrom: 0.45,
+                opacityTo: 0.05,
+                stops: [20, 100, 100, 100]
+              },
+        },
+          yaxis: {
+            //floating: true,
+            labels: {
+                style: {
+                    color: '#8e8da4',
+                },
+                offsetX: 0,
+                formatter: function(val) {
+                  return (val / 1000000).toFixed(0);
+                },
+            },
+            axisBorder: {
+                show: false,
+            },
+            axisTicks: {
+                show: false
+            }
+          },
+          xaxis: {
+            type: 'datetime',
+
+          },
+          title: {
+            text: 'Irregular Data in Time Series',
+            align: 'left',
+            offsetX: 14
+          },
+          tooltip: {
+            shared: true,
+            y: {
+              formatter: function(val) {
+                return ( val/1000000).toFixed(0) + " points"
+              }
+            }
+          },
+          legend: {
+            position: 'top',
+            horizontalAlign: 'right',
+            offsetX: -10
+          }
+        }
+
+         var chart6 = new ApexCharts(
+              document.querySelector("#chart6"),
+              options6
+          );
+
+          chart6.render();
+
+        //
+        // Missing / Null Values
+        //
+
+        var options7 = {
+            chart: {
+                height: 380,
+                type: 'area',
+                animations: {
+                    enabled: false
+                },
+                zoom: {
+                    enabled: false
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            series: [{
+                name: 'Network',
+                data: [{
+                        x: 'Dec 23 2017',
+                        y: null
+                    },
+                    {
+                        x: 'Dec 24 2017',
+                        y: 44
+                    },
+                    {
+                        x: 'Dec 25 2017',
+                        y: 31
+                    },
+                    {
+                        x: 'Dec 26 2017',
+                        y: 38
+                    },
+                    {
+                        x: 'Dec 27 2017',
+                        y: null
+                    },
+                    {
+                        x: 'Dec 28 2017',
+                        y: 32
+                    },
+                    {
+                        x: 'Dec 29 2017',
+                        y: 55
+                    },
+                    {
+                        x: 'Dec 30 2017',
+                        y: 51
+                    },
+                    {
+                        x: 'Dec 31 2017',
+                        y: 67
+                    },
+                    {
+                        x: 'Jan 01 2018',
+                        y: 22
+                    },
+                    {
+                        x: 'Jan 02 2018',
+                        y: 34
+                    },
+                    {
+                        x: 'Jan 03 2018',
+                        y: null
+                    },
+                    {
+                        x: 'Jan 04 2018',
+                        y: null
+                    },
+                    {
+                        x: 'Jan 05 2018',
+                        y: 11
+                    },
+                    {
+                        x: 'Jan 06 2018',
+                        y: 4
+                    },
+                    {
+                        x: 'Jan 07 2018',
+                        y: 15,
+                    },
+                    {
+                        x: 'Jan 08 2018',
+                        y: null
+                    },
+                    {
+                        x: 'Jan 09 2018',
+                        y: 9
+                    },
+                    {
+                        x: 'Jan 10 2018',
+                        y: 34
+                    },
+                    {
+                        x: 'Jan 11 2018',
+                        y: null
+                    },
+                    {
+                        x: 'Jan 12 2018',
+                        y: null
+                    },
+                    {
+                        x: 'Jan 13 2018',
+                        y: 13
+                    },
+                    {
+                        x: 'Jan 14 2018',
+                        y: null
+                    }
+                ],
+            }],
+            fill: {
+                opacity: 0.8,
+                gradient: {
+                    enabled: false
+                },
+                pattern: {
+                    enabled: true,
+                    style: ['verticalLines', 'horizontalLines'],
+                    width: 5,
+                    depth: 6
+                },
+            },
+            markers: {
+                size: 5,
+                hover: {
+                    size: 9
+                }
+            },
+            title: {
+                text: 'Network Monitoring',
+            },
+            tooltip: {
+                intersect: true,
+                shared: false
+            },
+            theme: {
+                palette: 'palette1'
+            },
+            xaxis: {
+                type: 'datetime',
+            },
+            yaxis: {
+                title: {
+                    text: 'Bytes Received'
+                }
+            }
+        }
+
+        var chart7 = new ApexCharts(
+            document.querySelector("#chart7"),
+            options7
+        );
+
+        chart7.render();
+
+    </script>
+</body>
+
+</html>

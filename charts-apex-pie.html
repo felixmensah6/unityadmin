@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Dashboard - Unity Admin Panel</title>
+    <title>Apex Charts : Pie - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 <!-- Sidebar Nav -->
                 <ul class="sidebar-nav">
                     <li class="sidebar-nav-group">Overview</li>
-                    <li><a href="index.html" class="active"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
                     <ul>
                         <li class="sidebar-nav-group">Layout</li>
                         <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
@@ -60,7 +60,7 @@
                         <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
                         <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
                         <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
-                        <li><a href="charts-apex.html"><i class="icon-chart-area"></i> Apex Charts</a></li>
+                        <li><a href="charts-apex.html" class="active"><i class="icon-chart-area"></i> Apex Charts</a></li>
                         <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
                         <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
                         <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
@@ -176,7 +176,7 @@
             <!-- Page Header -->
             <div class="page-header has-menu">
                 <div class="page-title">
-                    <h5>Dashboard</h5>
+                    <h5>Apex Charts : Pie</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
@@ -196,14 +196,16 @@
                 <div class="nav-scroller" id="page-nav">
                     <nav class="ns-nav">
                         <div class="ns-content">
-                            <a href="#" class="ns-item">Profile</a>
-                            <a href="#" class="ns-item">Settings</a>
-                            <a href="#" class="ns-item">Subscription</a>
-                            <a href="#" class="ns-item active">Messages</a>
-                            <a href="#" class="ns-item">Notifications</a>
-                            <a href="#" class="ns-item">My Files</a>
-                            <a href="#" class="ns-item">Todo</a>
-                            <a href="#" class="ns-item">Activities</a>
+                            <a href="charts-apex.html" class="ns-item">Dashboard</a>
+                            <a href="charts-apex-line.html" class="ns-item">Line</a>
+                            <a href="charts-apex-area.html" class="ns-item">Area</a>
+                            <a href="charts-apex-column.html" class="ns-item">Column</a>
+                            <a href="charts-apex-bar.html" class="ns-item">Bar</a>
+                            <a href="charts-apex-mixed.html" class="ns-item">Mixed</a>
+                            <a href="charts-apex-bubble.html" class="ns-item">Bubble</a>
+                            <a href="charts-apex-scatter.html" class="ns-item">Scatter</a>
+                            <a href="charts-apex-pie.html" class="ns-item active">Pie</a>
+                            <a href="charts-apex-radial.html" class="ns-item">Radial</a>
                         </div>
                     </nav>
                     <button class="ns-btn ns-btn-left" aria-label="Scroll left">
@@ -217,10 +219,32 @@
             </div>
 
             <!-- Content -->
-            <div class="content">
-                <div style="height: 1000px">
+            <div class="content boxed">
 
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Simple Pie Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart"></div>
+                    </div>
                 </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Simple Donut Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart2"></div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -242,8 +266,57 @@
     <!-- Javascript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/apexcharts/js/apexcharts.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+        //
+        // Simple Pie Chart
+        //
+
+        var options = {
+            chart: {
+                width: 380,
+                type: 'pie',
+            },
+            series: [44, 55, 41, 17, 15],
+
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart"),
+            options
+        );
+
+        chart.render();
+
+
+        //
+        // Simple Donut Chart
+        //
+
+        var options2 = {
+            chart: {
+                width: 380,
+                type: 'donut',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            series: [44, 55, 41, 17, 15],
+
+
+        }
+
+       var chart2 = new ApexCharts(
+            document.querySelector("#chart2"),
+            options2
+        );
+
+        chart2.render();
+
+    </script>
 </body>
 
 </html>

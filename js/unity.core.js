@@ -1031,11 +1031,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // // Init with all options at default setting
 // const priorityNavScrollerDefault = PriorityNavScroller({
 //   selector: '.nav-scroller',
-//   navSelector: '.nav-scroller-nav',
-//   contentSelector: '.nav-scroller-content',
-//   itemSelector: '.nav-scroller-item',
-//   buttonLeftSelector: '.nav-scroller-btn-left',
-//   buttonRightSelector: '.nav-scroller-btn-right',
+//   navSelector: '.ns-nav',
+//   contentSelector: '.ns-content',
+//   itemSelector: '.ns-item',
+//   buttonLeftSelector: '.ns-btn-left',
+//   buttonRightSelector: '.ns-btn-right',
 //   scrollStep: 75
 // });
 
@@ -1073,15 +1073,15 @@ var PriorityNavScroller = function PriorityNavScroller() {
       _ref$selector = _ref.selector,
       selector = _ref$selector === undefined ? '.nav-scroller' : _ref$selector,
       _ref$navSelector = _ref.navSelector,
-      navSelector = _ref$navSelector === undefined ? '.nav-scroller-nav' : _ref$navSelector,
+      navSelector = _ref$navSelector === undefined ? '.ns-nav' : _ref$navSelector,
       _ref$contentSelector = _ref.contentSelector,
-      contentSelector = _ref$contentSelector === undefined ? '.nav-scroller-content' : _ref$contentSelector,
+      contentSelector = _ref$contentSelector === undefined ? '.ns-content' : _ref$contentSelector,
       _ref$itemSelector = _ref.itemSelector,
-      itemSelector = _ref$itemSelector === undefined ? '.nav-scroller-item' : _ref$itemSelector,
+      itemSelector = _ref$itemSelector === undefined ? '.ns-item' : _ref$itemSelector,
       _ref$buttonLeftSelect = _ref.buttonLeftSelector,
-      buttonLeftSelector = _ref$buttonLeftSelect === undefined ? '.nav-scroller-btn-left' : _ref$buttonLeftSelect,
+      buttonLeftSelector = _ref$buttonLeftSelect === undefined ? '.ns-btn-left' : _ref$buttonLeftSelect,
       _ref$buttonRightSelec = _ref.buttonRightSelector,
-      buttonRightSelector = _ref$buttonRightSelec === undefined ? '.nav-scroller-btn-right' : _ref$buttonRightSelec,
+      buttonRightSelector = _ref$buttonRightSelec === undefined ? '.ns-btn-right' : _ref$buttonRightSelec,
       _ref$scrollStep = _ref.scrollStep,
       scrollStep = _ref$scrollStep === undefined ? 100 : _ref$scrollStep;
 

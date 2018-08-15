@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Dashboard - Unity Admin Panel</title>
+    <title>Apex Charts : Mixed - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 <!-- Sidebar Nav -->
                 <ul class="sidebar-nav">
                     <li class="sidebar-nav-group">Overview</li>
-                    <li><a href="index.html" class="active"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
                     <ul>
                         <li class="sidebar-nav-group">Layout</li>
                         <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
@@ -60,7 +60,7 @@
                         <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
                         <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
                         <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
-                        <li><a href="charts-apex.html"><i class="icon-chart-area"></i> Apex Charts</a></li>
+                        <li><a href="charts-apex.html" class="active"><i class="icon-chart-area"></i> Apex Charts</a></li>
                         <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
                         <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
                         <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
@@ -176,7 +176,7 @@
             <!-- Page Header -->
             <div class="page-header has-menu">
                 <div class="page-title">
-                    <h5>Dashboard</h5>
+                    <h5>Apex Charts : Mixed</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
@@ -196,14 +196,16 @@
                 <div class="nav-scroller" id="page-nav">
                     <nav class="ns-nav">
                         <div class="ns-content">
-                            <a href="#" class="ns-item">Profile</a>
-                            <a href="#" class="ns-item">Settings</a>
-                            <a href="#" class="ns-item">Subscription</a>
-                            <a href="#" class="ns-item active">Messages</a>
-                            <a href="#" class="ns-item">Notifications</a>
-                            <a href="#" class="ns-item">My Files</a>
-                            <a href="#" class="ns-item">Todo</a>
-                            <a href="#" class="ns-item">Activities</a>
+                            <a href="charts-apex.html" class="ns-item">Dashboard</a>
+                            <a href="charts-apex-line.html" class="ns-item">Line</a>
+                            <a href="charts-apex-area.html" class="ns-item">Area</a>
+                            <a href="charts-apex-column.html" class="ns-item">Column</a>
+                            <a href="charts-apex-bar.html" class="ns-item">Bar</a>
+                            <a href="charts-apex-mixed.html" class="ns-item active">Mixed</a>
+                            <a href="charts-apex-bubble.html" class="ns-item">Bubble</a>
+                            <a href="charts-apex-scatter.html" class="ns-item">Scatter</a>
+                            <a href="charts-apex-pie.html" class="ns-item">Pie</a>
+                            <a href="charts-apex-radial.html" class="ns-item">Radial</a>
                         </div>
                     </nav>
                     <button class="ns-btn ns-btn-left" aria-label="Scroll left">
@@ -217,10 +219,56 @@
             </div>
 
             <!-- Content -->
-            <div class="content">
-                <div style="height: 1000px">
+            <div class="content boxed">
 
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Line & Column Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart"></div>
+                    </div>
                 </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Multiple Y-Axis Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart2"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Line & Area Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart3"></div>
+                    </div>
+                </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Line, Column & Area Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart4"></div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -242,8 +290,321 @@
     <!-- Javascript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/apexcharts/js/apexcharts.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+        //
+        // Line & Column Chart
+        //
+
+        var options = {
+          chart: {
+            height: 380,
+            type: 'line',
+          },
+          series: [{
+            name: 'Website Blog',
+            type: 'column',
+            data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
+          }, {
+            name: 'Social Media',
+            type: 'line',
+            data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
+          }],
+          stroke: {
+            width: [0, 4]
+          },
+          title: {
+            text: 'Traffic Sources'
+          },
+          // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
+          xaxis: {
+            type: 'datetime'
+          },
+          yaxis: [{
+            title: {
+              text: 'Website Blog',
+            },
+
+          }, {
+            opposite: true,
+            title: {
+              text: 'Social Media'
+            }
+          }]
+
+        }
+
+        var chart = new ApexCharts(
+          document.querySelector("#chart"),
+          options
+        );
+
+        chart.render();
+
+
+        //
+        // Multiple Y-Axis Chart
+        //
+
+        var options2 = {
+          chart: {
+            height: 380,
+            type: 'line',
+            stacked: false
+          },
+          dataLabels: {
+            enabled: false
+          },
+          series: [{
+            name: 'Income',
+            type: 'column',
+            data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
+          }, {
+            name: 'Cashflow',
+            type: 'column',
+            data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5]
+          }, {
+            name: 'Revenue',
+            type: 'line',
+            data: [20, 29, 37, 36, 44, 45, 50, 58]
+          }],
+
+          title: {
+            text: 'XYZ - Stock Analysis (2009 - 2016)',
+            align: 'left',
+            offsetX: 110
+          },
+          xaxis: {
+            categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+          },
+          yaxis: [
+            {
+              axisTicks: {
+                show: true,
+              },
+              axisBorder: {
+                show: true,
+                color: '#3f51b5'
+              },
+              labels: {
+                style: {
+                  color: '#3f51b5',
+                }
+              },
+              title: {
+                text: "Income (thousand crores)"
+              },
+            },
+
+            {
+              axisTicks: {
+                show: true,
+              },
+              axisBorder: {
+                show: true,
+                color: '#FFA600'
+              },
+              labels: {
+                style: {
+                  color: '#FFA600',
+                }
+              },
+              title: {
+                text: "Operating Cashflow (thousand crores)",
+              },
+            },
+            {
+              opposite: true,
+              axisTicks: {
+                show: true,
+              },
+              axisBorder: {
+                show: true,
+                color: '#03a9f4'
+              },
+              labels: {
+                style: {
+                  color: '#03a9f4',
+                }
+              },
+              title: {
+                text: "Revenue (thousand crores)"
+              }
+            },
+
+          ],
+          tooltip: {
+            followCursor: true,
+            y: {
+              formatter: function (y) {
+                if(typeof y !== "undefined") {
+                  return y + " thousand crores"
+                }
+                return y;
+              }
+            }
+          }
+        }
+
+        var chart2 = new ApexCharts(
+          document.querySelector("#chart2"),
+          options2
+        );
+
+
+        chart2.render();
+
+
+        //
+        // Line & Area Chart
+        //
+
+        var options3 = {
+          chart: {
+            height: 380,
+            type: 'line',
+          },
+          stroke: {
+            curve: 'smooth'
+          },
+
+          series: [{
+            name: 'TEAM A',
+            type: 'area',
+            data: [44, 55, 31, 47, 31, 43, 26, 41, 31, 47, 33]
+          }, {
+            name: 'TEAM B',
+            type: 'line',
+            data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43]
+          }],
+          fill: {
+            type:'solid',
+            opacity: [0.35, 1],
+          },
+          labels: ['Dec 01', 'Dec 02','Dec 03','Dec 04','Dec 05','Dec 06','Dec 07','Dec 08','Dec 09 ','Dec 10','Dec 11'],
+          markers: {
+            size: 0
+          },
+          yaxis: [
+            {
+              title: {
+                text: 'Series A',
+              },
+            },
+            {
+              opposite: true,
+              title: {
+                text: 'Series B',
+              },
+            },
+          ],
+          tooltip: {
+            shared: true,
+            intersect: false,
+            y: {
+              formatter: function (y) {
+                if(typeof y !== "undefined") {
+                  return  y.toFixed(0) + " points";
+                }
+                return y;
+
+              }
+            }
+          }
+
+        }
+
+        var chart3 = new ApexCharts(
+          document.querySelector("#chart3"),
+          options3
+        );
+
+        chart3.render();
+
+
+        //
+        // Line, Column & Area Chart
+        //
+
+        var options4 = {
+          chart: {
+            height: 380,
+            type: 'line',
+            stacked: false,
+          },
+          stroke: {
+            width: [0, 2, 5],
+            curve: 'smooth'
+          },
+          plotOptions: {
+            bar: {
+              columnWidth: '50%'
+            }
+          },
+          series: [{
+            name: 'TEAM A',
+            type: 'column',
+            data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+          }, {
+            name: 'TEAM B',
+            type: 'area',
+            data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+          }, {
+            name: 'TEAM C',
+            type: 'line',
+            data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+          }],
+          fill: {
+            opacity: [0.85,0.25,1],
+    				gradient: {
+    					inverseColors: false,
+    					shade: 'light',
+    					type: "vertical",
+    					opacityFrom: 0.85,
+    					opacityTo: 0.55,
+    					stops: [0, 100, 100, 100]
+    				}
+          },
+          labels: ['01/01/2003', '02/01/2003','03/01/2003','04/01/2003','05/01/2003','06/01/2003','07/01/2003','08/01/2003','09/01/2003','10/01/2003','11/01/2003'],
+          markers: {
+            size: 0
+          },
+          xaxis: {
+            type:'datetime'
+          },
+          yaxis: {
+            title: {
+              text: 'Points',
+            },
+          },
+          tooltip: {
+            shared: true,
+            intersect: false,
+            y: {
+              formatter: function (y) {
+                if(typeof y !== "undefined") {
+                  return  y.toFixed(0) + " points";
+                }
+                return y;
+
+              }
+            }
+          }
+
+        }
+
+        var chart4 = new ApexCharts(
+          document.querySelector("#chart4"),
+          options4
+        );
+
+        chart4.render();
+
+    </script>
 </body>
 
 </html>

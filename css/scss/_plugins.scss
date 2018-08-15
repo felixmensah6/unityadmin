@@ -164,7 +164,7 @@
 //
 
 .nav-scroller,
-.nav-scroller-wrapper {
+.ns-wrapper {
     display: -ms-grid;
     display: grid;
     position: relative;
@@ -180,7 +180,7 @@
     overflow: hidden;
 }
 
-.nav-scroller-nav {
+.ns-nav {
     position: relative;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -195,7 +195,7 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.nav-scroller-content {
+.ns-content {
     position: relative;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -206,19 +206,19 @@
     transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.nav-scroller-content.no-transition {
+.ns-content.no-transition {
     transition: none;
 }
 
-ul.nav-scroller-content {
+ul.ns-content {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.nav-scroller-item,
-.nav-scroller-item:hover,
-.nav-scroller-item:focus {
+.ns-item,
+.ns-item:hover,
+.ns-item:focus {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     display: block;
@@ -232,21 +232,21 @@ ul.nav-scroller-content {
     font-weight: 500;
 }
 
-.nav-scroller-item:hover,
-.nav-scroller-item:focus {
+.ns-item:hover,
+.ns-item:focus {
     color: $page-header-link-hover;
 }
 
-.nav-scroller-item:last-child {
+.ns-item:last-child {
     margin-right: 0;
 }
 
-.nav-scroller-item.active {
+.ns-item.active {
     border-color: $page-header-active-border;
     color: $page-header-active;
 }
 
-.nav-scroller-border {
+.ns-border {
     border-bottom: $page-header-border;
     position: absolute;
     bottom: 0;
@@ -254,7 +254,7 @@ ul.nav-scroller-content {
     z-index: 1;
 }
 
-.nav-scroller-btn {
+.ns-btn {
     position: absolute;
     z-index: 10;
     padding: 0.625rem 0.5rem;
@@ -266,28 +266,28 @@ ul.nav-scroller-content {
     cursor: pointer;
 }
 
-.nav-scroller-btn:hover {
+.ns-btn:hover {
     color: darken($page-header-nav-arrows, 5%);
 }
 
-.nav-scroller-btn:focus {
+.ns-btn:focus {
     outline: 0;
 }
 
-.nav-scroller-btn:not(.active) {
+.ns-btn:not(.active) {
     opacity: 0;
     pointer-events: none;
 }
 
-.nav-scroller-btn-left {
+.ns-btn-left {
     left: 0;
 }
 
-.nav-scroller-btn-right {
+.ns-btn-right {
     right: 0;
 }
 
-.nav-scroller-logo {
+.ns-logo {
     display: inline-block;
     padding: 0.5rem;
     margin-right: 1rem;
@@ -295,21 +295,21 @@ ul.nav-scroller-content {
     font-weight: bold;
 }
 
-.nav-scroller-controls-inline .nav-scroller-content {
+.ns-controls-inline .ns-content {
     padding: 0 44px;
 }
 
-.nav-scroller-controls-inline .nav-scroller-btn:not(.active) {
+.ns-controls-inline .ns-btn:not(.active) {
     color: #ddd;
     opacity: 1;
 }
 
-.nav-scroller-expand .nav-scroller-content,
-.nav-scroller-expand .nav-scroller-nav {
+.ns-expand .ns-content,
+.ns-expand .ns-nav {
     width: 100%;
 }
 
-.nav-scroller-right .nav-scroller-nav {
+.ns-right .ns-nav {
     margin-left: auto;
 }
 

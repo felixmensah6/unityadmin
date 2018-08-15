@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Dashboard - Unity Admin Panel</title>
+    <title>Apex Charts : Scatter - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 <!-- Sidebar Nav -->
                 <ul class="sidebar-nav">
                     <li class="sidebar-nav-group">Overview</li>
-                    <li><a href="index.html" class="active"><i class="icon-tachometer"></i> Dashboard</a></li>
+                    <li><a href="index.html"><i class="icon-tachometer"></i> Dashboard</a></li>
                     <ul>
                         <li class="sidebar-nav-group">Layout</li>
                         <li><a href="layout-panels.html"><i class="icon-grip-horizontal"></i> Panels</a></li>
@@ -60,7 +60,7 @@
                         <li><a href="charts-summaries.html"><i class="icon-chart-pie"></i> Summaries</a></li>
                         <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Peity</a></li>
                         <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
-                        <li><a href="charts-apex.html"><i class="icon-chart-area"></i> Apex Charts</a></li>
+                        <li><a href="charts-apex.html" class="active"><i class="icon-chart-area"></i> Apex Charts</a></li>
                         <li><a href="charts-morris.html"><i class="icon-gitter"></i> Morris</a></li>
                         <li><a href="charts-chartsjs.html"><i class="icon-signature"></i> ChartsJS</a></li>
                         <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
@@ -176,7 +176,7 @@
             <!-- Page Header -->
             <div class="page-header has-menu">
                 <div class="page-title">
-                    <h5>Dashboard</h5>
+                    <h5>Apex Charts : Scatter</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
@@ -196,14 +196,16 @@
                 <div class="nav-scroller" id="page-nav">
                     <nav class="ns-nav">
                         <div class="ns-content">
-                            <a href="#" class="ns-item">Profile</a>
-                            <a href="#" class="ns-item">Settings</a>
-                            <a href="#" class="ns-item">Subscription</a>
-                            <a href="#" class="ns-item active">Messages</a>
-                            <a href="#" class="ns-item">Notifications</a>
-                            <a href="#" class="ns-item">My Files</a>
-                            <a href="#" class="ns-item">Todo</a>
-                            <a href="#" class="ns-item">Activities</a>
+                            <a href="charts-apex.html" class="ns-item">Dashboard</a>
+                            <a href="charts-apex-line.html" class="ns-item">Line</a>
+                            <a href="charts-apex-area.html" class="ns-item">Area</a>
+                            <a href="charts-apex-column.html" class="ns-item">Column</a>
+                            <a href="charts-apex-bar.html" class="ns-item">Bar</a>
+                            <a href="charts-apex-mixed.html" class="ns-item">Mixed</a>
+                            <a href="charts-apex-bubble.html" class="ns-item">Bubble</a>
+                            <a href="charts-apex-scatter.html" class="ns-item active">Scatter</a>
+                            <a href="charts-apex-pie.html" class="ns-item">Pie</a>
+                            <a href="charts-apex-radial.html" class="ns-item">Radial</a>
                         </div>
                     </nav>
                     <button class="ns-btn ns-btn-left" aria-label="Scroll left">
@@ -217,10 +219,32 @@
             </div>
 
             <!-- Content -->
-            <div class="content">
-                <div style="height: 1000px">
+            <div class="content boxed">
 
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Scatter XY Chart</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart"></div>
+                    </div>
                 </div>
+
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Scatter Chart - Datetime</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart2"></div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -242,8 +266,152 @@
     <!-- Javascript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/apexcharts/js/apexcharts.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+        //
+        // Scatter XY Chart
+        //
+
+        var options = {
+            chart: {
+                height: 380,
+                type: 'scatter',
+                zoom: {
+                    enabled: false
+                }
+            },
+
+            series: [{
+                name: "SAMPLE A",
+                data: [
+                [16.4, 5.4], [21.7, 2], [25.4, 3], [19, 2], [10.9, 1], [13.6, 3.2], [10.9, 7.4], [10.9, 0], [10.9, 8.2], [16.4, 0], [16.4, 1.8], [13.6, 0.3], [13.6, 0], [29.9, 0], [27.1, 2.3], [16.4, 0], [13.6, 3.7], [10.9, 5.2], [16.4, 6.5], [10.9, 0], [24.5, 7.1], [10.9, 0], [8.1, 4.7], [19, 0], [21.7, 1.8], [27.1, 0], [24.5, 0], [27.1, 0], [29.9, 1.5], [27.1, 0.8], [22.1, 2]]
+            },{
+                name: "SAMPLE B",
+                data: [
+                [6.4, 13.4], [1.7, 11], [5.4, 8], [9, 17], [1.9, 4], [3.6, 12.2], [1.9, 14.4], [1.9, 9], [1.9, 13.2], [1.4, 7], [6.4, 8.8], [3.6, 4.3], [1.6, 10], [9.9, 2], [7.1, 15], [1.4, 0], [3.6, 13.7], [1.9, 15.2], [6.4, 16.5], [0.9, 10], [4.5, 17.1], [10.9, 10], [0.1, 14.7], [9, 10], [12.7, 11.8], [2.1, 10], [2.5, 10], [27.1, 10], [2.9, 11.5], [7.1, 10.8], [2.1, 12]]
+            },{
+                name: "SAMPLE C",
+                data: [
+                [21.7, 3], [23.6, 3.5], [24.6, 3], [29.9, 3], [21.7, 20], [23, 2], [10.9, 3], [28, 4], [27.1, 0.3], [16.4, 4], [13.6, 0], [19, 5], [22.4, 3], [24.5, 3], [32.6, 3], [27.1, 4], [29.6, 6], [31.6, 8], [21.6, 5], [20.9, 4], [22.4, 0], [32.6, 10.3], [29.7, 20.8], [24.5, 0.8], [21.4, 0], [21.7, 6.9], [28.6, 7.7], [15.4, 0], [18.1, 0], [33.4, 0], [16.4, 0]]
+            }],
+            xaxis: {
+                tickAmount: 10,
+            },
+            yaxis: {
+                tickAmount: 7
+            }
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart"),
+            options
+        );
+
+        chart.render();
+
+
+        //
+        // Scatter Chart - Datetime
+        //
+
+        var options2 = {
+          chart: {
+            height: 380,
+            type: 'scatter',
+            zoom: {
+              type: 'xy'
+            }
+          },
+          series: [{
+              name: 'TEAM 1',
+              data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                min: 10,
+                max: 60
+              })
+            },
+            {
+              name: 'TEAM 2',
+              data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                min: 10,
+                max: 60
+              })
+            },
+            {
+              name: 'TEAM 3',
+              data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
+                min: 10,
+                max: 60
+              })
+            },
+            {
+              name: 'TEAM 4',
+              data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 10, {
+                min: 10,
+                max: 60
+              })
+            },
+            {
+              name: 'TEAM 5',
+              data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
+                min: 10,
+                max: 60
+              })
+            },
+          ],
+          dataLabels: {
+            enabled: false
+          },
+          grid: {
+            xaxis: {
+              showLines: true
+            },
+            yaxis: {
+              showLines: true
+            },
+          },
+          xaxis: {
+            type: 'datetime',
+
+          },
+          yaxis: {
+            max: 70
+          }
+        }
+
+        var chart2 = new ApexCharts(
+          document.querySelector("#chart2"),
+          options2
+        );
+
+        chart2.render();
+
+        /*
+        // this function will generate output in this format
+        // data = [
+            [timestamp, 23],
+            [timestamp, 33],
+            [timestamp, 12]
+            ...
+        ]
+        */
+        function generateDayWiseTimeSeries(baseval, count, yrange) {
+          var i = 0;
+          var series = [];
+          while (i < count) {
+            var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+
+            series.push([baseval, y]);
+            baseval += 86400000;
+            i++;
+          }
+          return series;
+        }
+
+
+    </script>
 </body>
 
 </html>
