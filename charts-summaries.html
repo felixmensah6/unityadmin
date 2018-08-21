@@ -625,7 +625,7 @@
                                 data-textY="110"
                                 data-textStyle="font-size: 8px;"
                                 data-foregroundColor="#4cae4f"
-                                data-backgroundColor="#eee"
+                                data-backgroundColor="#edf7ee"
                                 data-fillColor="transparent"
                                 data-animateInView="true">
                             </div>
@@ -634,11 +634,11 @@
 
                     <div class="col-sm-6 col-lg-3">
                         <div class="panel panel-default summary-circle">
-                            <div id="circle-stats1"
+                            <div id="circle-stats2"
                                 data-halfCircle="true"
-                                data-percent="85"
+                                data-percent="65"
                                 data-foregroundColor="#2094f3"
-                                data-backgroundColor="#eee"
+                                data-backgroundColor="#f0f8fe"
                                 data-fillColor="transparent"
                                 data-animateInView="true">
                             </div>
@@ -647,13 +647,13 @@
 
                     <div class="col-sm-6 col-lg-3">
                         <div class="panel panel-default summary-circle">
-                            ...
+                            <div id="circle-stats3"></div>
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-lg-3">
                         <div class="panel panel-default summary-circle">
-                            ...
+                            <div id="circle-stats4"></div>
                         </div>
                     </div>
 
@@ -691,7 +691,26 @@
             //
 
             $('#circle-stats').circleStats();
-            $('#circle-stats1').circleStats();
+            $('#circle-stats2').circleStats();
+            $('#circle-stats3').circleStats({
+                percent: 38,
+                animateInView: true
+            });
+            $("#circle-stats4").circleStats({
+                    animation: 1,
+                    animationStep: 10,
+                    foregroundBorderWidth: 5,
+                    backgroundColor: "none",
+                    fillColor: '#eee',
+                    percent: 75,
+                    replacePercentageByText: "",
+                    iconColor: '#ff6c99',
+                    icon: 'e9d2',
+                    iconSize: '32',
+                    iconPosition: 'bottom'
+                }, function(){
+                    console.log('done!');
+            });
 
         });
 

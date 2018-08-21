@@ -2029,8 +2029,8 @@ exports.default = PriorityNavScroller;
 
         var settings = $.extend({
             // These are the defaults.
-            foregroundColor: "#3498DB",
-            backgroundColor: "#ccc",
+            foregroundColor: "#2094f3",
+            backgroundColor: "#eee",
             pointColor: "none",
             fillColor: 'none',
             foregroundBorderWidth: 15,
