@@ -606,6 +606,59 @@
                     </div>
                 </div>
 
+                <!-- Page Divider -->
+                <div class="page-divider mt-0 mb-4"></div>
+
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-circle">
+                            <div id="circle-stats"
+                                data-halfCircle="false"
+                                data-percent="20"
+                                data-percentageTextSize="24"
+                                data-foregroundBorderWidth="10"
+                                data-backgroundBorderWidth="5"
+                                data-percentageY="95"
+                                data-text="New Clients"
+                                data-textY="110"
+                                data-textStyle="font-size: 8px;"
+                                data-foregroundColor="#4cae4f"
+                                data-backgroundColor="#eee"
+                                data-fillColor="transparent"
+                                data-animateInView="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-circle">
+                            <div id="circle-stats1"
+                                data-halfCircle="true"
+                                data-percent="85"
+                                data-foregroundColor="#2094f3"
+                                data-backgroundColor="#eee"
+                                data-fillColor="transparent"
+                                data-animateInView="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-circle">
+                            ...
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-circle">
+                            ...
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -629,6 +682,20 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            //
+            // Circle Statistics
+            //
+
+            $('#circle-stats').circleStats();
+            $('#circle-stats1').circleStats();
+
+        });
+
+    </script>
 </body>
 
 </html>
