@@ -785,6 +785,15 @@ div.loader {
 }
 
 //
+// Navbars
+//
+
+.card {
+    @include box-shadow($card-shadow);
+    border: 0;
+}
+
+//
 // Background Color Utilities
 //
 
