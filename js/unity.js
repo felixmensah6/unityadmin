@@ -76,8 +76,8 @@ $(document).bind('scroll', function() {
 $(".password-toggle").click(function() {
     var passwordInput = $('[data-toggle="password"]').closest('input'),
         toggleIcon = $('.password-toggle i'),
-        showIconClass = 'icon-eye-o',
-        hideIconClass = 'icon-eye-slash-o';
+        showIconClass = 'line-icon-eye',
+        hideIconClass = 'line-icon-eye-slash';
 
     if (passwordInput.attr('type') === 'password') {
         toggleIcon.removeClass(showIconClass).addClass(hideIconClass).attr('title', 'Hide Password');
@@ -144,6 +144,7 @@ setInterval(function(){
 		$(this).remove();
 	});
 }, 5000);
+
 
 
 })();

@@ -1,7 +1,10 @@
 @font-face {
     font-family: 'Fontawesome';
     src: url('fontawesome.eot?qpzwtg');
-    src: url('fontawesome.eot?qpzwtg#iefix') format('embedded-opentype'), url('fontawesome.ttf?qpzwtg') format('truetype'), url('fontawesome.woff?qpzwtg') format('woff'), url('fontawesome.svg?qpzwtg#Fontawesome') format('svg');
+    src: url('fontawesome.eot?qpzwtg#iefix') format('embedded-opentype'),
+         url('fontawesome.ttf?qpzwtg') format('truetype'),
+         url('fontawesome.woff?qpzwtg') format('woff'),
+         url('fontawesome.svg?qpzwtg#Fontawesome') format('svg');
     font-weight: normal;
     font-style: normal;
 }

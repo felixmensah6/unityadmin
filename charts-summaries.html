@@ -62,7 +62,6 @@
                         <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
                         <li><a href="charts-apex.html"><i class="icon-chart-area"></i> Apex Charts</a></li>
                         <li><a href="charts-morris.html"><i class="icon-signature"></i> Morris</a></li>
-                        <li><a href="charts-c3.html"><i class="icon-stream"></i> C3 Charts</a></li>
                     </ul>
                     <ul>
                         <li class="sidebar-nav-group">UI Elements</li>
@@ -606,6 +605,59 @@
                     </div>
                 </div>
 
+                <!-- Page Divider -->
+                <div class="page-divider mt-0 mb-4"></div>
+
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-circle">
+                            <div id="circle-stats"
+                                data-halfCircle="false"
+                                data-percent="20"
+                                data-percentageTextSize="24"
+                                data-foregroundBorderWidth="10"
+                                data-backgroundBorderWidth="5"
+                                data-percentageY="95"
+                                data-text="New Clients"
+                                data-textY="110"
+                                data-textStyle="font-size: 8px;"
+                                data-foregroundColor="#4cae4f"
+                                data-backgroundColor="#edf7ee"
+                                data-fillColor="transparent"
+                                data-animateInView="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-circle">
+                            <div id="circle-stats2"
+                                data-halfCircle="true"
+                                data-percent="65"
+                                data-foregroundColor="#2094f3"
+                                data-backgroundColor="#f0f8fe"
+                                data-fillColor="transparent"
+                                data-animateInView="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-circle">
+                            <div id="circle-stats3"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="panel panel-default summary-circle">
+                            <div id="circle-stats4"></div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -629,6 +681,39 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            //
+            // Circle Statistics
+            //
+
+            $('#circle-stats').circleStats();
+            $('#circle-stats2').circleStats();
+            $('#circle-stats3').circleStats({
+                percent: 38,
+                animateInView: true
+            });
+            $("#circle-stats4").circleStats({
+                    animation: 1,
+                    animationStep: 10,
+                    foregroundBorderWidth: 5,
+                    backgroundColor: "none",
+                    fillColor: '#eee',
+                    percent: 75,
+                    replacePercentageByText: "",
+                    iconColor: '#ff6c99',
+                    icon: 'e9d2',
+                    iconSize: '32',
+                    iconPosition: 'bottom'
+                }, function(){
+                    console.log('done!');
+            });
+
+        });
+
+    </script>
 </body>
 
 </html>

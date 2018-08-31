@@ -347,6 +347,7 @@ label, legend {
         cursor: pointer;
         display: block;
         color: $form-icon-color;
+        font-size: 22px;
 
         &::before {
             vertical-align: middle;
@@ -355,7 +356,7 @@ label, legend {
     }
 
     .form-icon-only {
-        top: 28%;
+        top: 8%;
         cursor: default;
     }
 
