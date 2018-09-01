@@ -790,7 +790,13 @@ div.loader {
 
 .card {
     @include box-shadow($card-shadow);
-    border: 0;
+    @include border-radius($panel-border-radius);
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    border-top-left-radius: calc(0.1875rem - 1px);
+    border-top-right-radius: calc(0.1875rem - 1px);
 }
 
 //

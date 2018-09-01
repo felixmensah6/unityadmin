@@ -98,6 +98,7 @@ $dropdown-border:           1px solid $dropdown-divider; // e.g. 1px solid trans
 $dropdown-border-radius:    0.1875rem;
 $dropdown-margin:           0.125rem;
 $page-heading-border:       1px solid rgba(0, 0, 0, 0.10);
+$content-boxed-margin:      1.5rem;
 
 //
 // Sidebar
@@ -152,6 +153,8 @@ $panel-shadow:             0 1px 3px 0 rgba(0, 0, 0, 0.15),
 $panel-heading-border:     1px solid rgba(0, 0, 0, 0.1);
 $panel-light-link:         hsl(220, 3%, 58%);
 $panel-light-footer-bg:    rgba(0, 0, 0, 0.025);
+$panel-column-count:       1;
+$panel-column-gap:         $content-boxed-margin;
 
 //
 // Buttons
@@ -191,7 +194,7 @@ $alert-border-radius:              0.1875rem;
 // Cards
 //
 
-$card-shadow:                      0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5;
+$card-shadow:              $panel-shadow;
 
 //
 // Footer

@@ -146,7 +146,7 @@
 .panel {
     position: relative;
     @include border-radius($panel-border-radius);
-    margin-bottom: 1.5rem;
+    margin-bottom: $content-boxed-margin;
 
     &.panel-default {
         background-color: $panel-light-bg;
@@ -249,6 +249,18 @@
         margin: 1rem 0;
     }
 
+}
+
+.panel-columns {
+    @include column-count($panel-column-count);
+    @include column-gap($panel-column-gap);
+    orphans: 1;
+    widows: 1;
+
+    .panel {
+        display: inline-block;
+        width: 100%;
+    }
 }
 
 .icon-grid-item {
@@ -545,7 +557,7 @@
 @media (min-width: $viewport-sm) {
 
     .content.boxed {
-        padding: 0.3125rem 1.5rem;
+        padding: 0.3125rem $content-boxed-margin;
     }
 
     .error-box .error-icon {
@@ -555,6 +567,14 @@
     .footer {
         line-height: $footer-height;
         text-align: left;
+    }
+
+    .column-sm-2 {
+        @include column-count(2);
+    }
+
+    .column-sm-3 {
+        @include column-count(3);
     }
 
 }
@@ -580,6 +600,46 @@
     .footer {
         line-height: $footer-height;
         text-align: left;
+    }
+
+    .column-md-2 {
+        @include column-count(2);
+    }
+
+    .column-md-3 {
+        @include column-count(3);
+    }
+
+}
+
+//
+// Large devices (desktops, 992px and up)
+//
+
+@media (min-width: $viewport-lg) {
+
+    .column-lg-2 {
+        @include column-count(2);
+    }
+
+    .column-lg-3 {
+        @include column-count(3);
+    }
+
+}
+
+//
+// Extra large devices (large desktops, 1200px and up)
+//
+
+@media (min-width: $viewport-xl) {
+
+    .column-xl-2 {
+        @include column-count(2);
+    }
+
+    .column-xl-3 {
+        @include column-count(3);
     }
 
 }

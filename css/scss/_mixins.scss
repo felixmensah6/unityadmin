@@ -16,6 +16,20 @@
 	        box-shadow: $parameters;
 }
 
+// Column Count
+@mixin column-count($parameters...) {
+	-webkit-column-count: $parameters;
+	   -moz-column-count: $parameters;
+	        column-count: $parameters;
+}
+
+// Column Gap
+@mixin column-gap($parameters...) {
+	-webkit-column-gap: $parameters;
+	   -moz-column-gap: $parameters;
+	        column-gap: $parameters;
+}
+
 // Transition
 @mixin transition($parameters...) {
 	-webkit-transition: $parameters;
