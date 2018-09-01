@@ -52,7 +52,7 @@ $(window).resize(function() {
 // Fixed Page Nav on Scroll
 //
 
-$(document).bind('scroll', function() {
+$(document).on('scroll', function() {
 	var $scrollPosition = $(document).scrollTop(),
         $pageHeader = $(".page-header"),
         $pageHeaderHeight = $pageHeader.height(),
@@ -134,6 +134,26 @@ setInterval(function(){
 		$(this).remove();
 	});
 }, 5000);
+
+//
+// Check For Changes in Columns
+//
+
+$('.columns').on("DOMSubtreeModified",function(){
+    var twoColumnCount = $(".column-sm-2 .column-item, .column-md-2 .column-item, .column-lg-2 .column-item, .column-xl-2   .column-item").length,
+        threeColumnCount = $(".column-sm-3 .column-item, .column-md-3 .column-item, .column-lg-3 .column-item, .column-xl-3 .column-item").length,
+        parentColumn = $(".column-item").parent();
+
+    if(twoColumnCount === 1 || threeColumnCount === 1){
+        parentColumn.addClass('column-reset-1');
+        parentColumn.removeClass('column-reset-2');
+    }else if(threeColumnCount === 2){
+        parentColumn.addClass('column-reset-2');
+        parentColumn.removeClass('column-reset-1');
+    }else{
+        parentColumn.removeClass('column-reset-1 column-reset-2');
+    }
+});
 
 
 

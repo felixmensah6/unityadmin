@@ -251,16 +251,24 @@
 
 }
 
-.panel-columns {
+.columns {
     @include column-count($panel-column-count);
     @include column-gap($panel-column-gap);
     orphans: 1;
     widows: 1;
 
-    .panel {
+    .column-item {
         display: inline-block;
         width: 100%;
     }
+}
+
+.column-reset-1 {
+    @include column-count(1 !important);
+}
+
+.column-reset-2 {
+    @include column-count(2 !important);
 }
 
 .icon-grid-item {
