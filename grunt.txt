@@ -1,0 +1,20 @@
+module.export = function(grunt) {
+
+    // Configuration
+    grunt.initConfig({
+        // pass in options for plugins, references to files
+    });
+
+    // Load plugins
+    //grunt.loadNpmTasks('')
+
+    // Register tasks
+    grunt.registerTask('run', function(){
+        console.log('I am running');
+    });
+
+    grunt.registerTask('sleep', function(){
+        console.log('I am sleeping');
+    });
+
+}
