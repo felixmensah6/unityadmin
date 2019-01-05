@@ -33,7 +33,7 @@ function showActiveNav(){
             totalElementPadding = 50,
             currentPosition = activeElemoffSet + totalElementPadding;
 
-        $('.ns-nav').animate({scrollLeft: activeElemoffSet.left-48}, 1000);
+        $('.ns-nav').animate({scrollLeft: activeElemoffSet.left - 160}, 1000);
     }
 }
 
