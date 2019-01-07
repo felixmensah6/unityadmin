@@ -335,6 +335,11 @@ label, legend {
     color: inherit;
 }
 
+.label-required::after {
+    content: ' *';
+    color: $danger;
+}
+
 .form-icon-addon {
     position: relative;
 
