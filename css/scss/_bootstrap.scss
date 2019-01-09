@@ -288,6 +288,10 @@ select.form-control:not([size]):not([multiple]) {
     height: auto;
 }
 
+.custom-select {
+    line-height: 1.2;
+}
+
 .form-group {
     position: relative;
 }
@@ -825,6 +829,29 @@ div.loader {
 .card-img-top {
     border-top-left-radius: calc(0.1875rem - 1px);
     border-top-right-radius: calc(0.1875rem - 1px);
+}
+
+//
+// Pagination
+//
+
+.page-link {
+    color: $primary;
+}
+
+.page-item.active .page-link {
+    z-index: 0;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.page-link:focus {
+    @include box-shadow(none);
+}
+
+.page-link:hover {
+    z-index: 0;
+    color: darken($primary, 20%);
 }
 
 //
