@@ -13,6 +13,16 @@
 }
 
 //
+// Typography
+//
+
+.display-5 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+//
 // Navbars
 //
 
@@ -104,6 +114,10 @@
 		color: $dropdown-link;
 	}
 
+}
+
+.dropdown-item-text {
+    white-space: nowrap;
 }
 
 //
@@ -271,6 +285,13 @@
 //
 // Forms
 //
+
+legend {
+    padding: 0 0 0.3rem 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 .form-control {
     border: $form-input-border;
@@ -855,6 +876,16 @@ div.loader {
 }
 
 //
+// Jumbotron
+//
+
+.jumbotron {
+    background-color: $jumbotron-bg;
+    @include border-radius($jumbotron-border-radius);
+    @include box-shadow($jumbotron-shadow);
+}
+
+//
 // Background Color Utilities
 //
 
@@ -886,6 +917,10 @@ div.loader {
 
     .modal-sm {
         max-width: 340px;
+    }
+
+    .jumbotron {
+        padding: 2rem;
     }
 
 }

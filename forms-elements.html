@@ -320,6 +320,23 @@
                                     <input class="form-control mb-2" type="text" placeholder="Default input">
                                     <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
                                 </div>
+                                <fieldset>
+                                    <legend>Fieldset & Legend</legend>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label>Username</label>
+                                            <input type="text" class="form-control" placeholder="Username">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" placeholder="Password">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Confirm Password</label>
+                                            <input type="password" class="form-control" placeholder="Confirm Password">
+                                        </div>
+                                    </div>
+                                </fieldset>
                             </form>
                         </div>
                     </div>
@@ -1114,8 +1131,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Disable Search</label>
-                                    <select class="form-control select2-nosearch" tabindex="1">
-                                        <option>Select a State</option>
+                                    <select class="form-control select2-nosearch" data-placeholder="Select a State" tabindex="1">
+                                        <option></option>
                                         <option value="AL">Alabama</option>
                                         <option value="AR">Arkansas</option>
                                         <option value="IL">Illinois</option>
