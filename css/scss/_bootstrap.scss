@@ -287,10 +287,14 @@
 //
 
 legend {
-    padding: 0 0 0.3rem 0;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.3125rem 0 0.3rem 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: $body-bg;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .form-control {
