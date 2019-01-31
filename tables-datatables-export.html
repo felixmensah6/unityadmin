@@ -10,6 +10,7 @@
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="plugins/datatables/css/datatables.bootstrap.css" rel="stylesheet">
+    <link href="plugins/datatables/css/buttons.bootstrap.css" rel="stylesheet">
     <link href="css/unity.css" rel="stylesheet">
 </head>
 
@@ -196,7 +197,7 @@
                 <div class="nav-scroller" id="page-nav">
                     <nav class="ns-nav">
                         <div class="ns-content">
-                            <a href="tables-datatables.html" class="ns-item active">Basic</a>
+                            <a href="tables-datatables.html" class="ns-item">Basic</a>
                             <a href="tables-datatables-styles.html" class="ns-item">Styles</a>
                             <a href="tables-datatables-features.html" class="ns-item">Features</a>
                             <a href="tables-datatables-html5.html" class="ns-item">Data Attributes</a>
@@ -204,7 +205,7 @@
                             <a href="tables-datatables-api.html" class="ns-item">API</a>
                             <a href="tables-datatables-ajax.html" class="ns-item">Ajax</a>
                             <a href="tables-datatables-serverside.html" class="ns-item">Server-Side</a>
-                            <a href="tables-datatables-export.html" class="ns-item">Export</a>
+                            <a href="tables-datatables-export.html" class="ns-item active">Export</a>
                         </div>
                     </nav>
                     <button class="ns-btn ns-btn-left" aria-label="Scroll left">
@@ -224,11 +225,11 @@
                 <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Basic</h6>
+                            <h6>Export Data</h6>
                         </div>
                     </div>
                     <div class="panel-body">
-                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <table id="example" class="table table-striped table-bordered" data-page-length="10" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -697,7 +698,7 @@
                                     <td>$112,000</td>
                                 </tr>
                             </tbody>
-                            <!-- <tfoot>
+                            <tfoot>
                                 <tr>
                                     <th>Name</th>
                                     <th>Position</th>
@@ -706,7 +707,7 @@
                                     <th>Start date</th>
                                     <th>Salary</th>
                                 </tr>
-                            </tfoot> -->
+                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -734,12 +735,56 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="plugins/datatables/js/datatables.min.js"></script>
     <script src="plugins/datatables/js/datatables.bootstrap.min.js"></script>
+    <script src="plugins/datatables/js/datatables.buttons.min.js"></script>
+    <script src="plugins/datatables/js/buttons.bootstrap.min.js"></script>
+    <script src="plugins/datatables/js/buttons.colVis.min.js"></script>
+    <script src="plugins/datatables/js/buttons.flash.min.js"></script>
+    <script src="plugins/datatables/js/jszip.min.js"></script>
+    <script src="plugins/datatables/js/pdfmake.min.js"></script>
+    <script src="plugins/datatables/js/vfs_fonts.js"></script>
+    <script src="plugins/datatables/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables/js/buttons.print.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.min.js"></script>
     <script type="text/javascript">
 
 		// Initialize datatables
-		$('#example').DataTable();
+        $('#example').DataTable({
+            //dom: 'Blfrtip',
+            dom: "<'row'<'col-sm-12 col-md-6'B><'col-sm-12 col-md-6'f>>" +
+                 "<'row'<'col-sm-12'tr>>" +
+                 "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            /*buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]*/
+            buttons: [
+                {
+                    extend:    'copy',
+                    text:      '<i class="icon-copy-o text-primary mr-1"></i> Copy',
+                    titleAttr: 'Copy'
+                },
+                {
+                    extend:    'excel',
+                    text:      '<i class="icon-file-excel-o text-success mr-1"></i> Excel',
+                    titleAttr: 'Excel'
+                },
+                {
+                    extend:    'csv',
+                    text:      '<i class="icon-file-alt-o text-warning mr-1"></i> CSV',
+                    titleAttr: 'CSV'
+                },
+                {
+                    extend:    'pdf',
+                    text:      '<i class="icon-file-pdf-o text-danger mr-1"></i> PDF',
+                    titleAttr: 'PDF'
+                },
+                {
+                    extend:    'print',
+                    text:      '<i class="icon-print text-secondary mr-1"></i> Print',
+                    titleAttr: 'Print'
+                }
+            ]
+        });
 
 	</script>
 </body>

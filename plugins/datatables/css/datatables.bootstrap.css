@@ -212,3 +212,6 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:fir
 div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:last-child {
 	padding-right: 0;
 }
+table.order-column.dataTable tbody td.sorting_1 {
+	background-color: rgba(0,0,0,.03);
+}
