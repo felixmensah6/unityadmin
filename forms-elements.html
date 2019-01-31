@@ -871,11 +871,11 @@
                                     <div class="input-group-prepend">
                                         <button class="btn btn-secondary" type="button">Button</button>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="">
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <input type="text" class="form-control" placeholder="Recipient's username" >
                                     <div class="input-group-append">
                                         <button class="btn btn-secondary" type="button">Button</button>
                                     </div>
@@ -886,11 +886,11 @@
                                         <button class="btn btn-secondary" type="button">Button</button>
                                         <button class="btn btn-secondary" type="button">Button</button>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="">
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <input type="text" class="form-control" placeholder="Recipient's username">
                                     <div class="input-group-append">
                                         <button class="btn btn-secondary" type="button">Button</button>
                                         <button class="btn btn-secondary" type="button">Button</button>
@@ -1076,7 +1076,7 @@
                             <form>
                                 <div class="form-group">
                                     <label>Single Select</label>
-                                    <select class="form-control select2-single" tabindex="1">
+                                    <select class="form-control select2" data-placeholder="Select State" data-width="100%" tabindex="1">
                                         <option></option>
                                         <option value="AL">Alabama</option>
                                         <option value="AR">Arkansas</option>
@@ -1086,8 +1086,55 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
+                                    <label>Single Select with Button Addon</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <select class="form-control select2" data-minimum-results-for-search="Infinity" data-width="20%" tabindex="1">
+                                            <option>Web</option>
+                                            <option>Images</option>
+                                            <option>Videos</option>
+                                            <option>News</option>
+                                        </select>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-secondary" type="button">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Multi Select Input Group</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="">Which 3 states are your favorite?</span>
+                                        </div>
+                                        <select class="form-control select2" multiple data-maximum-selection-length="3" data-placeholder="Select State" data-width="100%" tabindex="1">
+                                            <option></option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="IL">Illinois</option>
+                                            <option value="IA">Iowa</option>
+                                            <option value="KS">Kansas</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Multi Select with Button Addon</label>
+                                    <div class="input-group flex-nowrap">
+                                        <select class="form-control select2" multiple data-maximum-selection-length="3" data-placeholder="Select State" data-width="100%" tabindex="1">
+                                            <option></option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="IL">Illinois</option>
+                                            <option value="IA">Iowa</option>
+                                            <option value="KS">Kansas</option>
+                                        </select>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-secondary" type="button">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label>Single Select with Option Disabled</label>
-                                    <select class="form-control select2-single" tabindex="1">
+                                    <select class="form-control select2" data-placeholder="Select State" data-width="100%" tabindex="1">
                                         <option></option>
                                         <option value="AL">Alabama</option>
                                         <option value="AR">Arkansas</option>
@@ -1098,7 +1145,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Single Select with Option Groups</label>
-                                    <select class="form-control select2-single" tabindex="1">
+                                    <select class="form-control select2" data-placeholder="Select State" data-width="100%" tabindex="1">
                                         <option></option>
                                         <optgroup label="Alaskan/Hawaiian Time Zone">
                                             <option value="AK">Alaska</option>
@@ -1128,7 +1175,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Multiple Select with Limitation</label>
-                                    <select class="form-control select2-limited" multiple tabindex="1">
+                                    <select class="form-control select2" multiple data-maximum-selection-length="3" data-placeholder="Select State" data-width="100%" tabindex="1">
                                         <option></option>
                                         <option value="AL">Alabama</option>
                                         <option value="AR">Arkansas</option>
@@ -1139,7 +1186,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Multiple Select</label>
-                                    <select class="form-control select2-multiple" multiple tabindex="1">
+                                    <select class="form-control select2" multiple data-placeholder="Select State" data-width="100%" tabindex="1">
                                         <option></option>
                                         <option value="AL">Alabama</option>
                                         <option value="AR">Arkansas</option>
@@ -1150,7 +1197,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Disable Search</label>
-                                    <select class="form-control select2-nosearch" data-placeholder="Select a State" tabindex="1">
+                                    <select class="form-control select2" data-minimum-results-for-search="Infinity" data-placeholder="Select State" data-width="100%" tabindex="1">
                                         <option></option>
                                         <option value="AL">Alabama</option>
                                         <option value="AR">Arkansas</option>
@@ -1198,22 +1245,7 @@
 
             $.fn.select2.defaults.set( "theme", "bootstrap" );
 
-    		$(".select2-single, .select2-multiple").select2({
-    			placeholder: "Select a State",
-    			width: null,
-    			containerCssClass: ':all:'
-    		});
-
-    		$('.select2-nosearch').select2({
-    			minimumResultsForSearch: -1
-    		});
-
-            $('.select2-limited').select2({
-                placeholder: 'Select 3 States',
-                width: null,
-                minimumResultsForSearch: -1,
-                maximumSelectionLength: 3
-            });
+    		$('.select2').select2();
 
 		});
 	</script>

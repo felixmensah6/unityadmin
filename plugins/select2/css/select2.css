@@ -4,7 +4,7 @@
     margin: 0;
     position: relative;
     vertical-align: middle;
-    width: 100% !important;
+    /* width: 100% !important; */
 }
 
 .select2-container .select2-selection--single {
@@ -363,7 +363,7 @@
 
 .select2-container--bootstrap .select2-selection {
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
     border-radius: 2px;
     color: #555555;
     font-size: 14px;
@@ -617,7 +617,7 @@
     padding: 6px 12px;
     line-height: 1.42857143;
     margin-top: 0;
-    width: 100% !important;
+    /* width: 100% !important; */
 }
 
 .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice__remove {
@@ -735,6 +735,7 @@
 
 .input-group>.select2-hidden-accessible:not(:first-child)+.select2-container--bootstrap:not(:last-child)>.selection>.select2-selection, .input-group>.select2-hidden-accessible:not(:first-child)+.select2-container--bootstrap:not(:last-child)>.selection>.select2-selection.form-control {
     border-radius: 0;
+    margin-left: -1px;
 }
 
 .input-group>.select2-hidden-accessible:not(:first-child):not(:last-child)+.select2-container--bootstrap:last-child>.selection>.select2-selection, .input-group>.select2-hidden-accessible:not(:first-child):not(:last-child)+.select2-container--bootstrap:last-child>.selection>.select2-selection.form-control {
@@ -743,12 +744,18 @@
 }
 
 .input-group>.select2-container--bootstrap {
-    display: table;
-    table-layout: fixed;
+    /* display: table; */
+    /* table-layout: fixed; */
     position: relative;
     z-index: 2;
     width: 100%;
     margin-bottom: 0;
+    /* flex: 1 1; */
+    margin-left: -1px;
+}
+
+.input-group>.input-group-prepend ~ .select2-container--bootstrap {
+    flex: 1 1;
 }
 
 .input-group>.select2-container--bootstrap>.selection>.select2-selection.form-control {
