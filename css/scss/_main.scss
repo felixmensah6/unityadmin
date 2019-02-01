@@ -52,15 +52,15 @@
 }
 
 .page-header {
-    background-color: $page-header-bg;
     color: $page-header-color;
     margin-top: 3.125rem;
     display: flex;
     flex-flow: row wrap;
-    @include transition(background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out);
+    @include transition(box-shadow 0.3s ease-in-out);
 
     &.has-menu {
         margin-bottom: 1.5rem;
+        background-color: $page-header-bg;
     }
 
     .page-title {
@@ -237,7 +237,7 @@
     .panel-body {
         padding: 1rem 1.5rem;
         display: block;
-        overflow: hidden;
+        //overflow: hidden;
     }
 
     .panel-footer {

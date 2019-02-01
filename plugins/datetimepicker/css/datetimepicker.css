@@ -352,7 +352,7 @@
     display: inline-block;
     border: solid transparent;
     border-width: 0 0 7px 7px;
-    border-bottom-color: #3680bf;
+    border-bottom-color: #2094f3;
     border-top-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     bottom: 4px;
@@ -361,7 +361,7 @@
 
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover {
-    background-color: #3680bf;
+    background-color: #2094f3;
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -394,7 +394,7 @@
 }
 
 .bootstrap-datetimepicker-widget table td span.active {
-    background-color: #3680bf;
+    background-color: #2094f3;
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
