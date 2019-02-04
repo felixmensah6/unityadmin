@@ -52,19 +52,21 @@ $(window).resize(function() {
 // Fixed Page Nav on Scroll
 //
 
+var $pageHeader = $(".page-header"),
+    $pageHeaderHeight = $pageHeader.height(),
+    $navScrollerHeight = $(".nav-scroller").height(),
+    $navbarHeight = $(".navbar").height(),
+    $contentDiv = $(".content"),
+    $pageNav = $("#page-nav");
 $(document).on('scroll', function() {
-	var $scrollPosition = $(document).scrollTop(),
-        $pageHeader = $(".page-header"),
-        $pageHeaderHeight = $pageHeader.height(),
-        $navbarHeight = $(".navbar").height(),
-        $pageTitleHeight = $(".page-title").outerHeight(),
-        $contentDiv = $(".content"),
-        $pageNav = $("#page-nav");
-	if($pageNav.hasClass("nav-scroller") && $scrollPosition > ($pageTitleHeight - 2)) {
-		$pageHeader.addClass("fixed-header");
+    var $scrollPosition = $(document).scrollTop();
+	if($pageNav.hasClass("nav-scroller") && $scrollPosition > (($pageHeaderHeight - $navScrollerHeight) - 2)) {
+        $pageHeader.addClass("fixed-header");
+        $pageHeader.css({'top' : (($navScrollerHeight + $navbarHeight) - $pageHeaderHeight) + 'px'})
         $contentDiv.css({'margin-top' : ($pageHeaderHeight + $navbarHeight + 24) + 'px'});
 	}else{
-		$pageHeader.removeClass("fixed-header");
+        $pageHeader.removeClass("fixed-header");
+        $pageHeader.css({'top' : '0px'})
         $contentDiv.css({'margin-top' : '0px'});
 	}
 });
@@ -98,6 +100,10 @@ $('[data-toggle="tooltip"]').tooltip({
 
 $('[data-toggle="popover"]').popover({
     container: '.wrapper'
+});
+
+$('.dropdown-toggle').dropdown({
+    display: 'static'
 });
 
 //

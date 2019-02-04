@@ -104,7 +104,7 @@
     position: fixed;
     right: 0;
     left: 0;
-    top: -1rem;
+    //top: -1rem;
     margin-top: 0;
     background-color: $page-header-fixed-bg;
     @include transition(left 0.3s ease-in-out);
@@ -250,7 +250,24 @@
         width: 100%;
         margin: 1rem 0;
     }
+}
 
+.profile-box {
+    display: flex;
+    flex-grow: 1;
+    padding: 1.5rem;
+
+    .profile-details {
+        margin: 10px 0 0 1.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+.profile-actions {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
 }
 
 .columns {

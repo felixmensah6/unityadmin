@@ -200,7 +200,7 @@
 
 	.btn-light-#{$name}:not(:disabled):not(.disabled).active,
 	.btn-light-#{$name}:not(:disabled):not(.disabled):active,
-	.show > .btn-#{$name}.dropdown-toggle {
+	.show > .btn-light-#{$name}.dropdown-toggle {
 		color: $color;
 	    background-color: darken($bg, $hover-percentage);
 	    border-color: darken($bg, $hover-percentage);
