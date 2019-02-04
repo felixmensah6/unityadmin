@@ -236,7 +236,16 @@
                                     <div class="form-group">
                                         <label>Minimum Setup</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="datetimepicker1">
+                                            <input type="text" class="form-control datetimepicker">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Button Addon Trigger</label>
+                                        <div class="input-group datetimepicker mb-3">
+                                            <input type="text" class="form-control" placeholder="dd-mm-yyyy" data-date-format="DD-MM-YYYY">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-default" type="button"><i class="icon-calendar-alt"></i></button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -674,7 +683,7 @@
         $(document).ready(function(){
 
             // Minimum Setup
-            $('#datetimepicker1').datetimepicker();
+            $('.datetimepicker').datetimepicker();
 
             // Time Only
 			$('#datetimepicker2').datetimepicker({
