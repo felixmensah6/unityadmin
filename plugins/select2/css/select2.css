@@ -175,7 +175,7 @@
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
-    color: #999;
+    color: #75757d;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -220,7 +220,7 @@
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__placeholder {
-    color: #999;
+    color: #75757d;
     margin-top: 5px;
     float: left;
 }
@@ -245,7 +245,7 @@
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-    color: #999;
+    color: #75757d;
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
@@ -302,7 +302,7 @@
 }
 
 .select2-container--default .select2-results__option[aria-disabled=true] {
-    color: #999;
+    color: #75757d;
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
@@ -387,20 +387,20 @@
 }
 
 .select2-container--bootstrap .select2-search__field::-webkit-input-placeholder {
-    color: #999;
+    color: #75757d;
 }
 
 .select2-container--bootstrap .select2-search__field:-moz-placeholder {
-    color: #999;
+    color: #75757d;
 }
 
 .select2-container--bootstrap .select2-search__field::-moz-placeholder {
-    color: #999;
+    color: #75757d;
     opacity: 1;
 }
 
 .select2-container--bootstrap .select2-search__field:-ms-input-placeholder {
-    color: #999;
+    color: #75757d;
 }
 
 .select2-container--bootstrap .select2-results__option {
@@ -460,7 +460,7 @@
 }
 
 .select2-container--bootstrap .select2-results__group {
-    color: #999;
+    color: #75757d;
     display: block;
     padding: 12px 12px 4px;
     font-size: 12px;
@@ -573,7 +573,7 @@
 }
 
 .select2-container--bootstrap .select2-selection--single .select2-selection__placeholder {
-    color: #999;
+    color: #75757d;
 }
 
 .select2-container--bootstrap .select2-selection--multiple {
@@ -717,14 +717,14 @@
 .select2-container--bootstrap .select2-selection.input-lg.select2-container--open .select2-selection--single {}
 
 .select2-container--bootstrap .select2-selection.input-lg.select2-container--open .select2-selection--single .select2-selection__arrow b {
-    border-color: transparent transparent #999 transparent;
+    border-color: transparent transparent #75757d transparent;
     border-width: 0 5px 5px 5px;
 }
 
 .input-group-lg .select2-container--bootstrap .select2-selection.select2-container--open .select2-selection--single {}
 
 .input-group-lg .select2-container--bootstrap .select2-selection.select2-container--open .select2-selection--single .select2-selection__arrow b {
-    border-color: transparent transparent #999 transparent;
+    border-color: transparent transparent #75757d transparent;
     border-width: 0 5px 5px 5px;
 }
 
