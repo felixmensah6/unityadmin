@@ -33,7 +33,11 @@ function showActiveNav(){
             totalElementPadding = 50,
             currentPosition = activeElemoffSet + totalElementPadding;
 
-        $('.ns-nav').animate({scrollLeft: activeElemoffSet.left - 160}, 1000);
+        // Check if element exists
+        if(activeElem[0]) {
+            $('.ns-nav').animate({scrollLeft: activeElemoffSet.left - 160}, 1000);
+        }
+
     }
 }
 
