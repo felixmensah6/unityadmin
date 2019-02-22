@@ -756,3 +756,60 @@ svg .icon {
     padding-top: 3px;
     margin: 2px 5px 0 0;
 }
+
+//
+// Alertable
+//
+
+/* Modal */
+.alertable {
+    position: fixed;
+    z-index: 9999;
+    top: 38vh;
+    left: calc(50% - 150px);
+    width: 350px;
+    background: white;
+    @include border-radius(0.1875rem);
+    padding: 1rem;
+    margin: 0 auto;
+
+    .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0.3125rem 0.75rem;
+        margin: 0;
+    }
+}
+
+/* Overlay */
+.alertable-overlay {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* Message */
+.alertable-message {
+    margin-bottom: 0;
+}
+
+/* Prompt */
+.alertable-prompt {
+    margin-top: 1.25rem;
+}
+
+/* Button group */
+.alertable-buttons {
+    text-align: right;
+}
+.alertable-ok {
+    margin-left: 5px;
+}
+.alertable-ok, .alertable-cancel {
+    margin-top: 1.25rem;
+}

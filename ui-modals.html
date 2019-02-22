@@ -245,6 +245,25 @@
                     </div>
                 </div>
 
+                <!-- Panel -->
+                <div class="panel panel-default bordered">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h6>Alertable</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <button class="btn btn-secondary" id="alertable-alert-basic">Basic Alert</button>
+                        <button class="btn btn-secondary" id="alertable-alert-html">Alert (HTML)</button>
+                        <button class="btn btn-secondary" id="alertable-alert">Alert *</button>
+                        <button class="btn btn-secondary" id="alertable-confirm">Confirm *</button>
+                        <button class="btn btn-secondary" id="alertable-confirm-html">Confirm (HTML) *</button>
+                        <button class="btn btn-secondary" id="alertable-prompt">Prompt *</button>
+                        <button class="btn btn-secondary" id="alertable-prompt-login">Prompt (Login) *</button>
+                        <p>Check console for all alerts with * sign for callbacks.</p>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Footer -->
@@ -538,6 +557,75 @@
 						});
 					}
 			});*/
+
+            // Alertable Basic Alert
+            $('#alertable-alert-basic').on('click', function() {
+                $.alertable.alert('Hello World!');
+            });
+
+            // Alertable Alert HTML
+            $('#alertable-alert-html').on('click', function() {
+                $.alertable.alert(
+                    '<h5 class="text-success"><i class="icon-check-circle mr-1"></i>Account successfully created</h5>' +
+                    '<p class="mb-0"><b>Name:</b> John W. Smith <br>' +
+                    '<b>Staff ID:</b> 541203 <br>' +
+                    '<b>Position:</b> Accountant <br>' +
+                    '<b>Birthday:</b> 21 Feb. 1970</p>',
+                    {
+                        html: true,
+                        closeButton: true,
+                        okButton: false
+                    }
+                );
+            });
+
+            // Alertable Alert
+            $('#alertable-alert').on('click', function() {
+                $.alertable.alert('Howdy!').always(function() {
+                    console.log('Alert dismissed');
+                });
+            });
+
+            // Alertable Confirm
+            $('#alertable-confirm').on('click', function() {
+                $.alertable.confirm('You sure?').then(function() {
+                    console.log('Confirmation submitted');
+                }, function() {
+                    console.log('Confirmation canceled');
+                });
+            });
+
+            // Prompt
+            $('#alertable-prompt').on('click', function() {
+                $.alertable.prompt('How many?').then(function(data) {
+                    console.log('Prompt submitted', data);
+                }, function() {
+                    console.log('Prompt canceled');
+                });
+            });
+
+            // Confirm with HTML
+            $('#alertable-confirm-html').on('click', function() {
+                $.alertable.confirm('Are you <b>really</b> sure?', {
+                    html: true
+                }).then(function() {
+                    console.log('Confirmation submitted');
+                }, function() {
+                    console.log('Confirmation canceled');
+                });
+            });
+
+            // Login
+            $('#alertable-prompt-login').on('click', function() {
+                $.alertable.prompt('Login to continue', {
+                    prompt: '<input type="text" class="form-control mb-1 alertable-input" name="username" placeholder="Username">' +
+                        '<input type="password" class="form-control alertable-input" name="password" placeholder="Password">'
+                }).then(function(data) {
+                    console.log('Login submitted', data);
+                }, function() {
+                    console.log('Login canceled');
+                });
+            });
 
         });
 
