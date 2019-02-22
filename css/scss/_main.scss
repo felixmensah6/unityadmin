@@ -46,6 +46,13 @@
 
 }
 
+.search-results {
+    display: block;
+    position: absolute;
+    top: $navbar-height;
+    width: 100%;
+}
+
 .nav-user {
     padding-top: 0.625rem !important;
     padding-bottom: 0.625rem !important;

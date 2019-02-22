@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Morris Charts : Donut - Unity Admin Panel</title>
+    <title>Search Results - Unity Admin Panel</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -61,7 +61,8 @@
                         <li><a href="charts-peity.html"><i class="icon-chart-bar"></i> Sparklines</a></li>
                         <li><a href="charts-highcharts.html"><i class="icon-chart-line"></i> Highcharts</a></li>
                         <li><a href="charts-apex.html"><i class="icon-chart-area"></i> Apex Charts</a></li>
-                        <li><a href="charts-morris.html" class="active"><i class="icon-signature"></i> Morris</a></li>
+                        <li><a href="charts-morris.html"><i class="icon-signature"></i> Morris</a></li>
+                        <li><a href="charts-chartist.html"><i class="icon-stream"></i> Chartist</a></li>
                     </ul>
                     <ul>
                         <li class="sidebar-nav-group">UI Elements</li>
@@ -100,7 +101,7 @@
                     <ul>
                         <li class="sidebar-nav-group">Misc</li>
                         <li><a href="pages-blank.html"><i class="icon-file"></i> Blank Page</a></li>
-                        <li><a href="pages-search-results.html"><i class="icon-search"></i> Search Results</a></li>
+                        <li><a href="pages-search-results.html" class="active"><i class="icon-search"></i> Search Results</a></li>
                         <li><a href="pages-maintenance.html"><i class="icon-wrench"></i> Maintenance</a></li>
                         <li><a href="pages-offline.html"><i class="icon-globe-africa"></i> Offline</a></li>
                         <li><a href="pages-bug.html"><i class="icon-bug"></i> Bug</a></li>
@@ -124,6 +125,35 @@
                         <i class="icon-search"></i>
                     </button>
                     <input type="search" name="search" placeholder="Type in to Search..." autocomplete="off">
+
+                    <!-- Search Results -->
+                    <div class="search-results">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action">
+                                <small class="d-block mb-1 ml-3"><b>Staff ID: </b> 147/19</small>
+                                <h6 class="mb-2 ml-3">John W. Smith</h6>
+                                <nav class="nav">
+                                    <a class="nav-link py-0" href="#">Register</a>
+                                    <a class="nav-link py-0" href="#">Payment</a>
+                                    <a class="nav-link py-0" href="#">Invoice</a>
+                                    <a class="nav-link py-0" href="#">History</a>
+                                    <a class="nav-link py-0" href="#">Details</a>
+                                </nav>
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                                <small class="d-block mb-1 ml-3"><b>Staff ID: </b> 148/19</small>
+                                <h6 class="mb-2 ml-3">Jane Washington</h6>
+                                <nav class="nav">
+                                    <a class="nav-link py-0" href="#">Register</a>
+                                    <a class="nav-link py-0" href="#">Payment</a>
+                                    <a class="nav-link py-0" href="#">Invoice</a>
+                                    <a class="nav-link py-0" href="#">History</a>
+                                    <a class="nav-link py-0" href="#">Details</a>
+                                </nav>
+                            </li>
+                            <li class="list-group-item disabled">No record was found!</li>
+                        </ul>
+                    </div>
                 </form>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown d-none d-sm-block">
@@ -173,9 +203,9 @@
             </nav>
 
             <!-- Page Header -->
-            <div class="page-header has-menu">
+            <div class="page-header">
                 <div class="page-title">
-                    <h5>Morris Charts : Donut</h5>
+                    <h5>Search Results</h5>
                 </div>
                 <div class="page-header-link">
                     <a href="#" class="link" data-toggle="tooltip" data-placement="bottom" title="Help">
@@ -192,64 +222,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="nav-scroller" id="page-nav">
-                    <nav class="ns-nav">
-                        <div class="ns-content">
-                            <a href="charts-morris.html" class="ns-item">Bar</a>
-                            <a href="charts-morris-line.html" class="ns-item">Line</a>
-                            <a href="charts-morris-area.html" class="ns-item">Area</a>
-                            <a href="charts-morris-donut.html" class="ns-item active">Donut</a>
-                            <a href="charts-morris-options.html" class="ns-item">Options</a>
-                        </div>
-                    </nav>
-                    <button class="ns-btn ns-btn-left" aria-label="Scroll left">
-                        <i class="icon-chevron-left"></i>
-                    </button>
-                    <button class="ns-btn ns-btn-right" aria-label="Scroll right">
-                        <i class="icon-chevron-right"></i>
-                    </button>
-                    <div class="ns-border"></div>
-                </div>
             </div>
 
             <!-- Content -->
-            <div class="content boxed">
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>Donut Chart</h6>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div id="graph"></div>
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>Donut Chart Colors</h6>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div id="graph2"></div>
-                    </div>
-                </div>
-
-                <!-- Panel -->
-                <div class="panel panel-default bordered">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <h6>Donut Formatter</h6>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div id="graph3"></div>
-                    </div>
-                </div>
+            <div class="content">
 
             </div>
 
@@ -272,76 +248,8 @@
     <!-- Javascript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="plugins/morris/js/morris.min.js"></script>
-    <script src="plugins/morris/js/raphael.min.js"></script>
     <script src="js/unity.core.min.js"></script>
     <script src="js/unity.min.js"></script>
-    <script>
-
-        //
-        // Donut Chart
-        //
-
-        Morris.Donut({
-            element: 'graph',
-            data: [
-                {value: 70, label: 'foo'},
-                {value: 15, label: 'bar'},
-                {value: 10, label: 'baz'},
-                {value: 5, label: 'A really really long label'}
-            ],
-            resize: true,
-            formatter: function(x) {
-                return x + "%"
-            }
-        }).on('click', function(i, row) {
-            console.log(i, row);
-        });
-
-
-        //
-        // Donut Chart Colors
-        //
-
-        Morris.Donut({
-            element: 'graph2',
-            data: [
-                {value: 70, label: 'foo'},
-                {value: 15, label: 'bar'},
-                {value: 10, label: 'baz'},
-                {value: 5, label: 'A really really long label'}
-            ],
-            backgroundColor: '#ddd',
-            labelColor: '#060',
-            colors: ['#0BA462','#39B580','#67C69D','#95D7BB'
-            ],
-            resize: true,
-            formatter: function(x) {
-                return x + "%"
-            }
-        });
-
-
-        //
-        // Donut Formatter
-        //
-
-        Morris.Donut({
-            element: 'graph3',
-            data: [
-                {value: 70, label: 'foo', formatted: 'at least 70%' },
-                {value: 15, label: 'bar', formatted: 'approx. 15%' },
-                {value: 10, label: 'baz', formatted: 'approx. 10%' },
-                {value: 5, label: 'A really really long label', formatted: 'at most 5%' }
-            ],
-            resize: true,
-            formatter: function(x, data) {
-                return data.formatted;
-            }
-        });
-
-
-    </script>
 </body>
 
 </html>
