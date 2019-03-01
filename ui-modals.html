@@ -9,6 +9,7 @@
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/animated/css/animated.min.css" rel="stylesheet">
     <link href="css/unity.css" rel="stylesheet">
 </head>
 
@@ -207,15 +208,12 @@
                     </div>
                     <div class="panel-body">
                         <p>Live Modal</p>
-                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Launch Demo Modal</button>
-                        <p>Scrolling Long Content</p>
-                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModalLong">Launch Demo Modal</button>
-                        <p>Vertically Centered with Zoom Animation</p>
-                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModalCenter">Launch Demo Modal</button>
-                        <p>No Header & Footer</p>
-                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleModalOnly">Launch Demo Modal</button>
-                        <p>Delete Modal</p>
-                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleDeleteModal">Launch Demo Modal</button>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Default Modal</button>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModalLong">Long Content</button>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target="#exampleModalCenter">Center & Zoom</button>
+                        <p>Custom Modal</p>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleModalOnly">No Header & Footer</button>
+                        <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleDeleteModal">Delete Modal</button>
                         <p>Modal Sizes</p>
                         <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleLargeModal">Launch Large Modal</button>
                         <button type="button" class="btn btn-secondary mb-3" data-toggle="modal" data-target=".exampleSmallModal">Launch Small Modal</button>
@@ -250,18 +248,105 @@
                 <div class="panel panel-default bordered">
                     <div class="panel-heading">
                         <div class="panel-title">
-                            <h6>Alertable</h6>
+                            <h6>Bootbox</h6>
                         </div>
                     </div>
                     <div class="panel-body">
-                        <button class="btn btn-secondary" id="alertable-alert-basic">Basic Alert</button>
-                        <button class="btn btn-secondary" id="alertable-alert-html">Alert (HTML)</button>
-                        <button class="btn btn-secondary" id="alertable-alert">Alert *</button>
-                        <button class="btn btn-secondary" id="alertable-confirm">Confirm *</button>
-                        <button class="btn btn-secondary" id="alertable-confirm-html">Confirm (HTML) *</button>
-                        <button class="btn btn-secondary" id="alertable-prompt">Prompt *</button>
-                        <button class="btn btn-secondary" id="alertable-prompt-login">Prompt (Login) *</button>
-                        <p>Check console for all alerts with * sign for callbacks.</p>
+                        <p>Alert</p>
+                        <button class="btn btn-secondary" id="bootbox-alert-basic">Basic Alert</button>
+                        <button class="btn btn-secondary" id="bootbox-alert-title">Alert with Title</button>
+                        <button class="btn btn-secondary" id="bootbox-alert-basic-callback">Callback Alert *</button>
+                        <button class="btn btn-secondary" id="bootbox-alert-options-callback">Options Callback Alert *</button>
+                        <button class="btn btn-secondary" id="bootbox-overlay-dismiss">Dismiss with Overlay</button>
+                        <p class="mt-3">Dialog Sizes</p>
+                        <button class="btn btn-secondary" id="bootbox-dialog-small">Small Dialog</button>
+                        <button class="btn btn-secondary" id="bootbox-dialog-large">Large Dialog</button>
+                        <p class="mt-3">Dialog Animation (Animate.css)</p>
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <div class="input-group">
+                                    <select class="form-control" id="animations">
+                                        <optgroup label="Attention Seekers">
+                                            <option value="bounce">bounce</option>
+                                            <option value="flash">flash</option>
+                                            <option value="pulse">pulse</option>
+                                            <option value="rubberBand">rubberBand</option>
+                                            <option value="shake">shake</option>
+                                            <option value="swing">swing</option>
+                                            <option value="tada">tada</option>
+                                            <option value="wobble">wobble</option>
+                                            <option value="jello">jello</option>
+                                            <option value="heartBeat">heartBeat</option>
+                                        </optgroup>
+                                        <optgroup label="Bouncing Entrances">
+                                            <option value="bounceIn">bounceIn</option>
+                                            <option value="bounceInDown">bounceInDown</option>
+                                            <option value="bounceInLeft">bounceInLeft</option>
+                                            <option value="bounceInRight">bounceInRight</option>
+                                            <option value="bounceInUp">bounceInUp</option>
+                                        </optgroup>
+                                        <optgroup label="Fading Entrances">
+                                            <option value="fadeIn">fadeIn</option>
+                                            <option value="fadeInDown">fadeInDown</option>
+                                            <option value="fadeInDownBig">fadeInDownBig</option>
+                                            <option value="fadeInLeft">fadeInLeft</option>
+                                            <option value="fadeInLeftBig">fadeInLeftBig</option>
+                                            <option value="fadeInRight">fadeInRight</option>
+                                            <option value="fadeInRightBig">fadeInRightBig</option>
+                                            <option value="fadeInUp">fadeInUp</option>
+                                            <option value="fadeInUpBig">fadeInUpBig</option>
+                                        </optgroup>
+                                        <optgroup label="Flippers">
+                                            <option value="flip">flip</option>
+                                            <option value="flipInX">flipInX</option>
+                                            <option value="flipInY">flipInY</option>
+                                        </optgroup>
+                                        <optgroup label="Lightspeed">
+                                            <option value="lightSpeedIn">lightSpeedIn</option>
+                                        </optgroup>
+                                        <optgroup label="Rotating Entrances">
+                                            <option value="rotateIn">rotateIn</option>
+                                            <option value="rotateInDownLeft">rotateInDownLeft</option>
+                                            <option value="rotateInDownRight">rotateInDownRight</option>
+                                            <option value="rotateInUpLeft">rotateInUpLeft</option>
+                                            <option value="rotateInUpRight">rotateInUpRight</option>
+                                        </optgroup>
+                                        <optgroup label="Sliding Entrances">
+                                            <option value="slideInUp">slideInUp</option>
+                                            <option value="slideInDown">slideInDown</option>
+                                            <option value="slideInLeft">slideInLeft</option>
+                                            <option value="slideInRight">slideInRight</option>
+                                        </optgroup>
+                                        <optgroup label="Zoom Entrances">
+                                            <option value="zoomIn">zoomIn</option>
+                                            <option value="zoomInDown">zoomInDown</option>
+                                            <option value="zoomInLeft">zoomInLeft</option>
+                                            <option value="zoomInRight">zoomInRight</option>
+                                            <option value="zoomInUp">zoomInUp</option>
+                                        </optgroup>
+                                        <optgroup label="Specials">
+                                            <option value="jackInTheBox">jackInTheBox</option>
+                                            <option value="rollIn">rollIn</option>
+                                        </optgroup>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-secondary" type="button" id="bootbox-rubberband">Show Dialog</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3">Confirm</p>
+                        <button class="btn btn-secondary" id="bootbox-confirm-basic">Basic Confirm *</button>
+                        <button class="btn btn-secondary" id="bootbox-confirm-custom-buttons">Custom Buttons & Text *</button>
+                        <button class="btn btn-secondary" id="bootbox-confirm-custom-icons">Custom Icons *</button>
+                        <p class="mt-3">Prompt</p>
+                        <button class="btn btn-secondary" id="bootbox-prompt">Basic Prompt *</button>
+                        <button class="btn btn-secondary" id="bootbox-prompt-password">Prompt Password *</button>
+                        <p class="mt-3">Custom Dialogs</p>
+                        <button class="btn btn-secondary" id="bootbox-custom-dialog">Custom Dialog</button>
+                        <button class="btn btn-secondary" id="bootbox-custom-dialog-init">Custom Dialog Init</button>
+                        <button class="btn btn-secondary" id="bootbox-custom-dialog-advance">Custom Dialog Buttons & Callbacks *</button>
+                        <p class="mt-3">Check console for all alerts with * sign for callbacks.</p>
                     </div>
                 </div>
 
@@ -445,7 +530,7 @@
         $(window).on("load", function () {
 
             // Auto trigger on page load
-            $('#basic-confirm').click();
+            //$('#basic-confirm').click();
 
         });
 
@@ -559,72 +644,190 @@
 					}
 			});*/
 
-            // Alertable Basic Alert
-            $('#alertable-alert-basic').on('click', function() {
-                $.alertable.alert('Hello World!');
+            // Bootbox Basic Alert
+            $('#bootbox-alert-basic').on('click', function() {
+                bootbox.alert("This is the default alert!");
             });
 
-            // Alertable Alert HTML
-            $('#alertable-alert-html').on('click', function() {
-                $.alertable.alert(
-                    '<h5 class="text-success"><i class="icon-check-circle mr-1"></i>Account successfully created</h5>' +
-                    '<p class="mb-0"><b>Name:</b> John W. Smith <br>' +
-                    '<b>Staff ID:</b> 541203 <br>' +
-                    '<b>Position:</b> Accountant <br>' +
-                    '<b>Birthday:</b> 21 Feb. 1970</p>',
-                    {
-                        html: true,
-                        closeButton: true,
-                        okButton: ''
+            // Bootbox Basic Alert
+            $('#bootbox-alert-title').on('click', function() {
+                bootbox.alert({
+                    title: "Custom Title",
+                    message: "This is the default alert!"
+                });
+            });
+
+            // Bootbox Basic Alert with Callback
+            $('#bootbox-alert-basic-callback').on('click', function() {
+                bootbox.alert("This is an alert with a callback!", function(){
+                    console.log('This was logged in the callback!');
+                });
+            });
+
+            // Bootbox Basic Alert with Options Callback
+            $('#bootbox-alert-options-callback').on('click', function() {
+                bootbox.alert({
+                    message: "This is an alert with a callback!",
+                    callback: function () {
+                        console.log('This was logged in the callback!');
                     }
-                );
-            });
-
-            // Alertable Alert
-            $('#alertable-alert').on('click', function() {
-                $.alertable.alert('Howdy!').always(function() {
-                    console.log('Alert dismissed');
                 });
             });
 
-            // Alertable Confirm
-            $('#alertable-confirm').on('click', function() {
-                $.alertable.confirm('You sure?').then(function() {
-                    console.log('Confirmation submitted');
-                }, function() {
-                    console.log('Confirmation canceled');
+            // Bootbox Dismiss with Overlay
+            $('#bootbox-overlay-dismiss').on('click', function() {
+                bootbox.alert({
+                    message: "This alert can be dismissed by clicking on the background!",
+                    backdrop: true
                 });
             });
 
-            // Prompt
-            $('#alertable-prompt').on('click', function() {
-                $.alertable.prompt('How many?').then(function(data) {
-                    console.log('Prompt submitted', data);
-                }, function() {
-                    console.log('Prompt canceled');
+            // Bootbox Dialog Small
+            $('#bootbox-dialog-small').on('click', function() {
+                bootbox.alert({
+                    message: "This is the small alert!",
+                    size: 'small'
                 });
             });
 
-            // Confirm with HTML
-            $('#alertable-confirm-html').on('click', function() {
-                $.alertable.confirm('Are you <b>really</b> sure?', {
-                    html: true
-                }).then(function() {
-                    console.log('Confirmation submitted');
-                }, function() {
-                    console.log('Confirmation canceled');
+            // Bootbox Dialog Large
+            $('#bootbox-dialog-large').on('click', function() {
+                bootbox.alert({
+                    message: "This is the large alert!",
+                    size: 'large'
                 });
             });
 
-            // Login
-            $('#alertable-prompt-login').on('click', function() {
-                $.alertable.prompt('Login to continue', {
-                    prompt: '<input type="text" class="form-control mb-1 alertable-input" name="username" placeholder="Username">' +
-                        '<input type="password" class="form-control alertable-input" name="password" placeholder="Password">'
-                }).then(function(data) {
-                    console.log('Login submitted', data);
-                }, function() {
-                    console.log('Login canceled');
+            // Bootbox Animations
+            $('#bootbox-rubberband').on('click', function() {
+                var animation = $('#animations').val();
+                bootbox.alert({
+                    message: "This is an alert with additional classes!",
+                    className: animation + ' animated'
+                });
+            });
+
+            // Bootbox Confirm Baisc
+            $('#bootbox-confirm-basic').on('click', function() {
+                bootbox.confirm("This is the default confirm!", function(result){
+                    console.log('This was logged in the callback: ' + result);
+                });
+            });
+
+            // Bootbox Confirm Custom Buttons
+            $('#bootbox-confirm-custom-buttons').on('click', function() {
+                bootbox.confirm({
+                    message: "This is a confirm with custom button text and color! Do you like it?",
+                    buttons: {
+                        confirm: {
+                            label: 'Yes',
+                            className: 'btn-success'
+                        },
+                        cancel: {
+                            label: 'No',
+                            className: 'btn-danger'
+                        }
+                    },
+                    callback: function (result) {
+                        console.log('This was logged in the callback: ' + result);
+                    }
+                });
+            });
+
+            // Bootbox Confirm Custom Icons
+            $('#bootbox-confirm-custom-icons').on('click', function() {
+                bootbox.confirm({
+                    title: "Destroy planet?",
+                    message: "Do you want to activate the Deathstar now? This cannot be undone.",
+                    buttons: {
+                        cancel: {
+                            label: '<i class="icon-times mr-1"></i> Cancel'
+                        },
+                        confirm: {
+                            label: '<i class="icon-check mr-1"></i> Confirm'
+                        }
+                    },
+                    callback: function (result) {
+                        console.log('This was logged in the callback: ' + result);
+                    }
+                });
+            });
+
+            // Bootbox Prompt
+            $('#bootbox-prompt').on('click', function() {
+                bootbox.prompt("This is the default prompt!", function(result){
+                    console.log(result);
+                });
+            });
+
+            // Bootbox Prompt Password
+            $('#bootbox-prompt-password').on('click', function() {
+                bootbox.prompt({
+                    title: "This is a prompt with a password input!",
+                    inputType: 'password',
+                    callback: function (result) {
+                        console.log(result);
+                    }
+                });
+            });
+
+            // Bootbox Custom Dialog
+            $('#bootbox-custom-dialog').on('click', function() {
+                var dialog = bootbox.dialog({
+                    message: '<p class="text-center mb-0"><i class="icon-spin icon-cog mr-2"></i> Please wait for 5 seconds...</p>',
+                    closeButton: false
+                });
+
+                // Hide dialog
+                setTimeout(function(){
+                    dialog.modal('hide');
+                }, 5000);
+            });
+
+            // Bootbox Custom Init
+            $('#bootbox-custom-dialog-init').on('click', function() {
+                var dialog = bootbox.dialog({
+                    title: 'A custom dialog with init',
+                    message: '<p><i class="icon-spin icon-spinner"></i> Loading...</p>'
+                });
+
+                dialog.init(function(){
+                    setTimeout(function(){
+                        dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
+                    }, 3000);
+                });
+            });
+
+            // Bootbox Custom Dialog with Buttons and Callbacks
+            $('#bootbox-custom-dialog-advance').on('click', function() {
+                bootbox.dialog({
+                    title: 'A custom dialog with buttons and callbacks',
+                    message: "<p>This dialog has buttons. Each button has it's own callback function.</p>",
+                    size: 'large',
+                    buttons: {
+                        cancel: {
+                            label: "I'm a cancel button!",
+                            className: 'btn-danger',
+                            callback: function(){
+                                console.log('Custom cancel clicked');
+                            }
+                        },
+                        noclose: {
+                            label: "I don't close the modal!",
+                            className: 'btn-warning',
+                            callback: function(){
+                                console.log('Custom button clicked');
+                                return false;
+                            }
+                        },
+                        ok: {
+                            label: "I'm an OK button!",
+                            className: 'btn-info',
+                            callback: function(){
+                                console.log('Custom OK clicked');
+                            }
+                        }
+                    }
                 });
             });
 

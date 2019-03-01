@@ -758,61 +758,33 @@ svg .icon {
 }
 
 //
-// Alertable
+// Bootbox
 //
 
-/* Modal */
-.alertable {
-    position: fixed;
-    z-index: 9999;
-    top: 38vh;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: white;
-    @include border-radius(0.1875rem);
-    padding: 1rem;
-    margin: 0 auto;
+.bootbox .modal-dialog {
+    display: flex;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.bootbox.show .modal-dialog {
+    @include transform(none);
+}
+
+.bootbox.fade .modal-dialog {
+    @include transition(none);
+    @include transform(none);
+}
+
+.bootbox .modal-body {
+    padding: 1.5rem 1rem;
 
     .close {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0.3125rem 0.75rem;
-        margin: 0;
+        margin-top: -1.125rem;
+        font-weight: 100;
     }
-}
-
-/* Overlay */
-.alertable-overlay {
-    position: fixed;
-    z-index: 9998;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.85);
-}
-
-/* Message */
-.alertable-message {
-    margin-bottom: 0;
-}
-
-/* Prompt */
-.alertable-prompt {
-    margin-top: 1.25rem;
-}
-
-/* Button group */
-.alertable-buttons {
-    text-align: right;
-}
-.alertable-ok {
-    margin-left: 5px;
-}
-.alertable-ok, .alertable-cancel {
-    margin-top: 1.25rem;
 }
 
 //
