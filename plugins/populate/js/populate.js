@@ -252,6 +252,9 @@ jQuery.fn.populate = function(obj, options) {
 						// Select2 Ajax remote data fix
 						if(typeof $('[name=' + iTrim + ']').attr('data-ajax--url') != 'undefined'){
 
+							// Clear input before appending
+							$('[name=' + iTrim + ']').val(null).trigger("change");
+
 							if($.isArray(arr[i])){
 								for (x = 0, len = arr[i].length/2; x < len; x++) {
 								  $('[name=' + iTrim + ']').append('<option value="' + arr[i][x+x] + '" selected>' + arr[i][x+x+1] + '</option>');
