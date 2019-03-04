@@ -426,7 +426,7 @@
     content: "\e98f";
 }
 
-.summary, .summary-alt, .summary-linked, .summary-fluid {
+.summary, .shortcut, .summary-alt, .summary-linked, .summary-fluid {
     min-height: 7.5rem;
     position: relative;
 
@@ -458,6 +458,45 @@
 
     .description {
         font-size: 40%;
+    }
+}
+
+.shortcut {
+    display: flex;
+    align-items: stretch;
+
+    .link {
+        padding: 1rem;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:hover img {
+            @include transform(scale(1.2));
+        }
+    }
+
+    .shortcut-icon {
+        padding: 0.9375rem;
+        background-color: rgba(241, 245, 248, 1);
+        @include border-radius(3.125rem);
+
+        img {
+            height: 50px;
+            width: auto;
+            @include transition(transform 0.3s ease-in-out);
+        }
+    }
+
+    .value {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $body-color;
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
     }
 }
 
