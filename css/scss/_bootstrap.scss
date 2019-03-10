@@ -340,10 +340,6 @@ select.form-control:not([size]):not([multiple]) {
     position: relative;
 }
 
-.input-group {
-    align-items: flex-start;
-}
-
 .input-group-end {
     width: 100%;
 
@@ -948,6 +944,16 @@ div.loader {
 @each $name, $color in $colors {
     .text-#{$name} {
         color: $color !important;
+    }
+}
+
+//
+// Sizing Utilities
+//
+
+@each $name, $size in $widths {
+    .w-#{$name} {
+        width: $size !important;
     }
 }
 
