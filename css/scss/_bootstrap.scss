@@ -208,7 +208,7 @@
 
 .btn-group-xs>.btn,
 .btn-xs {
-    padding: 0.0625rem 0.3125rem;
+    padding: 0.1875rem 0.3125rem;
     font-size: 0.75rem !important;
 }
 
@@ -304,6 +304,17 @@
 //
 // Forms
 //
+
+.form-row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.form-row>.col,
+.form-row>[class*=col-] {
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 legend {
     padding: 0.3125rem 0 0.3rem 0.5rem;
@@ -848,6 +859,7 @@ div.loader {
 
 .table td, .table th {
     padding: 0.625rem 0.75rem;
+    vertical-align: inherit;
     font-size: 0.8125rem;
 }
 
@@ -944,6 +956,16 @@ div.loader {
 @each $name, $color in $colors {
     .text-#{$name} {
         color: $color !important;
+    }
+}
+
+//
+// Opacity Utilities
+//
+
+@each $name, $value in $opacity {
+    .opacity-#{$name} {
+        opacity: $value !important;
     }
 }
 
