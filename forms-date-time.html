@@ -29,7 +29,7 @@
             </nav>
 
             <!-- Sidebar Content -->
-            <div class="sidebar-content optiscroll">
+            <div class="sidebar-content optiscroll" style="overflow:hidden">
 
                 <!-- Sidebar Nav -->
                 <ul class="sidebar-nav">
